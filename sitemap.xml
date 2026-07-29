@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
+        <loc>https://gunnarpeipman.com/kool/oop/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/oop/klassid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/oop/objektide-loomine/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/oop/objektide-vordlemine/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/oop/parilus/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/oop/liidesed/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/oop/enumeraatorid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/oop/staatiline-skoop/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/oop/vead/</loc>
+      </url>
+      <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/</loc>
       </url>
       <url>
