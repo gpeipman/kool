@@ -37,9 +37,39 @@
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/tunnid/01-tooleht/</loc>
       </url>
       <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/tunnid/02-tooleht/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/tunnid/03-tooleht/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/tunnid/04-tooleht/</loc>
+      </url>
+      <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/sissejuhatus/</loc>
       </url>
       <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/git/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/visual-studio/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/objekt-orienteeritud-modelleerimine/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/orm/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/entity-framework-core/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/migratsioonid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/arhitektuuri-mudelid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/cqrs/</loc>
       </url>
 </urlset>

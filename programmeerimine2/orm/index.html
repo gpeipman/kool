@@ -12,34 +12,36 @@
         <meta name="author" content="Gunnar Peipman">
       
       
-        <link rel="canonical" href="https://gunnarpeipman.com/kool/oop/">
+        <link rel="canonical" href="https://gunnarpeipman.com/kool/programmeerimine2/orm/">
       
       
+        <link rel="prev" href="../objekt-orienteeritud-modelleerimine/">
       
-        <link rel="next" href="./klassid/">
+      
+        <link rel="next" href="../entity-framework-core/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="zensical-0.0.52">
     
     
       
-        <title>OOP - Kool</title>
+        <title>ORM - Programmeerimine 2 - Kool</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/classic/main.4c04d108.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.4c04d108.min.css">
       
         
           
         
-        <link rel="stylesheet" href="../assets/stylesheets/classic/palette.7dc9a0ad.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/classic/palette.7dc9a0ad.min.css">
       
       
 
@@ -58,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -95,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objekt-orienteeritud-programmeerimine" class="md-skip">
+        <a href="#object-relational-mapper-orm" class="md-skip">
           Keri sisuni
         </a>
       
@@ -109,7 +111,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Päis">
-    <a href="./.." title="Kool" class="md-header__button md-logo" aria-label="Kool" data-md-component="logo">
+    <a href="../.." title="Kool" class="md-header__button md-logo" aria-label="Kool" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -129,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OOP
+              ORM - Programmeerimine 2
             
           </span>
         </div>
@@ -197,62 +199,12 @@
   
   
   
-    
-  
   
     
       
       
         
           
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="././" class="md-tabs__link">
-          
-  
-  OOP
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-      
-      
-        
-          
-        
-      
-        
-      
         
       
         
@@ -276,7 +228,57 @@
     
     
       <li class="md-tabs__item">
-        <a href="../programmeerimine2/" class="md-tabs__link">
+        <a href="../../oop/" class="md-tabs__link">
+          
+  
+  OOP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   Programmeerimine 2
@@ -309,7 +311,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigatsioon" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="./.." title="Kool" class="md-nav__button md-logo" aria-label="Kool" data-md-component="logo">
+    <a href="../.." title="Kool" class="md-nav__button md-logo" aria-label="Kool" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -324,6 +326,308 @@
       
   
   
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../oop/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OOP
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  OOP
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/klassid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Klassid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/objektide-loomine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide loomine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/objektide-vordlemine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide võrdlemine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/parilus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pärilus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/liidesed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liidesed
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/enumeraatorid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Enumeraatorid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/staatiline-skoop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Staatiline skoop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/vead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vead
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -333,6 +637,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -365,317 +673,11 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="././" class="md-nav__link md-nav__link--active">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  OOP
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-  OOP
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./klassid/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Klassid
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./objektide-loomine/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Objektide loomine
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./objektide-vordlemine/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Objektide võrdlemine
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./parilus/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Pärilus
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./liidesed/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Liidesed
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./enumeraatorid/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Enumeraatorid
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./staatiline-skoop/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Staatiline skoop
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./vead/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-  Vead
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../programmeerimine2/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -692,13 +694,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -746,7 +748,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../programmeerimine2/tunnid/" class="md-nav__link ">
+            <a href="../tunnid/" class="md-nav__link ">
               
   
   
@@ -788,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/tunnid/01-tooleht/" class="md-nav__link">
+      <a href="../tunnid/01-tooleht/" class="md-nav__link">
         
   
   
@@ -815,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/tunnid/02-tooleht/" class="md-nav__link">
+      <a href="../tunnid/02-tooleht/" class="md-nav__link">
         
   
   
@@ -842,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/tunnid/03-tooleht/" class="md-nav__link">
+      <a href="../tunnid/03-tooleht/" class="md-nav__link">
         
   
   
@@ -869,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/tunnid/04-tooleht/" class="md-nav__link">
+      <a href="../tunnid/04-tooleht/" class="md-nav__link">
         
   
   
@@ -904,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/sissejuhatus/" class="md-nav__link">
+      <a href="../sissejuhatus/" class="md-nav__link">
         
   
   
@@ -931,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         
   
   
@@ -958,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/visual-studio/" class="md-nav__link">
+      <a href="../visual-studio/" class="md-nav__link">
         
   
   
@@ -985,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/objekt-orienteeritud-modelleerimine/" class="md-nav__link">
+      <a href="../objekt-orienteeritud-modelleerimine/" class="md-nav__link">
         
   
   
@@ -1009,10 +1011,38 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../programmeerimine2/orm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ORM
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1027,6 +1057,71 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisukord">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisukord
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Probleem
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lahendus-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lahendus: ORM
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orm-i-variandid-net-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ORM-i variandid .NET-is
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mida-orm-lahendab" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mida ORM lahendab?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1039,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/entity-framework-core/" class="md-nav__link">
+      <a href="../entity-framework-core/" class="md-nav__link">
         
   
   
@@ -1066,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/migratsioonid/" class="md-nav__link">
+      <a href="../migratsioonid/" class="md-nav__link">
         
   
   
@@ -1093,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/arhitektuuri-mudelid/" class="md-nav__link">
+      <a href="../arhitektuuri-mudelid/" class="md-nav__link">
         
   
   
@@ -1120,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../programmeerimine2/cqrs/" class="md-nav__link">
+      <a href="../cqrs/" class="md-nav__link">
         
   
   
@@ -1176,10 +1271,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#toovahendid" class="md-nav__link">
+  <a href="#probleem" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Töövahendid
+        Probleem
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lahendus-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lahendus: ORM
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orm-i-variandid-net-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ORM-i variandid .NET-is
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mida-orm-lahendab" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mida ORM lahendab?
       </span>
     </span>
   </a>
@@ -1211,7 +1339,7 @@
   
   
     <li class="md-path__item">
-      <a href="./.." class="md-path__link">
+      <a href="../.." class="md-path__link">
         
   
   <span class="md-ellipsis">
@@ -1250,16 +1378,20 @@
       
         
       
+        
+      
+        
+      
     
     
     
     
       <li class="md-path__item">
-        <a href="././" class="md-path__link">
+        <a href="../" class="md-path__link">
           
   
   <span class="md-ellipsis">
-    OOP
+    Programmeerimine 2
   </span>
 
         </a>
@@ -1276,18 +1408,133 @@
                 
                   
 
-<h1 id="objekt-orienteeritud-programmeerimine">Objekt-orienteeritud programmeerimine<a class="headerlink" href="#objekt-orienteeritud-programmeerimine" title="Permanent link">&para;</a></h1>
-<p>Käesoleva aine eesmärgiks on tutvustada objekt-orienteeritud programmeerimist. Kaetud on olulisem osa algajatele. Materjalid tutvustavad olulisemaid mõisteid ning sisaldavad nii koodinäiteid kui ka järgi proovimiseks mõeldud lähtekoodi, mida õpilased saavad suurema pusimiseta iseseisvalt käivitada. </p>
-<h2 id="toovahendid">Töövahendid<a class="headerlink" href="#toovahendid" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Visual Studio Community Edition </li>
-<li>Visual Studio Code (töötab ka Linuxi ja Apple peal)</li>
-<li>.NET raamistik (töötab ka Linuxi ja Apple peal)</li>
-</ul>
+<h1 id="object-relational-mapper-orm">Object-Relational Mapper (ORM)<a class="headerlink" href="#object-relational-mapper-orm" title="Permanent link">&para;</a></h1>
+<p>ORM on tehnoloogia, mis ühendab kaks erinevat maailma: <strong>objektid</strong> (C# kood) ja <strong>relatsioonilised andmebaasid</strong> (tabelid SQL andmebaasis). Klassikaline SQL andmebaas ei oska ise objektidega midagi teha. Kui soovime andmebaasiga suhelda, siis peame selleks kasutama SQL-keelseid käske, millest andmebaas aru saab. ORM võimaldab meil töötada objektidega, mille andmed on andmebaasis. SQL-keelsed käsud objektide küsimiseks, salvestamiseks ja eemaldamiseks koostab ORM automaatselt.</p>
 <div class="admonition note">
-<p class="admonition-title">Töötavad koodinäited</p>
-<p>Peatükkides toodud näiteid saab iseseisvalt Visual Studios või Visual Studio Code peal järgi proovida. Kui koodinäite kõrval on valik pealkirjaga "Proovimiseks", siis antud saki taga on kood toodud sellisel kujul, et selle saab copy-paste abil otse Visual Studiosse või Visual Studio Code peale tõsta ning käima lasta. Proovimiseks mõeldud kood on küll pikem, kuid selle järgi proovimine annab oluliselt parema tunnetuse näidete osas kui lihtsalt näidete lugemine.</p>
+<p class="admonition-title">Märkus</p>
+<p>Selles aines puutume andmebaasidega kokku pealiskaudselt. Põhjalikumad arusaamad andmebaasidest ja oskused nendega töötamiseks omate andmebaaside aines.</p>
 </div>
+<h2 id="probleem">Probleem<a class="headerlink" href="#probleem" title="Permanent link">&para;</a></h2>
+<p>Kui kirjutad tavalist C# rakendust, töötad klasside ja objektidega:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Book</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Id</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Author</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Ilma ORM-ita pead ise kirjutama SQL päringuid ja teisendama need käsitsi objektideks:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Ilma ORM-ita – pead ise kõik teisendama</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT Id, Title, Author FROM Books&quot;</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">var</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span><span class="w"> </span><span class="n">connection</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kt">var</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">ExecuteReader</span><span class="p">();</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">books</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Book</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">books</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Book</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="n">Id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">],</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="n">Pealkiri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;Pealkiri&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">(),</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="n">Autor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reader</span><span class="p">[</span><span class="s">&quot;Autor&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">()</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>See on tüütu, veaohtlik ja igav. Antud näide ei too välja koodi, mida peame kirjutama juhtudeks kui mõnel omadusel puudub andmebaasis väärtus. Lisaks ärme unusta, et ilma ORM-ita peame koostama SQL-käsud ka objektide salvestamiseks ja kustutamiseks.</p>
+<h2 id="lahendus-orm">Lahendus: ORM<a class="headerlink" href="#lahendus-orm" title="Permanent link">&para;</a></h2>
+<p>ORM teisendab automaatselt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>C# objekt ←→ Andmebaasi tabel
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>C#</th>
+<th>SQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Klass</td>
+<td>Tabel</td>
+</tr>
+<tr>
+<td>Objekt</td>
+<td>Rida</td>
+</tr>
+<tr>
+<td>Omadus</td>
+<td>Veerg</td>
+</tr>
+<tr>
+<td><code>book.Title = "..."</code></td>
+<td><code>Title = '...'</code></td>
+</tr>
+<tr>
+<td><code>db.Books.Add(book)</code></td>
+<td><code>INSERT INTO Books ...</code></td>
+</tr>
+<tr>
+<td><code>db.SaveChanges()</code></td>
+<td><code>COMMIT</code></td>
+</tr>
+</tbody>
+</table>
+<p>Andmebaasiga suhtleva andmekihi loomine on lihtne ainult alguses kui tabeleid ja päringuid on vähe. Süsteemi kasvades hakkavad kasvama ka keerukused andmekihis ja siis tuleb ebameeldiva üllatusena välja, et hea andmekihi kirjutamine on siiski väga keerukas töö. Head ORM-id peidavad meie eest mitmed keerukused, millega peaksime vastasel korral tegelema ise.</p>
+<h2 id="orm-i-variandid-net-is">ORM-i variandid .NET-is<a class="headerlink" href="#orm-i-variandid-net-is" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>ORM</th>
+<th>Kirjeldus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entity Framework Core</strong></td>
+<td>Peamine .NET ORM, täisfunktsionaalne</td>
+</tr>
+<tr>
+<td><strong>Dapper</strong></td>
+<td>Kergekaaluline, kirjutad ise SQL-i aga saad objektid</td>
+</tr>
+<tr>
+<td><strong>NHibernate</strong></td>
+<td>Vana .NET ORM, tänapäeval vähe kasutusel</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mida-orm-lahendab">Mida ORM lahendab?<a class="headerlink" href="#mida-orm-lahendab" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Probleem</th>
+<th>Ilma ORM-ita</th>
+<th>ORM-iga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SQL kirjutamine</strong></td>
+<td>Iga päring ise SQL-is</td>
+<td>Kirjutad C#-is (LINQ)</td>
+</tr>
+<tr>
+<td><strong>Tüübiteisendus</strong></td>
+<td><code>(int)reader["Id"]</code> – veaohtlik</td>
+<td>Automaatne</td>
+</tr>
+<tr>
+<td><strong>Andmebaasi muudatused</strong></td>
+<td>Uuendad kõik SQL päringud käsitsi</td>
+<td>Muudad ainult C# klasse</td>
+</tr>
+<tr>
+<td><strong>Seosed (JOIN)</strong></td>
+<td>Ise kirjutad JOIN-id</td>
+<td>EF Core teeb automaatselt</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1349,10 +1596,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.indexes","navigation.instant.prefetch","navigation.path","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Kopeeritud","clipboard.copy":"Kopeeri lõikelauale","search.result.more.one":"1 veel sellel lehel","search.result.more.other":"# veel sellel lehel","search.result.none":"Otsingule ei leitud ühtegi vastet","search.result.one":"Leiti üks tulemus","search.result.other":"Leiti # tulemust","search.result.placeholder":"Otsimiseks kirjuta siia","search.result.term.missing":"Puudub","select.version":"Vali versioon"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.indexes","navigation.instant.prefetch","navigation.path","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Kopeeritud","clipboard.copy":"Kopeeri lõikelauale","search.result.more.one":"1 veel sellel lehel","search.result.more.other":"# veel sellel lehel","search.result.none":"Otsingule ei leitud ühtegi vastet","search.result.one":"Leiti üks tulemus","search.result.other":"Leiti # tulemust","search.result.placeholder":"Otsimiseks kirjuta siia","search.result.term.missing":"Puudub","select.version":"Vali versioon"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.ed145cee.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ed145cee.min.js"></script>
       
     
   </body>
