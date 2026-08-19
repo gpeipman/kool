@@ -46,6 +46,9 @@
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/tunnid/04-tooleht/</loc>
       </url>
       <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/tunnid/05-tooleht/</loc>
+      </url>
+      <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/sissejuhatus/</loc>
       </url>
       <url>
@@ -67,9 +70,18 @@
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/migratsioonid/</loc>
       </url>
       <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/algandmed/</loc>
+      </url>
+      <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/arhitektuuri-mudelid/</loc>
       </url>
       <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/cqrs/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/dto/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/andmed-lehtedena/</loc>
       </url>
 </urlset>
