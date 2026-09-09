@@ -1,0 +1,45 @@
+---
+title: Tööleht 4 - Tunnid - Programmeerimine 2
+---
+# Tööleht 4
+
+## Harjutus: Entity Framework Core rakendus
+
+Entity Framework Core (EF Core) on .NET raamistiku poolt pakutav object-relational mapper (ORM). ORM on komponent, mis automatiseerib andmebaasiga suhtlemist. Oma rakenduse koodis kasutame me klasse, mille andmeid soovime hoida andmebaasis. Me võiksime kirjutada ka käsitsi sellist koodi, mis saadab päringuid andmebaasi ja loob saadud tulemustest objekte, kuid see pealtnäha lihtne ülesanne kasvab päris kähku küllaltki keerukaks.  
+
+Meile tuleb appi EF Core, mille abil saame me kirjutada oma klassidel baseeruvaid LINQ-päringuid. EF Core teisendab need ise andmebaasi päringuteks ning loob meile päringute põhjal objektid. 
+
+Harjutuse eesmärgiks on ASP.NET Core veebirakenduse näitel tutvuda EF Corega ja LINQ-päringutega. Selle harjutuse tulemusena saame esimesed kogemused andmebaaside kasutamisega .NET Core raamistikus ning näeme kuidas käib veebirakenduse kaudu andmete haldamine.
+
+* **NB!** Loo harjutuse jaoks omale Githubi koodihoidla
+* Harjutus koosneb 11 sammust, mis kõik need tuleb läbi teha
+* Loe teksti rahulikult ja mõttega
+* Süvene programmi koodi ja tee selgeks kuidas see töötab
+* Ära kiirusta, ole hoolikas - iga pisemgi lohakusviga lõpeb probleemidega
+* Kui hätta jääd, siis küsi õpetajalt abi
+
+Juhend asub Microsofti lehel **[ASP.NET Core MVC with EF Core - tutorial series](https://learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/?view=aspnetcore-10.0)**
+
+## Ülesanne: Loo klassid ja seo need Entity Frameworki DbContextiga
+
+- Ava Githubist oma klassiskeem
+- Loo need klassid KooliProjekt.Application projektis Data kausta
+- Lisa need klassid ka samas kaustas olevasse DbContexti (klass nimega ApplicationDbContext)
+- Kompileeri ja veendu, et ei oleks vigu
+- Kui muutsid klasside ülesehitust, siis uuende ka klassiskeemi ja dokumentatsiooni
+
+## Ülesanne: Lisa uus migratsioon
+
+- Loo uus migratsioon
+    - Vali Tools menüüst Package Manager
+    - Sisesta järgnev käsk: Add-Migration InitialCreate
+    - Sisesta järgnev käsk: Update-Database
+- Veendu, et vigu ei tekkinud ja arvutisse tekkis andmebaas koos tabelitega
+
+## Ülesanne: Lisa algandmete tugi
+
+- Lisa oma projekti Data kausta klass nimega SeedData
+- SeedData klassis kontrolli kas tabelites on andmeid või ei (võta mõni keskne tabel selleks)
+- Kui tabelis andmeid pole, siis lisa testandmed kõikidesse tabelitesse
+- Vaata õpetaja näitest SeedData klassi ja tee selle järgi
+- Lase programm käima ja veendu, et tabelitesse tekkisid andmed

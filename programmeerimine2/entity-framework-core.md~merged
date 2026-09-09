@@ -1,0 +1,129 @@
+---
+title: Entity Framework Core - Programmeerimine 2
+---
+# Entity Framework Core
+
+Entity Framework Core on .NET raamistikul töötav populaarseim ORM. Seda on võimas ja seda on lihtne kasutada. Samuti on Entity Framework hästi paindlik. Lisaks tüüpilisele andmete liigutamisele koodi ja andmebaasi vahel oskab Entity Framework ka andmebaase luua ja uuendada. 
+
+Entity Framework pakub meile andmebaasiga suhtlemiseks spetsiaalse baasklassi DbContext, mille peale ehitame enda andmebaasi konteksti klassi. Selle klassi kaudu toimub kogu suhtlus andmebaasiga.
+
+Siin on näide DbContexti klassist.
+
+``` cs
+public class LibraryContext : DbContext
+{
+    public LibraryContext(DbContextOptions<LibraryContext> options) : base(options)
+    {
+    }
+    
+    public DbSet<Books> Books { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<Borrowing> Borrowings { get; set; }
+}
+```
+
+LibraryContext pärib ennast DbContext klassist. Kui uus LibraryContext tüüpi objekt luuakse, siis antakse sellele kaasa andmebaasi seaded. 
+
+DbSet<> tüüpi omadused käivad klasside kohta, mida me andmebaasis tahame hoida. Iga klassi jaoks on oma eraldi DbSet<>.
+
+## Andmete pärimine
+
+Andmete pärimiseks kasutame sellist C# tehnoloogiat nagu LINQ (Language Integrated Queries). LINQ abil saab teha päringuid ka mujale kui andmebaasid. Seda saab kasutada ka objektide loendite jaoks, mille programm on koostanud või kuskilt laadinud jne.
+
+Järgmiseks vaatame näiteid LINQ kasutamise kohta andmete pärimisel.
+
+Küsi kõik paksud raamatud (raamatud, millel on vähemalt 500 lehekülge):
+
+``` C#
+var books = await libraryDbContext.Books
+    .Where(book => book.Pages >= 500)
+    .ToListAsync();
+```
+
+Küsi kõik paksud raamatud ja sorteeri need autori nime järgi:
+
+``` C#
+var books = await libraryDbContext.Books
+    .Where(book => book.Pages >= 500)
+    .OrderBy(book => book.Author)
+    .ToListAsync();
+```
+
+Küsi kõige paksem raamat:
+
+``` C#
+var book = await libraryDbContext.Books
+    .OrderByDescending(book => book.Pages)
+    .FirstAsync();
+```
+
+Küsi raamat ID järgi:
+
+``` C#
+var book = await libraryDbContext.Books.FindAsync(id);
+```
+
+## Seotud objektide kaasamine
+
+Kui me pärime andmeid andmebaasist LINQ abil, siis vaikimisi ei tooda meile kaasa seotud objekte. Kui küsime laenutusi, siis pole neil küljes kasutajat ja raamatut, mida laenutati.
+
+``` C#
+var borrowing = await libraryDbContext.Borrowings.Find(id);
+
+var user = borrowing.User; // user on null
+var book = borrowing.Book; // book on null
+```
+
+Me peame ise LINQ päringus ütlema, milliseid seotud objekte me soovime saada. Vaikimisi neid meile ei tooda, sest kõik täiendav, mida me kasutada ei soovi, lisaks asjatut koormust nii andmebaasile kui ka muudele süsteemi osadele.
+
+Kui soovime koos laenutamisega saada ka kasutaja ja raamatu, siis peame ülaltoodud päringu kirjutama selliselt:
+
+``` C#
+var borrowing = await libraryDbContext.Borrowings
+    .Include(borrowing => borrowing.User)
+    .Include(borrowing => borrowing.Book)
+    .Where(borrowing => borrowing.Id == id)
+    .FirstAsync();
+```
+
+## Uue objekti lisamine
+
+``` C#
+var book = new Book();
+book.Title = "Moby Dick";
+book.Author = "Herman Melville";
+book.ISBN = "9780142437247";
+book.YearPublished = 1851;
+book.Pages = 720;
+book.IsAvailable = true;
+
+libraryDbContext.Books.Add(book);
+await libraryDbContext.SaveChangesAsync();
+```
+
+## Objekti uuendamine
+
+``` C#
+var book = await libraryDbContext.Books.Find(id);
+
+book.IsAvailable = false;
+
+await libraryContext.SaveChangesAsync();
+```
+
+Kuidas Entity Framework teadis, et objekt on muutunud? Me ise ei öelnud talle ju mitte midagi. Entity Framework jätab meelde objektid, mida ta meile tagastanud on. Selle funktsionaalsuse nimi on `Change tracking` ehk muutuste jälgimine. Kui me kutsume SaveChangesAsync() meetodi, siis Entity Framework võrdleb objekti praegust olekut sellega, mis ta enne objekti tagastamist meelde jättis. Kui on muudatusi, siis järelikult tuleb objekt salvestada.
+
+## Objekti kustutamine
+
+``` C#
+var book = await libraryDbContext.Books.Find(id);
+
+libraryContext.Books.Remove(book);
+
+await libraryContext.SaveChangesAsync();
+```
+
+## Viited
+
+- [Introduction to LINQ Queries in C# - Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/linq/get-started/introduction-to-linq-queries)
+- [Entity Framework Core - Microsoft Learn](https://learn.microsoft.com/en-us/ef/core/)

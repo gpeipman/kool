@@ -1,0 +1,131 @@
+---
+title: Tunnid - Programmeerimine 2
+---
+# Tunnid
+
+Siit leiate tunnid, tundides tehtu ja kodutööd. Tundide materjalid on toodud tabelis teemade veerus. Iseseisev töö, millega tunnis alustate, on tunni juures töölehe lingi taga.
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="4" align="center">SÜGIS</th>
+        </tr>
+        <tr>
+            <th>Tund</th>
+            <th>Teemad</th>
+            <th>Kodutöö</th>
+            <th>Lingid</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="right">1</td>
+            <td>
+                <ul>
+                    <li><a href="../sissejuhatus.md">Sissejuhatus ainesse</a></li>
+                    <li><a href="../git.md">Giti ja Githubi kasutamine</a></li>
+                    <li><a href="../../oop/">Objekt-orienteeritud programmeerimine</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                <li>Looge omale Githubi hoidla nimega Programmeerimine2 ning saatke kutse (invite) kasutajale gpeipman</li>
+                <li><strong>NB!</strong> Programmeerimine2 hoidla README.md faili kirjutage oma nimi</li>
+                <li>Töötage iseseisvalt läbi <a href="../../oop/">objekt-orienteeritud programmeerimise materjalid</a></li>
+                </ul>
+            </td>
+            <td style="white-space:nowrap">
+                <a href="01-tooleht.md">Tööleht</a>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">2</td>
+            <td>
+                <ul>
+                <li><a href="../visual-studio.md">Visual Studio kasutamine</a></li>
+                <li>Praktilised harjutused</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                <li>Lõpetada mõlemad harjutused iseseisvalt kodus</li>
+                <li>Veenduge, et mõlemad programmid töötavad ja vigu ei anna</li>
+                </ul>
+            </td>
+            <td>
+                <a href="02-tooleht.md">Tööleht</a>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">3</td>
+            <td>
+                <ul>
+                <li><a href="../objekt-orienteeritud-modelleerimine.md">Objekt-orienteeritud modelleerimine</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                <li>Lõpeta töölehel toodud ülesanded iseseisvalt kodus</li>
+                </ul>
+            </td>
+            <td>
+                <a href="03-tooleht.md">Tööleht</a>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">4</td>
+            <td>
+                <ul>
+                <li><a href="../orm.md">ORM</a></li>
+                <li><a href="../entity-framework-core.md">Entity Framework Core</a></li>
+                <li><a href="../migratsioonid.md">Migratsioonid</a></li>
+                <li><a href="../algandmed.md">Algandmed</a></li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                <li>Lõpeta töölehel toodud ülesanded iseseisvalt kodus</li>
+                </ul>
+            </td>
+            <td>
+                <a href="04-tooleht.md">Tööleht</a>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">5</td>
+            <td>
+                <ul>
+                <li><a href="../arhitektuuri-mudelid.md">Arhitektuuri mudelid</a></li>
+                <li><a href="../cqrs.md">CQRS</a></li>
+                <li>Get ja list päringud</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                <li>Lõpeta töölehel toodud ülesanded iseseisvalt kodus</li>
+                </ul>
+            </td>
+            <td>
+                <a href="05-tooleht.md">Tööleht</a>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">6</td>
+            <td>
+                <ul>
+                <li><a href="../dto.md">DTO</a></li>
+                <li><a href="../andmed-lehtedena.md">Andmete jagamine lehtedeks</a></li>
+                <li>Save ja delete päringud</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                <li>Lõpeta töölehel toodud ülesanded iseseisvalt kodus</li>
+                </ul>
+            </td>
+            <td>
+                <!--a href="06-tooleht.md">Tööleht</a-->
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,3 +1,8 @@
 [dir=ltr] .md-header__title {
     margin-left: 0rem;
 }
+
+.md-top {
+    background-color: var(--md-accent-fg-color);
+    color: var(--md-accent-bg-color);
+}

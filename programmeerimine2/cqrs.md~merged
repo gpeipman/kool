@@ -1,0 +1,242 @@
+---
+title: CQRS - Programmeerimine 2
+---
+
+# CQRS
+
+CQRS (Command Query Responsibility Segregation) on tarkvaraarhitektuuri muster, mis eraldab andmete **lugemise** ja **kirjutamise** teineteisest. Selles materjalis vaatame, mis on CQRS, kuidas seda Visual Studios .NET-iga kasutada ja kuidas see sobib ASP.NET Core Web API projektidesse.
+
+## Põhiidee
+
+Tavapärases rakenduses kasutame samu klasse nii lugemiseks kui kirjutamiseks. CQRS teeb selge piiri:
+
+| Command (käsk) | Query (päring) |
+|---|---|
+| Muudab andmeid | Loeb andmeid |
+| Ei tagasta andmeid (void) | Tagastab andmed |
+| Nimi on käskivas vormis: `SaveBookCommand` | Nimi on küsimus: `ListBooksQuery` |
+| Käivitab reeglid ja valideerimise | Lihtsalt toob andmed |
+
+### Näide
+
+Tavaline lähenemine – üks klass teeb kõike:
+
+``` cs
+public class BookService
+{
+    public List<Book> GetAll() { ... }
+    public void Add(Book book) { ... }
+    public void Delete(int id) { ... }
+}
+```
+
+CQRS-iga on iga tegevus on oma klass:
+
+``` cs
+// Päring (loeb andmeid)
+public class ListBooksQuery
+{
+    // võib sisaldada filtreid
+}
+
+// Käsk (muudab andmeid)
+public class SaveBookCommand
+{
+    public string Title { get; set; }
+    public string Author { get; set; }
+    public string ISBN { get; set; }
+}
+```
+
+## CQRS Visual Studio projektis
+
+Kui avad Visual Studios oma Web API projekti, näeb Solution Explorer välja umbes selline:
+
+```
+Lahendus
+├── ProjektiNimi.Application (Äriloogika)
+│   ├── Controllers
+│   └── Program.cs
+└── ProjektiNimi.Tests (Testide projekt)
+
+### Kaustade selgitused
+
+| Kaust | Sisu |
+|-------|------|
+| `Controllers/` | API kontrollerid, võtavad pöördumise vastu |
+| `Features/` | Käsud, päringud ja nende käsitlejad |
+| `Data/` | Andmebaasi mudelid (Entity Framework) |
+
+## Command (käsk)
+
+Command on klass, mis esindab **ühte tegevust**, mis midagi muudab.
+
+``` cs
+public class SaveCommand
+{
+    public string Title { get; set; }
+    public string Auhtor { get; set; }
+    public string Isbn { get; set; }
+    public int YearPublished { get; set; }
+    public int Pages { get; set; }
+}
+```
+
+**Reeglid:**
+
+- Commandi nimi on käskivas vormis – `SaveBook`, `DeleteBook`, `AddUser`
+- Command sisaldab ainult andmeid, mida tegevuseks vaja
+- Command **ei tagasta** andmeid (võib tagastada õnnestumise või vea)
+
+## Command Handler (käskude käsitleja)
+
+Handler on klass, mis võtab commandi vastu ja teeb sellega midagi.
+
+``` cs
+public class SaveBookCommandHandler
+{
+    private readonly LibraryDbContext _dbContext;
+
+    public SaveBookCommandHandler(LibraryDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
+    public async Task<Result> Handle(SaveBookCommand command)
+    {
+        var book = new Book
+        {
+            Title = command.Title,
+            Author = command.Author,
+            ISBN = command.ISBN,
+            YearPublished = command.YearPublished,
+            Pages = command.Pages
+        };
+
+        _dbContext.Books.Add(book);
+        await _dbContext.SaveChangesAsync();
+
+        return Result.Ok();
+    }
+}
+```
+
+**Reeglid:**
+
+- Handler tegeleb ainult **ühe** commandiga
+- Handler teeb valideerimise (kas ISBN on õige, kas aasta on lubatud jne)
+- Handler salvestab andmed andmebaasi
+
+## Query (päring)
+
+Query on klass, mis esindab **ühte päringut** andmete lugemiseks.
+
+``` cs
+public class ListBooksQuery
+{
+    // Tühjad päringud – toovad kõik raamatud
+}
+
+public class GetBookQuery
+{
+    public int Id { get; set; }
+}
+```
+
+**Reeglid:**
+
+- Query nimi on küsimus – `ListBooks`, `FindBooks`, `GetUser`
+- Query võib sisaldada filtreid (nt id, otsingusõna)
+- Query **tagastab** andmed
+
+## Query Handler (päringute käsitleja)
+
+``` cs
+public class ListBooksQueryHandler
+{
+    private readonly LibraryDbContext _dbContext;
+
+    public ListBooksQueryHandler(LibraryDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
+    public async Task<List<Book>> Handle(ListBooksQuery query)
+    {
+        return await _dbContext.Books.ToListAsync();
+    }
+}
+```
+``` mermaid
+graph LR
+    subgraph Lugemine["Lugemine – Query"]
+        direction TB
+        Q["ListBooksQuery"] --> QH["ListBooksQueryHandler"] --> DB1[("Andmebaas")]
+    end
+    subgraph Kirjutamine["Kirjutamine – Command"]
+        direction TB
+        C["SaveBookCommand"] --> CH["SaveBookCommandHandler"] --> DB2[("Andmebaas")]
+    end
+    QH ~~~ CH
+    linkStyle 4 stroke-width:0px,stroke:none
+    style QH width:230px
+    style CH width:230px
+```
+
+## Kuidas see kõik kokku läheb?
+
+Kui kasutaja teeb API päringu, toimub järgmine teekond:
+
+``` mermaid
+sequenceDiagram
+    participant K as Kasutaja
+    participant C as BooksController
+    participant M as Mediator
+    participant H as SaveBookCommandHandler
+    participant DB as Andmebaas
+    K->>C: POST /api/books
+    C->>M: Saada(SaveBookCommand)
+    M->>H: Käivita handler
+    H->>DB: Salvesta (SaveChangesAsync)
+    DB-->>H: OK
+    H-->>M: Result.Ok()
+    M-->>C: Result
+    C-->>K: 201 Created
+```
+
+## Mediatorid
+
+Päris projektides kasutatakse tihti mediatori nimelist komponenti, mis lihtsustab käskude ja päringute kokku viimist nende handleriga. See ei ole kohustuslik, kuid on mõningaid asju, mida me saame taolise komponendi abil lahendada selliselt, et me ei peaks korduvat koodi kirjutama.
+
+``` mermaid
+graph TD
+    Controller["Controller"] --> Mediator["Mediator"]
+    Mediator --> H1["SaveBookCommandHandler"]
+    Mediator --> H2["DeleteBookCommandHandler"]
+    Mediator --> Q1["ListBooksQueryHandler"]
+```
+
+!!! Note "Teadmiseks"
+    - Nende komponentide nimeks on teinekord ka `Dispatcher`
+    - Mediatori kasutamine ei ole kohustuslik
+
+Mediatorid pakuvad meile tavaliselt välja sellised funktsionaalsused:
+
+- **Käskude ja päringute** handlerite leidmine ja nende käivitamine
+- **Pipeline behaviors** - täiendavad klassid, mis laiendavat mediatori toimimist (näiteks vigade haldamine, sisendandmete valideerimine jne)
+- **Teavituste saatmine** - süsteemi komponendid võivad tekitada sündmusi, mida teised komponendid kuulavad ja millele need reageerivad.
+
+## Kokkuvõte
+
+- **CQRS** eraldab lugemise (Query) ja kirjutamise (Command)
+- **Command** – muudab andmeid, ei tagasta neid
+- **Query** – loeb andmeid, ei muuda neid
+- **Handler** – teeb tegeliku töö
+- **Controller** – võtab päringu vastu ja suunab õigele handlerile
+- CQRS muudab koodi loetavamaks, testitavamaks ja hooldatavamaks
+
+## Viited
+
+- [CQRS in ASP.NET Core Web API](https://dotnettutorials.net/lesson/cqrs-in-asp-net-core/)
+- [CQRS - Martin Fowler](https://martinfowler.com/bliki/CQRS.html)
+- [Command Query Responsibility Segregation (CQRS) patter - Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)
