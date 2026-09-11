@@ -1,0 +1,2850 @@
+
+<!doctype html>
+<html lang="et" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Gunnar Peipmani tundide ja koolituste materjalid">
+      
+      
+        <meta name="author" content="Gunnar Peipman">
+      
+      
+        <link rel="canonical" href="https://gunnarpeipman.com/kool/programmeerimise-alused/linq/">
+      
+      
+        <link rel="prev" href="../tsuklid/">
+      
+      
+        <link rel="next" href="../../programmeerimine2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.61">
+    
+    
+      
+        <title>LINQ - Programmeerimise alused - Kool</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/classic/main.e0592429.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/classic/palette.c7ab7c71.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-7ENGH7MSL7"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-7ENGH7MSL7",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-7ENGH7MSL7",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigatsioon"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#language-integrated-queries-linq" class="md-skip">
+          Keri sisuni
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Päis">
+    <a href="../.." title="Kool" class="md-header__button md-logo" aria-label="Kool" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigatsioon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kool
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LINQ - Programmeerimise alused
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Otsing">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Otsing">
+  <button type="button" class="md-search__button">
+    Otsing
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Vaheleht" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../oop/" class="md-tabs__link">
+          
+  
+  OOP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Programmeerimise alused
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../programmeerimine2/" class="md-tabs__link">
+          
+  
+  Programmeerimine 2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigatsioon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kool" class="md-nav__button md-logo" aria-label="Kool" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kool
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../oop/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OOP
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  OOP
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/klassid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Klassid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/objektide-loomine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide loomine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/objektide-vordlemine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide võrdlemine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/parilus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pärilus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/liidesed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liidesed
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/enumeraatorid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Enumeraatorid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/staatiline-skoop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Staatiline skoop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oop/vead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vead
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Programmeerimise alused
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Programmeerimise alused
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programmid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Programmid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algoritmid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Algoritmid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../andmetuubid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Andmetüübid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../muutujad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Muutujad
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tehted-arvudega/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tehted arvudega
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vordlused/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Võrdlused
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tingimuslaused/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tingimuslaused
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../massiivid-ja-loendid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Massiivid ja loendid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tsuklid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tsüklid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  LINQ
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  LINQ
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisukord">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisukord
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mis-on-linq" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mis on LINQ?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esimene-naide-ilma-linq-ja-sellega" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Esimene näide — ilma LINQ ja sellega
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Esimene näide — ilma LINQ ja sellega">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ilma-linq" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ilma LINQ
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linq-ga" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LINQ-ga
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peamised-linq-meetodid" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Peamised LINQ meetodid
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Peamised LINQ meetodid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-filtreerimine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Where()</code> — filtreerimine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-vaartuste-muutmine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Select()</code> — väärtuste muutmine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderby-ja-orderbydescending-sorteerimine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.OrderBy()</code> ja <code>.OrderByDescending()</code> — sorteerimine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-ja-last-esimene-ja-viimane-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.First()</code> ja <code>.Last()</code> — esimene ja viimane element
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-elementide-arv" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Count()</code> — elementide arv
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum-ja-average-summa-ja-keskmine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Sum()</code> ja <code>.Average()</code> — summa ja keskmine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-ja-max-vaikseim-ja-suurim" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Min()</code> ja <code>.Max()</code> — väikseim ja suurim
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meetodite-aheldamine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Meetodite aheldamine
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igapaevaelu-naited" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Igapäevaelu näited
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Igapäevaelu näited">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#koolihinnete-analuus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Koolihinnete analüüs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tootenimekiri" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tootenimekiri
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bussiliinide-vordlus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Bussiliinide võrdlus
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sageli tekkinud vead
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-systemlinq-unustamine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>using System.Linq</code> unustamine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lambdalekspressi-suntaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lambdalekspressi süntaks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tulemuse-kasutamine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tulemuse kasutamine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#koik-meetodid-kokkuvottes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kõik meetodid kokkuvõttes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harjutused" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harjutused
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../programmeerimine2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Programmeerimine 2
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Programmeerimine 2
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../programmeerimine2/tunnid/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tunnid
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Tunnid
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/tunnid/01-tooleht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  1. tund
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/tunnid/02-tooleht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  2. tund
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/tunnid/03-tooleht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  3. tund
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/tunnid/04-tooleht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  4. tund
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/tunnid/05-tooleht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  5. tund
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/sissejuhatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sissejuhatus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Git ja Github
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/visual-studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visual Studio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/objekt-orienteeritud-modelleerimine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objekt-orienteeritud modelleerimine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/orm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ORM
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/entity-framework-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Entity Framework Core
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/migratsioonid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migratsioonid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/algandmed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Algandmed
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/arhitektuuri-mudelid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Arhitektuuri mudelid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/cqrs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  CQRS
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/dto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DTO
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmeerimine2/andmed-lehtedena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Andmete jagamine lehtedeks
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisukord">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisukord
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mis-on-linq" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Mis on LINQ?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esimene-naide-ilma-linq-ja-sellega" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Esimene näide — ilma LINQ ja sellega
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Esimene näide — ilma LINQ ja sellega">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ilma-linq" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Ilma LINQ
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linq-ga" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LINQ-ga
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#peamised-linq-meetodid" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Peamised LINQ meetodid
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Peamised LINQ meetodid">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-filtreerimine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Where()</code> — filtreerimine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-vaartuste-muutmine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Select()</code> — väärtuste muutmine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orderby-ja-orderbydescending-sorteerimine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.OrderBy()</code> ja <code>.OrderByDescending()</code> — sorteerimine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-ja-last-esimene-ja-viimane-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.First()</code> ja <code>.Last()</code> — esimene ja viimane element
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count-elementide-arv" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Count()</code> — elementide arv
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum-ja-average-summa-ja-keskmine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Sum()</code> ja <code>.Average()</code> — summa ja keskmine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-ja-max-vaikseim-ja-suurim" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>.Min()</code> ja <code>.Max()</code> — väikseim ja suurim
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meetodite-aheldamine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Meetodite aheldamine
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igapaevaelu-naited" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Igapäevaelu näited
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Igapäevaelu näited">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#koolihinnete-analuus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Koolihinnete analüüs
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tootenimekiri" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tootenimekiri
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bussiliinide-vordlus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Bussiliinide võrdlus
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Sageli tekkinud vead
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-systemlinq-unustamine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        <code>using System.Linq</code> unustamine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lambdalekspressi-suntaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lambdalekspressi süntaks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tulemuse-kasutamine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tulemuse kasutamine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#koik-meetodid-kokkuvottes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kõik meetodid kokkuvõttes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harjutused" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harjutused
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigatsioon" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  
+  <span class="md-ellipsis">
+    Õppematerjalid
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Programmeerimise alused
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="language-integrated-queries-linq">Language INtegrated Queries (LINQ)<a class="headerlink" href="#language-integrated-queries-linq" title="Permanent link">&para;</a></h1>
+<p>Seni oleme andmetega töötanud käsitsi — käinud massiive ja loendeid läbi tsüklitega, võtnud elemente indeksite järgi ja teinud võrdlusi. LINQ pakub palju lühemat ja loetavamat viisi andmete filtreerimiseks, sorteerimiseks ja töötlemiseks.</p>
+<h2 id="mis-on-linq">Mis on LINQ?<a class="headerlink" href="#mis-on-linq" title="Permanent link">&para;</a></h2>
+<p>LINQ on C# keele osa, mis võimaldab küsida andmeid massiividelt ja loenditelt sarnaselt andmebaasi päringuga. Selle asemel, et kirjutada pikk <code>for</code>-tsükkel koos <code>if</code>-lausetega, kirjutame ühe rea, mis ütleb arvutile täpselt, mida me tahame.</p>
+<p>Lühidalt: LINQ asendab tüütud tsüklid kompaktsete päringutega.</p>
+<h2 id="esimene-naide-ilma-linq-ja-sellega">Esimene näide — ilma LINQ ja sellega<a class="headerlink" href="#esimene-naide-ilma-linq-ja-sellega" title="Permanent link">&para;</a></h2>
+<p>Vaata, kuidas sama ülesannet lahendatakse kahel viisil.</p>
+<h3 id="ilma-linq">Ilma LINQ<a class="headerlink" href="#ilma-linq" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">numbrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// Soovime ainult paarisarve</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">paarisarvud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numbrid</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="n">paarisarvud</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">numbrid</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">paarisarvud</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">{</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nr</span><span class="p">);</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="linq-ga">LINQ-ga<a class="headerlink" href="#linq-ga" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">numbrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kt">var</span><span class="w"> </span><span class="n">paarisarvud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">paarisarvud</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nr</span><span class="p">);</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Mõlemad programmid annavad sama tulemuse: <code>12, 8</code>. Teine variant on lühem ja selgem.</p>
+<div class="admonition note">
+<p class="admonition-title">Lisatud <code>using System.Linq</code></p>
+<p>LINQ kasutamiseks peame lisama programmi ülaossa rea <code>using System.Linq;</code>. Ilma selleta C# LINQ meetodeid ei tunne.</p>
+</div>
+<h2 id="peamised-linq-meetodid">Peamised LINQ meetodid<a class="headerlink" href="#peamised-linq-meetodid" title="Permanent link">&para;</a></h2>
+<h3 id="where-filtreerimine"><code>.Where()</code> — filtreerimine<a class="headerlink" href="#where-filtreerimine" title="Permanent link">&para;</a></h3>
+<p><code>.Where()</code> võtab kogu ja jätab alles ainult need elemendid, mis vastavad tingimusele.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">linnad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"Tallinn"</span><span class="p">,</span><span class="w"> </span><span class="s">"Tartu"</span><span class="p">,</span><span class="w"> </span><span class="s">"Pärnu"</span><span class="p">,</span><span class="w"> </span><span class="s">"Narva"</span><span class="p">,</span><span class="w"> </span><span class="s">"Kuressaare"</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">// Ainult linnad, mis algavad T-ga</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">tLinnad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">linnad</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">l</span><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">"T"</span><span class="p">));</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">linn</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">tLinnad</span><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">linn</span><span class="p">);</span><span class="w"> </span><span class="c1">// Tallinn, Tartu</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">hinded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">// Ainult viied</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">viied</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Viite hindeid on: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">viied</span><span class="p">.</span><span class="n">Count</span><span class="p">());</span><span class="w"> </span><span class="c1">// 3</span>
+</span></code></pre></div>
+<h3 id="select-vaartuste-muutmine"><code>.Select()</code> — väärtuste muutmine<a class="headerlink" href="#select-vaartuste-muutmine" title="Permanent link">&para;</a></h3>
+<p><code>.Select()</code> võtab iga elemendi ja muudab selle mingil viisil.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">numbrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">// Korruta iga number kolmega</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">korrutised</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">korrutised</span><span class="p">)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nr</span><span class="p">);</span><span class="w"> </span><span class="c1">// 3, 6, 9, 12, 15</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">nimed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"Mari"</span><span class="p">,</span><span class="w"> </span><span class="s">"Jaan"</span><span class="p">,</span><span class="w"> </span><span class="s">"Kati"</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">// Muuda kõik nimed suurtähtedeks</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">suuredNimed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nimed</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">());</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nimi</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">suuredNimed</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">{</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nimi</span><span class="p">);</span><span class="w"> </span><span class="c1">// MARI, JAAN, KATI</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="orderby-ja-orderbydescending-sorteerimine"><code>.OrderBy()</code> ja <code>.OrderByDescending()</code> — sorteerimine<a class="headerlink" href="#orderby-ja-orderbydescending-sorteerimine" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">hinded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">// Kasvavalt</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">kasvavalt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">OrderBy</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">h</span><span class="p">);</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Kasvavalt: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">string</span><span class="p">.</span><span class="n">Join</span><span class="p">(</span><span class="s">", "</span><span class="p">,</span><span class="w"> </span><span class="n">kasvavalt</span><span class="p">));</span><span class="w"> </span><span class="c1">// 1, 2, 3, 4, 5</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1">// Kahanevalt</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="kt">var</span><span class="w"> </span><span class="n">kahanevalt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">OrderByDescending</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">h</span><span class="p">);</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Kahanevalt: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">string</span><span class="p">.</span><span class="n">Join</span><span class="p">(</span><span class="s">", "</span><span class="p">,</span><span class="w"> </span><span class="n">kahanevalt</span><span class="p">));</span><span class="w"> </span><span class="c1">// 5, 4, 3, 2, 1</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">toidud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"Supp"</span><span class="p">,</span><span class="w"> </span><span class="s">"Pizza"</span><span class="p">,</span><span class="w"> </span><span class="s">"Salat"</span><span class="p">,</span><span class="w"> </span><span class="s">"Apel"</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">// Tähestiku järjekorras</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">sorteeritud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">toidud</span><span class="p">.</span><span class="n">OrderBy</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">toit</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">sorteeritud</span><span class="p">)</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">{</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">toit</span><span class="p">);</span><span class="w"> </span><span class="c1">// Apel, Pizza, Salat, Supp</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="first-ja-last-esimene-ja-viimane-element"><code>.First()</code> ja <code>.Last()</code> — esimene ja viimane element<a class="headerlink" href="#first-ja-last-esimene-ja-viimane-element" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">numbrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">esimene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">First</span><span class="p">();</span><span class="w">      </span><span class="c1">// 10</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">viimane</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Last</span><span class="p">();</span><span class="w">       </span><span class="c1">// 50</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Esimene: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">esimene</span><span class="p">);</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Viimane: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">viimane</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="count-elementide-arv"><code>.Count()</code> — elementide arv<a class="headerlink" href="#count-elementide-arv" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">numbrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">koguarv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Count</span><span class="p">();</span><span class="w">                    </span><span class="c1">// 7</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">paarisarve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Count</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// 2</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Kokku: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">koguarv</span><span class="p">);</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Paarisarve: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">paarisarve</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="sum-ja-average-summa-ja-keskmine"><code>.Sum()</code> ja <code>.Average()</code> — summa ja keskmine<a class="headerlink" href="#sum-ja-average-summa-ja-keskmine" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">hinded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">summa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Sum</span><span class="p">();</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="kt">double</span><span class="w"> </span><span class="n">keskmine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Average</span><span class="p">();</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Summa: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">summa</span><span class="p">);</span><span class="w">        </span><span class="c1">// 30</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Keskmine: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">keskmine</span><span class="p">);</span><span class="w">  </span><span class="c1">// 4.28...</span>
+</span></code></pre></div>
+<h3 id="min-ja-max-vaikseim-ja-suurim"><code>.Min()</code> ja <code>.Max()</code> — väikseim ja suurim<a class="headerlink" href="#min-ja-max-vaikseim-ja-suurim" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">hinded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Min</span><span class="p">();</span><span class="w">  </span><span class="c1">// 3</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Max</span><span class="p">();</span><span class="w">  </span><span class="c1">// 5</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Väikseim: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">min</span><span class="p">);</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Suurim: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">max</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="meetodite-aheldamine">Meetodite aheldamine<a class="headerlink" href="#meetodite-aheldamine" title="Permanent link">&para;</a></h2>
+<p>Tõeline jõud tuleneb sellest, et meetodeid saab <strong>aheldada</strong> — panna üksteise järele. Iga meetod annab tulemise järgmisele meetodile.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">hinded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1">// Sorteeri kasvavalt, võta ainult unikaalsed, võta esimesed 3</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="p">.</span><span class="n">OrderBy</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">h</span><span class="p">)</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="p">.</span><span class="n">Distinct</span><span class="p">()</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="p">.</span><span class="n">Take</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">{</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">h</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1, 2, 3</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">nimed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"Mari"</span><span class="p">,</span><span class="w"> </span><span class="s">"Jaan"</span><span class="p">,</span><span class="w"> </span><span class="s">"Kati"</span><span class="p">,</span><span class="w"> </span><span class="s">"Andres"</span><span class="p">,</span><span class="w"> </span><span class="s">"Maris"</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1">// Filtreeri nimed, mis algavad M-ga, muuda suurtähtedeks, sorteeri</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nimed</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="s">"M"</span><span class="p">))</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">())</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">    </span><span class="p">.</span><span class="n">OrderBy</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nimi</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="p">{</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nimi</span><span class="p">);</span><span class="w"> </span><span class="c1">// MARIS, MARI</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="igapaevaelu-naited">Igapäevaelu näited<a class="headerlink" href="#igapaevaelu-naited" title="Permanent link">&para;</a></h2>
+<h3 id="koolihinnete-analuus">Koolihinnete analüüs<a class="headerlink" href="#koolihinnete-analuus" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">hinded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">parim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Max</span><span class="p">();</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">halvim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Min</span><span class="p">();</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="kt">double</span><span class="w"> </span><span class="n">keskmine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Average</span><span class="p">();</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">miinimumHinded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Count</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Parim hinne: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">parim</span><span class="p">);</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Halvim hinne: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">halvim</span><span class="p">);</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Keskmine: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">keskmine</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">"F1"</span><span class="p">));</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Miinimumi täitnud (≥3): "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">miinimumHinded</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"/"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hinded</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="tootenimekiri">Tootenimekiri<a class="headerlink" href="#tootenimekiri" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">List</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tooted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"Piim"</span><span class="p">,</span><span class="w"> </span><span class="s">"Leib"</span><span class="p">,</span><span class="w"> </span><span class="s">"Munad"</span><span class="p">,</span><span class="w"> </span><span class="s">"Juust"</span><span class="p">,</span><span class="w"> </span><span class="s">"Õun"</span><span class="p">,</span><span class="w"> </span><span class="s">"Banaan"</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="c1">// Tooted tähestiku järjekorras</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">sorteeritud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tooted</span><span class="p">.</span><span class="n">OrderBy</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Tooted A-Z:"</span><span class="p">);</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">toode</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">sorteeritud</span><span class="p">)</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="p">{</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"  "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">toode</span><span class="p">);</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="p">}</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="c1">// Kõik tooted suurtähtedeks</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="kt">var</span><span class="w"> </span><span class="n">suured</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tooted</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">ToUpper</span><span class="p">());</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"\nKõik suurtähtedega:"</span><span class="p">);</span>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Join</span><span class="p">(</span><span class="s">", "</span><span class="p">,</span><span class="w"> </span><span class="n">suured</span><span class="p">));</span>
+</span></code></pre></div>
+<h3 id="bussiliinide-vordlus">Bussiliinide võrdlus<a class="headerlink" href="#bussiliinide-vordlus" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">bussideMinutid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">kiireim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bussideMinutid</span><span class="p">.</span><span class="n">Min</span><span class="p">();</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">aeglasem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bussideMinutid</span><span class="p">.</span><span class="n">Max</span><span class="p">();</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="kt">double</span><span class="w"> </span><span class="n">ooteaeg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bussideMinutid</span><span class="p">.</span><span class="n">Average</span><span class="p">();</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Kiireim buss: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kiireim</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" min"</span><span class="p">);</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Aeglasem buss: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">aeglasem</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" min"</span><span class="p">);</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Keskmine ooteaeg: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ooteaeg</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="s">"F1"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" min"</span><span class="p">);</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="c1">// Bussid, mis tulevad alla 10 minuti</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="kt">var</span><span class="w"> </span><span class="n">kiired</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bussideMinutid</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Kiired bussid (&lt;10 min): "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kt">string</span><span class="p">.</span><span class="n">Join</span><span class="p">(</span><span class="s">", "</span><span class="p">,</span><span class="w"> </span><span class="n">kiired</span><span class="p">));</span>
+</span></code></pre></div>
+<h2 id="sageli-tekkinud-vead">Sageli tekkinud vead<a class="headerlink" href="#sageli-tekkinud-vead" title="Permanent link">&para;</a></h2>
+<h3 id="using-systemlinq-unustamine"><code>using System.Linq</code> unustamine<a class="headerlink" href="#using-systemlinq-unustamine" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1">// VIGA — LINQ meetodid ei tööta</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">numbrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Viga!</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1">// ÕIGE</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="kt">var</span><span class="w"> </span><span class="n">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// töötab</span>
+</span></code></pre></div>
+<h3 id="lambdalekspressi-suntaks">Lambdalekspressi süntaks<a class="headerlink" href="#lambdalekspressi-suntaks" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">// Õige — lambdalekspress</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1">// VIGA — sulud ja return on liigsed</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="c1">// var result = numbrid.Where((n) =&gt; { return n &gt; 1; });</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="c1">// See töötab küll, aga on tarbetult pikk</span>
+</span></code></pre></div>
+<h3 id="tulemuse-kasutamine">Tulemuse kasutamine<a class="headerlink" href="#tulemuse-kasutamine" title="Permanent link">&para;</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">numbrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="c1">// LINQ on laisk — ta ei tee midagi enne, kui tulemust kasutatakse</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">filtered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbrid</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="c1">// Siin ei ole veel midagi juhtunud!</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="c1">// Tulemus tekib alles siin</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">filtered</span><span class="p">)</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="p">{</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nr</span><span class="p">);</span><span class="w"> </span><span class="c1">// alles nüüd käib filtreerimine läbi</span>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="koik-meetodid-kokkuvottes">Kõik meetodid kokkuvõttes<a class="headerlink" href="#koik-meetodid-kokkuvottes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Meetod</th>
+<th>Tähendus</th>
+<th>Näide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.Where()</code></td>
+<td>Filtreeri elemendid</td>
+<td><code>.Where(n =&gt; n &gt; 5)</code></td>
+</tr>
+<tr>
+<td><code>.Select()</code></td>
+<td>Muuda iga element</td>
+<td><code>.Select(n =&gt; n * 2)</code></td>
+</tr>
+<tr>
+<td><code>.OrderBy()</code></td>
+<td>Sorteeri kasvavalt</td>
+<td><code>.OrderBy(n =&gt; n)</code></td>
+</tr>
+<tr>
+<td><code>.OrderByDescending()</code></td>
+<td>Sorteeri kahanevalt</td>
+<td><code>.OrderByDescending(n =&gt; n)</code></td>
+</tr>
+<tr>
+<td><code>.First()</code></td>
+<td>Esimene element</td>
+<td><code>.First()</code></td>
+</tr>
+<tr>
+<td><code>.Last()</code></td>
+<td>Viimane element</td>
+<td><code>.Last()</code></td>
+</tr>
+<tr>
+<td><code>.Count()</code></td>
+<td>Elementide arv</td>
+<td><code>.Count()</code></td>
+</tr>
+<tr>
+<td><code>.Count(tingimus)</code></td>
+<td>Tingimusele vastavate arv</td>
+<td><code>.Count(n =&gt; n &gt; 5)</code></td>
+</tr>
+<tr>
+<td><code>.Sum()</code></td>
+<td>Kõikide summa</td>
+<td><code>.Sum()</code></td>
+</tr>
+<tr>
+<td><code>.Average()</code></td>
+<td>Keskmine</td>
+<td><code>.Average()</code></td>
+</tr>
+<tr>
+<td><code>.Min()</code></td>
+<td>Väikseim</td>
+<td><code>.Min()</code></td>
+</tr>
+<tr>
+<td><code>.Max()</code></td>
+<td>Suurim</td>
+<td><code>.Max()</code></td>
+</tr>
+<tr>
+<td><code>.Distinct()</code></td>
+<td>Eemalda kordused</td>
+<td><code>.Distinct()</code></td>
+</tr>
+<tr>
+<td><code>.Take(n)</code></td>
+<td>Esimesed n elementi</td>
+<td><code>.Take(3)</code></td>
+</tr>
+<tr>
+<td><code>.ToList()</code></td>
+<td>Teisenda loendiks</td>
+<td><code>.ToList()</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="harjutused">Harjutused<a class="headerlink" href="#harjutused" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Loo massiiv 10 juhuslikust numbrit (1–50). Kasuta LINQ-d, et leia summa, keskmine, suurim ja väikseim number.</li>
+<li>Loo loend 7 lemmikfilmiga. Filtreeri välja ainult filmid, mille nimi on pikem kui 6 tähemärki. Sorteeri tulemus tähestiku järjekorras.</li>
+<li>Loo massiiv 10 õpilase hinnetega. Arvuta välja mitu õpilast on saanud vähemalt 4. Kasuta <code>.Count()</code> tingimusega.</li>
+<li>Loo loend 5 linnaga. Muuda iga linna nimi suurtähtedeks ja prindi tulemus välja ühel real, komadega eraldatuna (<code>string.Join</code>).</li>
+</ol>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Üles
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright (C) Gunnar Peipman, 2023–2026
+    </div>
+  
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.indexes","navigation.instant.prefetch","navigation.path","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Kopeeritud","clipboard.copy":"Kopeeri lõikelauale","search.result.more.one":"1 veel sellel lehel","search.result.more.other":"# veel sellel lehel","search.result.none":"Otsingule ei leitud ühtegi vastet","search.result.one":"Leiti üks tulemus","search.result.other":"Leiti # tulemust","search.result.placeholder":"Otsimiseks kirjuta siia","search.result.term.missing":"Puudub","select.version":"Vali versioon"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.df5d1f2b.min.js"></script>
+      
+    
+  </body>
+</html>
