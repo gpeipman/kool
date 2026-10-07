@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
+        <loc>https://gunnarpeipman.com/kool/</loc>
+      </url>
+      <url>
         <loc>https://gunnarpeipman.com/kool/oop/</loc>
       </url>
       <url>
+        <loc>https://gunnarpeipman.com/kool/oop/enumeraatorid/</loc>
+      </url>
+      <url>
         <loc>https://gunnarpeipman.com/kool/oop/klassid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/oop/liidesed/</loc>
       </url>
       <url>
         <loc>https://gunnarpeipman.com/kool/oop/objektide-loomine/</loc>
@@ -16,55 +25,112 @@
         <loc>https://gunnarpeipman.com/kool/oop/parilus/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/oop/liidesed/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/oop/enumeraatorid/</loc>
-      </url>
-      <url>
         <loc>https://gunnarpeipman.com/kool/oop/staatiline-skoop/</loc>
       </url>
       <url>
         <loc>https://gunnarpeipman.com/kool/oop/vead/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/programmid/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/algoritmid/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/andmetuubid/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/muutujad/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/tehted-arvudega/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/vordlused/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/tingimuslaused/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/massiivid-ja-loendid/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/tsuklid/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/linq/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/kodutoo-1/</loc>
-      </url>
-      <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/ainetoo-lahendus/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/algandmed/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/andmed-lehtedena/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/arhitektuuri-mudelid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/cqrs/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/dto/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/entity-framework-core/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/git/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/migratsioonid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/objekt-orienteeritud-modelleerimine/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/orm/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/sissejuhatus/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/tunnid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/tunnid/01-tooleht/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/tunnid/02-tooleht/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/tunnid/03-tooleht/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/tunnid/04-tooleht/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/tunnid/05-tooleht/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/visual-studio/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/ainetoo-lahendus/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/algandmed/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/andmed-lehtedena/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/arhitektuuri-mudelid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/cqrs/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/dependency-injection/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/dto/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/entity-framework-core/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/git/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/migratsioonid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/objekt-orienteeritud-modelleerimine/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/orm/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimine2/sissejuhatus/</loc>
       </url>
       <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/tunnid/</loc>
@@ -85,39 +151,42 @@
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/tunnid/05-tooleht/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/sissejuhatus/</loc>
-      </url>
-      <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/git/</loc>
-      </url>
-      <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimine2/visual-studio/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/objekt-orienteeritud-modelleerimine/</loc>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/orm/</loc>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/algoritmid/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/entity-framework-core/</loc>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/andmetuubid/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/migratsioonid/</loc>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/kodutoo-1/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/algandmed/</loc>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/linq/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/arhitektuuri-mudelid/</loc>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/massiivid-ja-loendid/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/cqrs/</loc>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/muutujad/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/dto/</loc>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/programmid/</loc>
       </url>
       <url>
-        <loc>https://gunnarpeipman.com/kool/programmeerimine2/andmed-lehtedena/</loc>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/tehted-arvudega/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/tingimuslaused/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/tsuklid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/vordlused/</loc>
       </url>
 </urlset>

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="zensical-0.0.63">
+      <meta name="generator" content="zensical-0.0.68">
     
     
       
@@ -32,12 +32,12 @@
       
         
       
-      <link rel="stylesheet" href="../../../assets/stylesheets/classic/main.1470d0a1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/classic/main.3d7537f3.min.css">
       
         
           
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/classic/palette.c7ab7c71.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/classic/palette.031959be.min.css">
       
       
 
@@ -89,14 +89,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navigatsioon"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#visual-studio" class="md-skip">
-          Keri sisuni
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Keri sisuni
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -295,6 +292,8 @@
       
         
           
+        
+      
         
       
         
@@ -1106,6 +1105,8 @@
       
         
       
+        
+      
     
     
     
@@ -1652,6 +1653,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../../dependency-injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dependency Injection
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../dto/" class="md-nav__link">
         
   
@@ -1883,8 +1911,10 @@
 
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
 
 <h1 id="visual-studio">Visual Studio<a class="headerlink" href="#visual-studio" title="Permanent link">&para;</a></h1>
 <p>Visual Studio on Microsofti arenduskeskkond (IDE – Integrated Development Environment). See on programm, kus me kirjutame koodi, ehitame rakendusi ja haldame oma koodi. Visual Studio toetab paljusid programmeerimiskeeli – meie kasutame .NET raamistikku ja C# programmeerimiskeelt.</p>
@@ -1893,7 +1923,7 @@
 <p>Visual Studios struktureeritakse programmid selliselt. Lahendus ehk <em>solution</em> on konteiner, mis sisaldab ühte või mitut projekti. Lahenduse failil on laiend <code>.sln</code> või <code>.slnx</code>.</p>
 <div style="text-align:center">
     <picture>
-    <source srcset="../assets/visual-studio-solution-project.webp" type="image/webp">
+    <source srcset="../../assets/visual-studio-solution-project.webp" type="image/webp">
     <img src="../../assets/visual-studio-solution-project.png" loading="lazy" alt="Visual Studio lahendus projektidega">
     </picture>
 </div>
@@ -2016,7 +2046,7 @@
 </ol>
 <div style="text-align:center">
     <picture>
-    <source srcset="../assets/visual-studio-nuget-package-manager.webp" type="image/webp">
+    <source srcset="../../assets/visual-studio-nuget-package-manager.webp" type="image/webp">
     <img src="../../assets/visual-studio-nuget-package-manager.png" loading="lazy" alt="Nuget paketihaldur">
     </picture>
 </div>
@@ -2033,7 +2063,7 @@
 <p>Ava: View → Git Repository. See aken näitab käesoleva haru muudatuste ajalugu. Kõik Giti serverisse jõudnud commitid on siin näha. Commiti peal klikkides näeme ka muutunud faile ja saame ridade kaupa võrrelda, et mis täpselt muutus. </p>
 <div style="text-align:center">
     <picture>
-    <source srcset="../assets/visual-studio-git-repository.webp" type="image/webp">
+    <source srcset="../../assets/visual-studio-git-repository.webp" type="image/webp">
     <img src="../../assets/visual-studio-git-repository.png" loading="lazy" alt="Giti koodihoidla vaatamine">
     </picture>
 </div>
@@ -2046,7 +2076,7 @@
 <p>Teine oluline aken on Git Changes. See aken näitab meile muudatusi, mille oleme teinud peale viimast commitit. Muudatus võib olla lisaks mõne faili muutmisele ka failide lisamine ja kustutamine.</p>
 <div style="display:block;text-align:center; width:100%">
     <picture>
-    <source srcset="../assets/visual-studio-git-changes.webp" type="image/webp">
+    <source srcset="../../assets/visual-studio-git-changes.webp" type="image/webp">
     <img src="../../assets/visual-studio-git-changes.png" loading="lazy" alt="Koodi muudatuste vaatamine" style="width:400px">
     </picture>
 </div>
@@ -2114,7 +2144,7 @@ visualstudio/get-started/csharp/tutorial-console?view=visualstudio">Tutorial: Cr
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -2126,10 +2156,10 @@ visualstudio/get-started/csharp/tutorial-console?view=visualstudio">Tutorial: Cr
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.indexes","navigation.instant.prefetch","navigation.path","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Kopeeritud","clipboard.copy":"Kopeeri lõikelauale","search.result.more.one":"1 veel sellel lehel","search.result.more.other":"# veel sellel lehel","search.result.none":"Otsingule ei leitud ühtegi vastet","search.result.one":"Leiti üks tulemus","search.result.other":"Leiti # tulemust","search.result.placeholder":"Otsimiseks kirjuta siia","search.result.term.missing":"Puudub","select.version":"Vali versioon"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.indexes","navigation.instant.prefetch","navigation.path","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Kopeeritud","clipboard.copy":"Kopeeri lõikelauale","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 veel sellel lehel","search.result.more.other":"# veel sellel lehel","search.result.none":"Otsingule ei leitud ühtegi vastet","search.result.one":"Leiti üks tulemus","search.result.other":"Leiti # tulemust","search.result.placeholder":"Otsimiseks kirjuta siia","search.result.term.missing":"Puudub","select.version":"Vali versioon"},"version":null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8dcc8e9c.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.3c842f4c.min.js"></script>
       
     
   </body>
