@@ -1991,6 +1991,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#harjutused" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harjutused
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#viited" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -2877,6 +2888,17 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         Vigade mõju jõudlusele
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harjutused" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harjutused
       </span>
     </span>
   </a>
@@ -4057,6 +4079,14 @@
 </div>
 <p>See kontroll, mille me lisasime, kannab nimetust <code>sanity check</code> ja see aitab meil vältida veaolukorda. Sama masina peal jooksutades lõpetas optimeeritud tsükkel oma töö keskmiselt 0.006 sekundiga ehk siis kuue millisekundiga.</p>
 <p>Optimeeritud kood, mis vältis vigu, osutus seega <strong>533 korda kiiremaks</strong> kui optimeerimata kood.</p>
+<h2 id="harjutused">Harjutused<a class="headerlink" href="#harjutused" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Kirjuta meetod <code>Jaga(int x, int y)</code>, mis kontrollib, kas <code>y</code> on 0, ja annab sel juhul edasi <code>DivideByZeroException</code>. Püüa viga <code>try-catch</code> plokiga kinni ja trüki veateade.</li>
+<li>Loo klass <code>Toode</code> omadusega <code>Hind</code>, mille setter annab negatiivse väärtuse korral edasi <code>ArgumentOutOfRangeException</code>. Loo objekt nii õige kui vale hinnaga ja jälgi, mida programm teeb.</li>
+<li>Kirjuta programm, mis loeb faili <code>andmed.txt</code>. Kui faili ei ole, püüa <code>FileNotFoundException</code> eraldi kinni ja trüki, et fail puudub. Kasuta <code>finally</code> plokki, mis trükib alati <code>"Töö lõpetatud"</code>.</li>
+<li>Kirjuta meetod <code>LoePikkus(string s)</code>, mis püüab kinni <code>NullReferenceException</code>-i ja annab edasi uue <code>ApplicationException</code>-i, mille sisemiseks veaks on algne viga. Kuva saadud <code>stack trace</code> ja leia sealt algne põhjus.</li>
+<li>Võrdle kahte tsüklit, mis läbivad loendit kümne tuhande elemendiga: üks kasutab vigade püüdmiseks <code>try-catch</code> plokki ja teine eelnevat nullikontrolli (<code>sanity check</code>). Mõõda mõlema tööaeg <code>Stopwatch</code>-iga ja võrdle tulemusi.</li>
+</ol>
 <h2 id="viited">Viited<a class="headerlink" href="#viited" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.exception?view=net-5.0">Exception Class (.NET API)</a></li>

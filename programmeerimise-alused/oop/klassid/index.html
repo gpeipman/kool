@@ -1724,6 +1724,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#harjutused" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harjutused
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#viited" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -2721,6 +2732,17 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         Klassi konstandid
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harjutused" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harjutused
       </span>
     </span>
   </a>
@@ -3743,6 +3765,14 @@ Klassi liikmete ees on korduvalt läbi käinud sellised märksõnad nagu `public
 Kuidas nende nelja vahel otsustada tuleks kui lisame klassile mõne uue liikme? Üldiselt lähtutakse reeglist, et klass näitab väljapoole nii vähe kui minimaalselt on vajalik. Arvestama peab sellega, et mida rohkem klass oma sisemust paljastab, seda enam on liikmeid, mida mujal koodis kasutatakse ja seda keerukam on klassi ennast muuta kui koodi aina juurde kirjutatakse. Alati hoia klassi nähtav osa nii minimaalne kui võimalik.
 -->
 
+<h2 id="harjutused">Harjutused<a class="headerlink" href="#harjutused" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Loo klass <code>Raamat</code> omadustega <code>Pealkiri</code>, <code>Autor</code> ja <code>LehekülgedeArv</code>. Loo üks raamat, omista omadustele väärtused ja trüki raamatu andmed konsoolile.</li>
+<li>Loo klass <code>PangaKonto</code>, millel on privaatne muutuja <code>_balance</code> ja ainult loetav omadus <code>Balance</code>. Kirjuta meetodid <code>Deposit(double summa)</code> ja <code>Withdraw(double summa)</code>; <code>Withdraw</code> ei tohi lubada jääki alla nulli. Lisa klassile konstant <code>MaxWithdraw = 1000</code> ja kasuta seda väljamakse kontrollimisel.</li>
+<li>Loo klass <code>Temperatuur</code>, millel on privaatne muutuja <code>_celsius</code> ja omadus <code>Celsius</code>, mille setter ei luba väärtust alla absoluutse nulli (-273.15). Lisa ainult loetav omadus <code>Fahrenheit</code>. Loo objekt ja trüki mõlemad temperatuurid.</li>
+<li>Loo klass <code>Kalkulaator</code> kahe samanimelise meetodiga <code>Korruta</code>: üks korrutab kaks täisarvu ja teine kolm täisarvu. Kutsu mõlemat meetodit ja trüki tulemused.</li>
+<li>Loo klass <code>Taimer</code>, millel on sündmus <code>AegTais</code> ja meetod <code>Alusta(int sekundid)</code>, mis ootab antud aja ja kutsub seejärel sündmuse esile. Registreeri sündmusele tegevus, mis trükib konsoolile <code>"Aeg täis!"</code>.</li>
+</ol>
 <h2 id="viited">Viited<a class="headerlink" href="#viited" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/properties">Properties (C# concepts)</a></li>
