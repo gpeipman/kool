@@ -1,0 +1,81 @@
+<h1 id="andmetüübid">Andmetüübid</h1>
+
+<p>Kõik andmed, millega me programmis töötame, on mingisugust tüüpi. Näiteks on numbrilised ja tekstilised andmed, tõeväärtused, vektorid jpm. Kooli matemaatikast mäletame näiteks täisarve ja ratsionaalarve. Lisaks on kuupäevad ja kellaajad. Soovi korral saame ise juurde luua uusi andmetüüpe.</p>
+
+<p>Mõned C# andmetüübid on toodud järgmises tabelis.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Tüüp</th>
+            <th>Selgitus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>int</td>
+            <td>Täisarv (1, 2, 3, ...)</td>
+        </tr>
+        <tr>
+            <td>float</td>
+            <td>Ratsionaalarv, öeldakse ka ujukomaga arv (1.1, 2.4, 3.14, ...)</td>
+        </tr>
+        <tr>
+            <td>decimal</td>
+            <td>Ratsionaalarv, fikseeritud täpsusega</td>
+        </tr>
+        <tr>
+            <td>bool</td>
+            <td>Kahendväärtus (inglise keeles boolean), kas tõene või väär</td>
+        </tr>
+        <tr>
+            <td>string</td>
+            <td>Tekstiliste väärtuste jaoks ("Hello, world!", "Aleksander", ...)</td>
+        </tr>
+        <tr>
+            <td>DateTime</td>
+            <td>Tüüp kuupäevade ja kellaaegade jaoks ("10.01.2020", "2020-01-10 12:00:00")</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Vaatleme näitena andmeid, mis iseloomustavad arvet.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Atribuut</th>
+            <th>Tüüp</th>
+            <th>Selgitus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Arve number</td>
+            <td>string</td>
+            <td>Arve number võib sisaldada ka tähti ning side- ja kaldkriipse</td>
+        </tr>
+        <tr>
+            <td>Kuupäev</td>
+            <td>DateTime</td>
+            <td>Arve koostamise kuupäev, kellaajaks on 00:00</td>
+        </tr>
+        <tr>
+            <td>Maksetähtaeg</td>
+            <td>DateTime</td>
+            <td>Sarnaselt kuupäevale on siin kellaajaks 00:00</td>
+        </tr>
+        <tr>
+            <td>Summa</td>
+            <td>decimal</td>
+            <td>Raamatupidamine kasutab nelja komakohta</td>
+        </tr>
+        <tr>
+            <td>Klient</td>
+            <td>Customer</td>
+            <td>Kliendi andmete hoidmiseks on meil eraldi andmestruktuur</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Sarnaselt kasutatakse andmetüüpe andmebaaside tabelites. Tüüpide nimetused on küll teised, kuid mõte on sama.</p>

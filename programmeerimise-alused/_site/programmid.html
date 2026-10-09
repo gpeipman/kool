@@ -1,0 +1,121 @@
+<h1 id="programmid">Programmid</h1>
+
+<p>Programm on juhiste kogum, mida arvuti programmi käivitamisel täidab. Need juhised kirjeldavad, mida arvuti peaks tegema — näiteks kuvama teksti, tegema arvutustehteid või salvestama infot. Programm koosneb <strong>käskudest</strong>. Iga käsk ütleb arvutile ühe konkreetse tegevuse.</p>
+
+<p>Arvuti ei saa aru ühestki inimkeelest. Meie programmid on tegelikult ühtede ja nullide jadad, mida arvuti mõistab.</p>
+
+<p>Programmeerimiskeel on vahepealne keel, mis tõlgib inimese jaoks loetavad juhised arvuti jaoks arusaadavaks koodiks. Seda tõlkimist teeb eriline programm, mida nimetatakse <strong>kompilaatoriks</strong> või <strong>translaatoriks</strong>.</p>
+
+<h2 id="programmeerimiskeeled">Programmeerimiskeeled</h2>
+
+<p>Maailmas on sadu programmeerimiskeeli. Igal keelel on oma tugevad küljed:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keel</th>
+      <th>Kasutusala</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>C#</strong></td>
+      <td>Veebirakendused, mängud, tööriistad (.NET)</td>
+    </tr>
+    <tr>
+      <td><strong>Python</strong></td>
+      <td>Andmeanalüüs, tehisintellekt, automateerimine</td>
+    </tr>
+    <tr>
+      <td><strong>JavaScript</strong></td>
+      <td>Veebilehed, veebirakendused</td>
+    </tr>
+    <tr>
+      <td><strong>Java</strong></td>
+      <td>Ärirakendused, Androidi rakendused</td>
+    </tr>
+    <tr>
+      <td><strong>C/C++</strong></td>
+      <td>Operatsioonisüsteemid, mängumootorid</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Meie kasutame <strong>C#</strong> keelt ja <strong>.NET</strong> raamistikku. <strong>.NET</strong> on tarkvararaamistik, mis annab valmis tööriistu. Selle abil saame kiiresti luua rakendusi, ilma et peaksime kõike nullist kirjutama. Raamistik võimaldab luua väga erinevat tüüpi rakendusi - käsurea rakendused, töölaua rakendused, veebilehed ja veebipõhised API-d, mobiilirakendused jpm.</p>
+
+<h2 id="minu-esimene-programm">Minu esimene programm</h2>
+
+<p>Kirjutame oma esimese C# programmi — kuulsa <strong>“Hello, world!”</strong> rakenduse.</p>
+
+<ol>
+    <li>Käivita Visual Studio</li>
+    <li>Vali ülevalt menüüst File =&gt; New =&gt; Project</li>
+    <li>Vali Console App ja vajuta nupule Next</li>
+    <li>Project name lahtrisse kirjuta HelloWorldApp, jäta kõik muu nagu on ja vajuta nupule Next</li>
+    <li>Veendu, et kastis `Do not use top-level statements` oleks linnuke ja vajuta nupule Next</li>
+</ol>
+
+<p>Visual Studio loob lihtsa programmi, mis koosneb failist Program.cs. See fail näeb välja selline:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">HelloWorldApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Hello, world!"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Käivita programm (vajuta klahvi F5) ja näed avanenud käsurea aknas sellist väljundit:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, world!
+</code></pre></div></div>
+
+<p>Seekord tegi Visual Studio meie eest kogu töö ära, kuid edaspidi me enam nii lihtsasti ei pääse.</p>
+
+<h2 id="millest-meie-programm-koosneb">Millest meie programm koosneb?</h2>
+
+<p>Meie programm sisaldab rohkemat kui üks rida, mis <strong>Hello, world!</strong> ekraanile kirjutab. Osade asjadega nagu namespace ja class tutvume me hiljem selle aine jooksul.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">HelloWorldApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="c1">// Main() on funktsioon, millest algab meie programmi töö</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Console on objekt, mis esindab käsurida</span>
+        <span class="c1">// WriteLine on Console-objekti funktsioon, </span>
+        <span class="c1">// millega saame käsureale kirjutada</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Hello, world!"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Kõiki teisi harjutusi selles aines alustame samamoodi - Visual Studio loob meile käsureal töötava Hello, world! programmi ja meie hakkame seda muutma ja täiendama.</p>
+
+<h2 id="sisend-kasutajalt">Sisend kasutajalt</h2>
+
+<p>Enamasti küsivad meie programmid kasutaja käest sisendit. Me võiksime programmile vajaliku sisendi anda käsurea parameetritena. Tihti on aga vaja kasutaja käest küsida konkreetne küsimus ja lasta tal vastata. Näiteks “Kui pikk sa oled (cm)?”.</p>
+
+<p>Sisendi küsimiseks saame kasutada Console objekti, mida vaatasime eelmisest näites. Kirjutame eelneva programmi ümber selliselt, et see küsiks nime ja kasutaks seda.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">HelloNameApp</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="c1">// Main() on funktsioon, millest algab meie programmi töö</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"Sisesta oma nimi: "</span><span class="p">);</span>
+
+            <span class="c1">// ReadLine ootab, et kasutaja sisestaks midagi ja vajutaks Enter</span>
+            <span class="c1">// name on muutuja, millesse kasutaja sisestatud salvestatakse</span>
+            <span class="kt">var</span> <span class="n">name</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Tere, "</span> <span class="p">+</span> <span class="n">name</span> <span class="p">+</span> <span class="s">"!"</span><span class="p">);</span><span class="n">M</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>

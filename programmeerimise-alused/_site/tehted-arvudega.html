@@ -1,0 +1,103 @@
+<h1 id="tehted-arvudega">Tehted arvudega</h1>
+
+<p>Andmete ja muutujatega saame teha tehteid. Erinevad andmetüübid võimaldavad erinevaid tehteid. Mis on võimalik arvudega, ei pruugi olla võimalik näiteks kuupäevadega või andmestruktuuridega. Arvude jaoks on programmeerimiskeeltes defineeritud kõik olulised tehted nagu liitmine, lahutamine, korrutamine, jagamine, astendamine jne. Lisaks saame kasutada mitmeid matemaatilisi funktsioone.</p>
+
+<p>Tehete tegemiseks kasutame kas operaatoreid või funktsioone. Siin on mõned C# poolt toetatud operaatorid ja funktsioonid.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Operaator</th>
+            <th>Selgitus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>+</td>
+            <td>Liitmine, töötab nii arvude kui stringidega</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Lahutamine</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>Korrutamine</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>Jagamine</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>Jäägiga jagamine</td>
+        </tr>
+        <tr>
+            <td>Math.Pow()</td>
+            <td>Astendamine</td>
+        </tr>
+        <tr>
+            <td>Math.Sqrt()</td>
+            <td>Juurimine</td>
+        </tr>
+        <tr>
+            <td>Math.Min()</td>
+            <td>Vähima arvu leidmine</td>
+        </tr>
+        <tr>
+            <td>Math.Max()</td>
+            <td>Suurima arvu leidmine</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Proovimiseks kirjutame sellise programmi.</p>
+
+<p>=== “Näide”
+    ```csharp
+    int x = 24;
+    int y = 4;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Console.WriteLine("x + y = " + (x + y));
+Console.WriteLine("x - y = " + (x - y));
+Console.WriteLine("x * y = " + (x * y));
+Console.WriteLine("x / y = " + (x / y));
+
+Console.WriteLine("√4 = " + Math.Sqrt(y));
+Console.WriteLine("4² = " + Math.Pow(y, 2));
+
+Console.WriteLine("max(x, y)" = Math.Max(x, y));
+Console.WriteLine("min(x, y)" = Math.Min(x, y));
+``` === "Proovimiseks"
+```csharp
+namespace MathApp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int x = 24;
+        int y = 4;
+
+        Console.WriteLine("x + y = " + (x + y));
+        Console.WriteLine("x - y = " + (x - y));
+        Console.WriteLine("x * y = " + (x * y));
+        Console.WriteLine("x / y = " + (x / y));
+
+        Console.WriteLine("√4 = " + Math.Sqrt(y));
+        Console.WriteLine("4² = " + Math.Pow(y, 2));
+
+        Console.WriteLine("max(x, y)" = Math.Max(x, y));
+        Console.WriteLine("min(x, y)" = Math.Min(x, y));
+    }
+}
+```
+</code></pre></div></div>
+
+<h2 id="harjutused">Harjutused</h2>
+
+<ol>
+  <li>Kirjuta programm, mis arvutab ruudu pindala</li>
+  <li>Kirjuta programm, mis arvutab ristküliku pindala</li>
+  <li>Kirjuta programm, mis küsib kasutajalt ringi raadiust ja arvutab ringi pindala (Math.Pi annab pii väärtuse)</li>
+</ol>

@@ -1,0 +1,292 @@
+<h1 id="massiivid-ja-loendid">Massiivid ja loendid</h1>
+
+<p>Seni oleme hoidnud iga väärtuse eraldi muutujas. Aga mis siis, kui peame hoidma 20 õpilase nime või 50 toote hinda? Üksikute muutujate loomine oleks tüütu ja ebapraktiline. Selleks ongi <strong>massiivid</strong> ja <strong>loendid</strong> — need võimaldavad hoida mitut väärtust ühes muutujas.</p>
+
+<h2 id="massiivid">Massiivid</h2>
+
+<p>Massiiv on <strong>fikseeritud suurusega</strong> kogum, kuhu saame salvestada mitu ühest tüüpi väärtust. Massiivi suurust ei saa peale loomist muuta.</p>
+
+<h3 id="massiivi-loomine">Massiivi loomine</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">ArrayApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Loome massiivi, mis mahutab 5 täisarvu</span>
+        <span class="kt">int</span><span class="p">[]</span> <span class="n">hinded</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">5</span><span class="p">];</span>
+
+        <span class="c1">// Anname väärtused indeksite kaupa (algab nullist!)</span>
+        <span class="n">hinded</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+        <span class="n">hinded</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+        <span class="n">hinded</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+        <span class="n">hinded</span><span class="p">[</span><span class="m">3</span><span class="p">]</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+        <span class="n">hinded</span><span class="p">[</span><span class="m">4</span><span class="p">]</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+
+        <span class="c1">// Või lühem variant — anname väärtused kohe</span>
+        <span class="kt">string</span><span class="p">[]</span> <span class="n">toidud</span> <span class="p">=</span> <span class="p">{</span> <span class="s">"Pizza"</span><span class="p">,</span> <span class="s">"Pasta"</span><span class="p">,</span> <span class="s">"Salat"</span><span class="p">,</span> <span class="s">"Supp"</span> <span class="p">};</span>
+
+        <span class="c1">// Või pikem variant</span>
+        <span class="kt">double</span><span class="p">[]</span> <span class="n">hinnad</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">double</span><span class="p">[]</span> <span class="p">{</span> <span class="m">1.99</span><span class="p">,</span> <span class="m">4.50</span><span class="p">,</span> <span class="m">0.75</span><span class="p">,</span> <span class="m">12.99</span> <span class="p">};</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Esimene hind: "</span> <span class="p">+</span> <span class="n">hinnad</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>  <span class="c1">// 1.99</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Kolmas toit: "</span> <span class="p">+</span> <span class="n">toidud</span><span class="p">[</span><span class="m">2</span><span class="p">]);</span>    <span class="c1">// Salat</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>!!! warning “Indeksid algavad nullist”
+    Esimene element on indeksil <code class="language-plaintext highlighter-rouge">0</code>, mitte <code class="language-plaintext highlighter-rouge">1</code>. See on kõige levinum algaja viga.
+    <code class="language-plaintext highlighter-rouge">csharp
+    string[] puuviljad = { "Õun", "Banaan", "Apelsin" };
+    // puuviljad[0] → "Õun"
+    // puuviljad[1] → "Banaan"
+    // puuviljad[2] → "Apelsin"
+    // puuviljad[3] → VIGA! IndexOutOfRangeException
+   </code></p>
+
+<h3 id="massiivi-pikkus">Massiivi pikkus</h3>
+
+<p>Massiivi elementide arvu saame teada <code class="language-plaintext highlighter-rouge">.Length</code> omadusega:</p>
+
+<p>=== “Näide”
+    <code class="language-plaintext highlighter-rouge">csharp
+    int[] numbrid = { 10, 20, 30, 40, 50 };
+    Console.WriteLine("Massiivis on " + numbrid.Length + " elementi."); // 5
+   </code>
+=== “Proovimiseks”
+    ```csharp
+    using System;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>internal class Program
+{
+    public static void Main(string[] args)
+    {
+        int[] numbrid = { 10, 20, 30, 40, 50 };
+        Console.WriteLine("Massiivis on " + numbrid.Length + " elementi."); // 5
+    }
+}
+```
+</code></pre></div></div>
+
+<h3 id="igapäevaelu-näited">Igapäevaelu näited</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Nädalapäevad</span>
+<span class="kt">string</span><span class="p">[]</span> <span class="n">nadalapaevad</span> <span class="p">=</span> <span class="p">{</span> <span class="s">"Esmaspäev"</span><span class="p">,</span> <span class="s">"Teisipäev"</span><span class="p">,</span> <span class="s">"Kolmapäev"</span><span class="p">,</span> <span class="s">"Neljapäev"</span><span class="p">,</span> <span class="s">"Reede"</span><span class="p">,</span> <span class="s">"Laupäev"</span><span class="p">,</span> <span class="s">"Pühapäev"</span> <span class="p">};</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Täna on: "</span> <span class="p">+</span> <span class="n">nadalapaevad</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span> <span class="c1">// Esmaspäev</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Nädala viimane päev: "</span> <span class="p">+</span> <span class="n">nadalapaevad</span><span class="p">[</span><span class="m">6</span><span class="p">]);</span> <span class="c1">// Pühapäev</span>
+
+<span class="c1">// Klassi hinnete keskmine</span>
+<span class="kt">int</span><span class="p">[]</span> <span class="n">matemaatikaHinded</span> <span class="p">=</span> <span class="p">{</span> <span class="m">5</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">4</span> <span class="p">};</span>
+<span class="kt">int</span> <span class="n">summa</span> <span class="p">=</span> <span class="n">matemaatikaHinded</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">+</span> <span class="n">matemaatikaHinded</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">+</span> <span class="n">matemaatikaHinded</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">+</span> <span class="n">matemaatikaHinded</span><span class="p">[</span><span class="m">3</span><span class="p">]</span> <span class="p">+</span> <span class="n">matemaatikaHinded</span><span class="p">[</span><span class="m">4</span><span class="p">]</span> <span class="p">+</span> <span class="n">matemaatikaHinded</span><span class="p">[</span><span class="m">5</span><span class="p">]</span> <span class="p">+</span> <span class="n">matemaatikaHinded</span><span class="p">[</span><span class="m">6</span><span class="p">];</span>
+<span class="kt">double</span> <span class="n">keskmine</span> <span class="p">=</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">summa</span> <span class="p">/</span> <span class="n">matemaatikaHinded</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Keskmine hinne: "</span> <span class="p">+</span> <span class="n">keskmine</span><span class="p">);</span> <span class="c1">// 4.28...</span>
+</code></pre></div></div>
+
+<p>!!! note “Tsüklid tulevad hiljem”
+    Hinnete summa arvutamisel kirjutasime iga indeksi käsitsi. Hiljem õpime <strong>tsükleid</strong>, mis teevad selle palju lühemaks.</p>
+
+<h3 id="massiivi-muutmine">Massiivi muutmine</h3>
+
+<p>Kuna massiivi suurus on fikseeritud, siis elemente saame <strong>muuta</strong>, aga <strong>uut elementi lisada ei saa</strong>.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span><span class="p">[]</span> <span class="n">numbrid</span> <span class="p">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">5</span> <span class="p">};</span>
+<span class="n">numbrid</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">99</span><span class="p">;</span>    <span class="c1">// muuda kolmandat elementi</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">numbrid</span><span class="p">[</span><span class="m">2</span><span class="p">]);</span> <span class="c1">// 99</span>
+
+<span class="c1">// numbrid[5] = 6; // VIGA! IndexOutOfRangeException — massiiv on ainult 5 pikk</span>
+</code></pre></div></div>
+
+<h2 id="loendid-list">Loendid (<code class="language-plaintext highlighter-rouge">List</code>)</h2>
+
+<p>Loend on <strong>muudetava suurusega</strong> kogum. Erinevalt massiivist saame loendisse elemente juurde lisada ja neid eemaldada. Enamasti on loend praktilisem kui massiiv.</p>
+
+<p>Loendi kasutamiseks peame lisama <code class="language-plaintext highlighter-rouge">using System.Collections.Generic;</code> rea programmi ülaossa.</p>
+
+<h3 id="loendi-loomine">Loendi loomine</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">ListApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Tühi loend</span>
+        <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">ostukorv</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+
+        <span class="c1">// Või algväärtustatud loend</span>
+        <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">numbrid</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="p">{</span> <span class="m">10</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="m">30</span> <span class="p">};</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Loendis on "</span> <span class="p">+</span> <span class="n">numbrid</span><span class="p">.</span><span class="n">Count</span> <span class="p">+</span> <span class="s">" elementi."</span><span class="p">);</span> <span class="c1">// 3</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>!!! note “<code class="language-plaintext highlighter-rouge">.Count</code> vs <code class="language-plaintext highlighter-rouge">.Length</code>”
+    Massiiv kasutab <code class="language-plaintext highlighter-rouge">.Length</code>, loend kasutab <code class="language-plaintext highlighter-rouge">.Count</code>. Mõlemad annavad elementide arvu.</p>
+
+<h3 id="elementide-lisamine">Elementide lisamine</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">ListAddApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">sõbrad</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+
+        <span class="c1">// Lisa üks element lõppu</span>
+        <span class="n">sõbrad</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Mari"</span><span class="p">);</span>
+        <span class="n">sõbrad</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Jaan"</span><span class="p">);</span>
+        <span class="n">sõbrad</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Kati"</span><span class="p">);</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Sõpru on: "</span> <span class="p">+</span> <span class="n">sõbrad</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span> <span class="c1">// 3</span>
+
+        <span class="c1">// Lisa konkreetsele kohale</span>
+        <span class="n">sõbrad</span><span class="p">.</span><span class="nf">Insert</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">"Peeter"</span><span class="p">);</span>
+        <span class="c1">// Nüüd on: Mari, Peeter, Jaan, Kati</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Teine sõber: "</span> <span class="p">+</span> <span class="n">sõbrad</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span> <span class="c1">// Peeter</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="elementide-eemaldamine">Elementide eemaldamine</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">toidud</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="p">{</span> <span class="s">"Pizza"</span><span class="p">,</span> <span class="s">"Pasta"</span><span class="p">,</span> <span class="s">"Salat"</span><span class="p">,</span> <span class="s">"Supp"</span> <span class="p">};</span>
+
+<span class="c1">// Eemalda nime järgi (esimene vastav leitud element)</span>
+<span class="n">toidud</span><span class="p">.</span><span class="nf">Remove</span><span class="p">(</span><span class="s">"Pasta"</span><span class="p">);</span>
+
+<span class="c1">// Eemalda indeksi järgi</span>
+<span class="n">toidud</span><span class="p">.</span><span class="nf">RemoveAt</span><span class="p">(</span><span class="m">0</span><span class="p">);</span> <span class="c1">// eemaldab esimese elemendi ("Pizza")</span>
+
+<span class="c1">// Tühjenda kogu loend</span>
+<span class="n">toidud</span><span class="p">.</span><span class="nf">Clear</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h3 id="otsimine-ja-kontrollimine">Otsimine ja kontrollimine</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">linnad</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="p">{</span> <span class="s">"Tallinn"</span><span class="p">,</span> <span class="s">"Tartu"</span><span class="p">,</span> <span class="s">"Pärnu"</span><span class="p">,</span> <span class="s">"Narva"</span> <span class="p">};</span>
+
+<span class="c1">// Kas element on olemas?</span>
+<span class="kt">bool</span> <span class="n">onTallinn</span> <span class="p">=</span> <span class="n">linnad</span><span class="p">.</span><span class="nf">Contains</span><span class="p">(</span><span class="s">"Tallinn"</span><span class="p">);</span>       <span class="c1">// true</span>
+<span class="kt">bool</span> <span class="n">onKohtlaJärve</span> <span class="p">=</span> <span class="n">linnad</span><span class="p">.</span><span class="nf">Contains</span><span class="p">(</span><span class="s">"Kohtla-Järve"</span><span class="p">);</span> <span class="c1">// false</span>
+
+<span class="c1">// Millisel indeksil on element?</span>
+<span class="kt">int</span> <span class="n">indeks</span> <span class="p">=</span> <span class="n">linnad</span><span class="p">.</span><span class="nf">IndexOf</span><span class="p">(</span><span class="s">"Pärnu"</span><span class="p">);</span>              <span class="c1">// 2</span>
+
+<span class="c1">// Mitu elementi on?</span>
+<span class="kt">int</span> <span class="n">arv</span> <span class="p">=</span> <span class="n">linnad</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span>                             <span class="c1">// 4</span>
+</code></pre></div></div>
+
+<h3 id="igapäevaelu-näited-1">Igapäevaelu näited</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Ostukorv — kaks paralleelset loendit</span>
+<span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">tooted</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+<span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="n">hinnad</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;();</span>
+
+<span class="n">tooted</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Piim"</span><span class="p">);</span>     <span class="n">hinnad</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="m">1.29</span><span class="p">);</span>
+<span class="n">tooted</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Leib"</span><span class="p">);</span>     <span class="n">hinnad</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="m">2.49</span><span class="p">);</span>
+<span class="n">tooted</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Munad"</span><span class="p">);</span>    <span class="n">hinnad</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="m">3.99</span><span class="p">);</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Ostukorv:"</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"  "</span> <span class="p">+</span> <span class="n">tooted</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">+</span> <span class="s">" — "</span> <span class="p">+</span> <span class="n">hinnad</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">+</span> <span class="s">"€"</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"  "</span> <span class="p">+</span> <span class="n">tooted</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">+</span> <span class="s">" — "</span> <span class="p">+</span> <span class="n">hinnad</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">+</span> <span class="s">"€"</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"  "</span> <span class="p">+</span> <span class="n">tooted</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">+</span> <span class="s">" — "</span> <span class="p">+</span> <span class="n">hinnad</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">+</span> <span class="s">"€"</span><span class="p">);</span>
+
+<span class="c1">// Kõikide hindade summa</span>
+<span class="kt">double</span> <span class="n">koguSumma</span> <span class="p">=</span> <span class="n">hinnad</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">+</span> <span class="n">hinnad</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">+</span> <span class="n">hinnad</span><span class="p">[</span><span class="m">2</span><span class="p">];</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Kokku: "</span> <span class="p">+</span> <span class="n">koguSumma</span> <span class="p">+</span> <span class="s">"€"</span><span class="p">);</span>
+
+<span class="c1">// Sõnumite nimekiri</span>
+<span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">sõnumid</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+<span class="n">sõnumid</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
+<span class="n">sõnumid</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Kuidas läheb?"</span><span class="p">);</span>
+<span class="n">sõnumid</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="s">"Näeme homme!"</span><span class="p">);</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Sõnumeid: "</span> <span class="p">+</span> <span class="n">sõnumid</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Esimene: "</span> <span class="p">+</span> <span class="n">sõnumid</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Viimane: "</span> <span class="p">+</span> <span class="n">sõnumid</span><span class="p">[</span><span class="m">2</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h2 id="massiiv-vs-loend--millal-kumbagi">Massiiv vs loend — millal kumbagi?</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Omadus</th>
+      <th>Massiiv (<code class="language-plaintext highlighter-rouge">[]</code>)</th>
+      <th>Loend (<code class="language-plaintext highlighter-rouge">List&lt;T&gt;</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Suurus</td>
+      <td>Fikseeritud</td>
+      <td>Muudetav</td>
+    </tr>
+    <tr>
+      <td>Lisamine</td>
+      <td>Ei saa</td>
+      <td>Saab <code class="language-plaintext highlighter-rouge">.Add()</code></td>
+    </tr>
+    <tr>
+      <td>Eemaldamine</td>
+      <td>Ei saa</td>
+      <td>Saab <code class="language-plaintext highlighter-rouge">.Remove()</code></td>
+    </tr>
+    <tr>
+      <td>Kiirus</td>
+      <td>Natuke kiirem</td>
+      <td>Natuke aeglasem</td>
+    </tr>
+    <tr>
+      <td>Kasutus</td>
+      <td>Kui suurus on teada</td>
+      <td>Kui suurus võib muutuda</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>!!! tip “Reegel pöialt”
+    Kui tead ette, mitu elementi on vaja, kasuta massiivi. Kui elementide arv võib töö ajal muutuda, kasuta loendit.</p>
+
+<h2 id="sageli-tekkinud-vead">Sageli tekkinud vead</h2>
+
+<h3 id="indeksi-piirid">Indeksi piirid</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span><span class="p">[]</span> <span class="n">numbrid</span> <span class="p">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">};</span>
+<span class="c1">// numbrid[3] = 4; // VIGA — max indeks on 2</span>
+<span class="c1">// numbrid[-1];    // VIGA — negatiivsed indeksid ei tööta</span>
+</code></pre></div></div>
+
+<h3 id="tühja-loendiga-töötamine">Tühja loendiga töötamine</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">nimed</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;();</span>
+<span class="c1">// nimed[0]; // VIGA — IndexOutOfRangeException, loend on tühi</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">nimed</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span> <span class="c1">// 0 — kontrolli alati enne</span>
+</code></pre></div></div>
+
+<h3 id="massiivi-suuruse-unustamine">Massiivi suuruse unustamine</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// VIGA — unustasid suuruse</span>
+<span class="c1">// int[] valed = new int[]; </span>
+
+<span class="c1">// ÕIGE</span>
+<span class="kt">int</span><span class="p">[]</span> <span class="n">õige</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">5</span><span class="p">];</span>       <span class="c1">// 5 elementi</span>
+<span class="kt">int</span><span class="p">[]</span> <span class="n">kaÕige</span> <span class="p">=</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">};</span>   <span class="c1">// 3 elementi, suurus automaatne</span>
+</code></pre></div></div>
+
+<h2 id="harjutused">Harjutused</h2>
+
+<ol>
+  <li>Loo massiiv viie lemmikfilmi nimega. Kuva kõik filmid ekraanile nummerdatult, kasutades iga indeksit eraldi (1. Film, 2. Film, …).</li>
+  <li>Loo loend sõpradest. Lisa kolm sõpra, seejärel eemalda üks ja kuva lõplik nimekiri koos arvuga.</li>
+  <li>Loo massiiv viie klassikaaslase nimega. Kuva esimene, kolmas ja viimane nimi. Seejärel muuda teine nimi uue nimega ja kuva muudetud massiiv.</li>
+</ol>

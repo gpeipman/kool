@@ -1,0 +1,299 @@
+<h1 id="võrdlused">Võrdlused</h1>
+
+<p>Programmeerimisel peame pidevalt andmeid võrdlema: kas number on suurem kui teine? Kas tekst kattub oodatuga? Kas kuupäev on möödunud? Võrdluse tulemus on alati <strong>tõeväärtus</strong> — kas <code class="language-plaintext highlighter-rouge">true</code> (tõene) või <code class="language-plaintext highlighter-rouge">false</code> (väär). just neid tõeväärtusi kasutame hiljem <code class="language-plaintext highlighter-rouge">if</code> lausetes otsuste tegemiseks.</p>
+
+<h2 id="arvude-võrdlemine">Arvude võrdlemine</h2>
+
+<p>Arve võrdlemiseks on C#-is kuus operaatorit.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operaator</th>
+      <th>Tähendus</th>
+      <th>Näide</th>
+      <th>Tulemus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">==</code></td>
+      <td>võrdub</td>
+      <td><code class="language-plaintext highlighter-rouge">5 == 5</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">!=</code></td>
+      <td>ei võrdu</td>
+      <td><code class="language-plaintext highlighter-rouge">5 != 3</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;</code></td>
+      <td>väiksem kui</td>
+      <td><code class="language-plaintext highlighter-rouge">3 &lt; 5</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
+      <td>suurem kui</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &gt; 3</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;=</code></td>
+      <td>väiksem või võrdne</td>
+      <td><code class="language-plaintext highlighter-rouge">5 &lt;= 5</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&gt;=</code></td>
+      <td>suurem või võrdne</td>
+      <td><code class="language-plaintext highlighter-rouge">3 &gt;= 5</code></td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">ComparisonApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">vanus</span> <span class="p">=</span> <span class="m">17</span><span class="p">;</span>
+        <span class="kt">bool</span> <span class="n">kasOnVanemKui16</span> <span class="p">=</span> <span class="n">vanus</span> <span class="p">&gt;</span> <span class="m">16</span><span class="p">;</span>
+        <span class="kt">bool</span> <span class="n">kasOnTäisealine</span> <span class="p">=</span> <span class="n">vanus</span> <span class="p">&gt;=</span> <span class="m">18</span><span class="p">;</span>
+        <span class="kt">bool</span> <span class="n">kasOn17</span> <span class="p">=</span> <span class="n">vanus</span> <span class="p">==</span> <span class="m">17</span><span class="p">;</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Vanem kui 16: "</span> <span class="p">+</span> <span class="n">kasOnVanemKui16</span><span class="p">);</span>   <span class="c1">// true</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Täisealine: "</span> <span class="p">+</span> <span class="n">kasOnTäisealine</span><span class="p">);</span>      <span class="c1">// false</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"On 17: "</span> <span class="p">+</span> <span class="n">kasOn17</span><span class="p">);</span>                    <span class="c1">// true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>!!! warning “Sage algaja viga: <code class="language-plaintext highlighter-rouge">=</code> vs <code class="language-plaintext highlighter-rouge">==</code>”
+    Üks võrdusmärk <code class="language-plaintext highlighter-rouge">=</code> annab muutujale väärtuse. Kaks võrdusmärki <code class="language-plaintext highlighter-rouge">==</code> võrdleb. Need on kaks täiesti erinevat asja.
+    <code class="language-plaintext highlighter-rouge">csharp
+    int x = 5;     // annab väärtuse — see on õige
+    // if (x = 5)  // VIGA — siin ei võrrelda, vaid annad väärtust
+    if (x == 5)    // õige — võrdled
+   </code></p>
+
+<h3 id="igapäevaelu-näited">Igapäevaelu näited</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Bussipilet</span>
+<span class="kt">int</span> <span class="n">piletihind</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasTasuta</span> <span class="p">=</span> <span class="n">piletihind</span> <span class="p">==</span> <span class="m">0</span><span class="p">;</span>       <span class="c1">// false</span>
+<span class="kt">bool</span> <span class="n">kasOdav</span> <span class="p">=</span> <span class="n">piletihind</span> <span class="p">&lt;</span> <span class="m">3</span><span class="p">;</span>          <span class="c1">// true</span>
+
+<span class="c1">// Koolihinne</span>
+<span class="kt">int</span> <span class="n">hinne</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasHeaHinne</span> <span class="p">=</span> <span class="n">hinne</span> <span class="p">&gt;=</span> <span class="m">5</span><span class="p">;</span>          <span class="c1">// false</span>
+<span class="kt">bool</span> <span class="n">kasMiinimum</span> <span class="p">=</span> <span class="n">hinne</span> <span class="p">&gt;=</span> <span class="m">1</span><span class="p">;</span>          <span class="c1">// true</span>
+</code></pre></div></div>
+
+<h2 id="stringide-võrdlemine">Stringide võrdlemine</h2>
+
+<p>Stringe võrreldakse <strong>tähthaaval</strong>. Tähed reastatakse tähestiku järjekorras: <code class="language-plaintext highlighter-rouge">A</code> on väiksem kui <code class="language-plaintext highlighter-rouge">B</code>, <code class="language-plaintext highlighter-rouge">a</code> on väiksem kui <code class="language-plaintext highlighter-rouge">b</code> jne. Suurtäht ja väiketäht on erinevad — <code class="language-plaintext highlighter-rouge">"Mari"</code> ja <code class="language-plaintext highlighter-rouge">"mari"</code> ei ole võrdsed.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">StringComparisonApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">string</span> <span class="n">kasutajanimi</span> <span class="p">=</span> <span class="s">"mari"</span><span class="p">;</span>
+        <span class="kt">bool</span> <span class="n">kasOnAdmin</span> <span class="p">=</span> <span class="n">kasutajanimi</span> <span class="p">==</span> <span class="s">"admin"</span><span class="p">;</span>     <span class="c1">// false</span>
+        <span class="kt">bool</span> <span class="n">kasOnMari</span> <span class="p">=</span> <span class="n">kasutajanimi</span> <span class="p">==</span> <span class="s">"mari"</span><span class="p">;</span>        <span class="c1">// true</span>
+        <span class="kt">bool</span> <span class="n">kasOnMituhteist</span> <span class="p">=</span> <span class="s">"mari"</span> <span class="p">==</span> <span class="s">"Mari"</span><span class="p">;</span>        <span class="c1">// false — erinevad tähed!</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Admin: "</span> <span class="p">+</span> <span class="n">kasOnAdmin</span><span class="p">);</span>      <span class="c1">// false</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Mari: "</span> <span class="p">+</span> <span class="n">kasOnMari</span><span class="p">);</span>         <span class="c1">// true</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"mari == Mari: "</span> <span class="p">+</span> <span class="n">kasOnMituhteist</span><span class="p">);</span> <span class="c1">// false</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="igapäevaelu-näited-1">Igapäevaelu näited</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// WiFi nimi</span>
+<span class="kt">string</span> <span class="n">wifiNimi</span> <span class="p">=</span> <span class="s">"KoduWiFi"</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasKoduWifi</span> <span class="p">=</span> <span class="n">wifiNimi</span> <span class="p">==</span> <span class="s">"KoduWiFi"</span><span class="p">;</span>      <span class="c1">// true</span>
+<span class="kt">bool</span> <span class="n">kasLahti</span> <span class="p">=</span> <span class="n">wifiNimi</span> <span class="p">!=</span> <span class="s">"Mituhteist"</span><span class="p">;</span>        <span class="c1">// true</span>
+
+<span class="c1">// пароль kontroll</span>
+<span class="kt">string</span> <span class="n">parool</span> <span class="p">=</span> <span class="s">"kala123"</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasParoolOnPikk</span> <span class="p">=</span> <span class="n">parool</span><span class="p">.</span><span class="n">Length</span> <span class="p">&gt;=</span> <span class="m">6</span><span class="p">;</span>        <span class="c1">// true</span>
+</code></pre></div></div>
+
+<p>!!! note “Meetodid stringidega”
+    <code class="language-plaintext highlighter-rouge">string</code> tüübil on kasulikke meetodeid:
+    - <code class="language-plaintext highlighter-rouge">.Length</code> — stringi pikkus (tähemärkide arv)
+    - <code class="language-plaintext highlighter-rouge">.ToLower()</code> / <code class="language-plaintext highlighter-rouge">.ToUpper()</code> — muuda kõik tähed väiketähtedeks/suurteks
+    - <code class="language-plaintext highlighter-rouge">.Contains("otsitav")</code> — kas string sisaldab otsitavat sõna</p>
+
+<h2 id="boolide-võrdlemine">Boolide võrdlemine</h2>
+
+<p>Boolid (<code class="language-plaintext highlighter-rouge">true</code> ja <code class="language-plaintext highlighter-rouge">false</code>) saab samuti võrrelda, kuigi enamasti piisab lihtsalt muutuja kasutamisest.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">BoolComparisonApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">bool</span> <span class="n">kasTänaOnTööpäev</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="kt">bool</span> <span class="n">kasOnNädalavahetus</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+
+        <span class="c1">// Need kaks rida annavad sama tulemuse</span>
+        <span class="kt">bool</span> <span class="n">kasPeabMinemaA</span> <span class="p">=</span> <span class="n">kasTänaOnTööpäev</span> <span class="p">==</span> <span class="k">true</span><span class="p">;</span>
+        <span class="kt">bool</span> <span class="n">kasPeabMinemaB</span> <span class="p">=</span> <span class="n">kasTänaOnTööpäev</span><span class="p">;</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">kasPeabMinemaA</span><span class="p">);</span>  <span class="c1">// true</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">kasPeabMinemaB</span><span class="p">);</span>  <span class="c1">// true</span>
+
+        <span class="c1">// Võrdlus vale väärtusega</span>
+        <span class="kt">bool</span> <span class="n">kasOnPuhkus</span> <span class="p">=</span> <span class="n">kasOnNädalavahetus</span> <span class="p">==</span> <span class="k">true</span><span class="p">;</span> <span class="c1">// false</span>
+
+        <span class="c1">// Pööramine operaatoriga !</span>
+        <span class="kt">bool</span> <span class="n">kasEiPeaMinema</span> <span class="p">=</span> <span class="p">!</span><span class="n">kasTänaOnTööpäev</span><span class="p">;</span>       <span class="c1">// false</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">kasOnPuhkus</span><span class="p">);</span>     <span class="c1">// false</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">kasEiPeaMinema</span><span class="p">);</span>  <span class="c1">// false</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>!!! tip “Boole ei pea võrdlema”
+    <code class="language-plaintext highlighter-rouge">if (kasOnAdmin == true)</code> on õige, kuid <code class="language-plaintext highlighter-rouge">if (kasOnAdmin)</code> on lühem ja loetavam. Mõlemad töötavad samamoodi. Võrdlemist vajad siis, kui tahad kontrollida <code class="language-plaintext highlighter-rouge">false</code> väärtust: <code class="language-plaintext highlighter-rouge">if (kasOnAdmin == false)</code> või lühemalt <code class="language-plaintext highlighter-rouge">if (!kasOnAdmin)</code>.</p>
+
+<h2 id="kuupäevade-võrdlemine">Kuupäevade võrdlemine</h2>
+
+<p><code class="language-plaintext highlighter-rouge">DateTime</code> tüüp toetab kõiki võrdlusoperaatoreid. See on kasulik, kui tahad teada, kas kuupäev on möödunud, tulemas või kattub.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">DateComparisonApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">DateTime</span> <span class="n">synnipäev</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DateTime</span><span class="p">(</span><span class="m">2008</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">15</span><span class="p">);</span>
+        <span class="n">DateTime</span> <span class="n">täna</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+
+        <span class="kt">bool</span> <span class="n">kasSünnipäevOnMöödas</span> <span class="p">=</span> <span class="n">täna</span> <span class="p">&gt;</span> <span class="n">synnipäev</span><span class="p">;</span>
+        <span class="kt">bool</span> <span class="n">kasSünnipäevOnTäna</span> <span class="p">=</span> <span class="n">täna</span><span class="p">.</span><span class="n">Date</span> <span class="p">==</span> <span class="n">synnipäev</span><span class="p">.</span><span class="n">Date</span><span class="p">;</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Sünnipäev möödas: "</span> <span class="p">+</span> <span class="n">kasSünnipäevOnMöödas</span><span class="p">);</span> <span class="c1">// true</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Sünnipäev täna: "</span> <span class="p">+</span> <span class="n">kasSünnipäevOnTäna</span><span class="p">);</span>       <span class="c1">// false (tõenäoliselt)</span>
+
+        <span class="c1">// Kontrolli kas kuupäev on tulevikus</span>
+        <span class="n">DateTime</span> <span class="n">eksami</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DateTime</span><span class="p">(</span><span class="m">2026</span><span class="p">,</span> <span class="m">12</span><span class="p">,</span> <span class="m">20</span><span class="p">);</span>
+        <span class="kt">bool</span> <span class="n">kasEksamiEes</span> <span class="p">=</span> <span class="n">eksami</span> <span class="p">&gt;</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Eksami ees: "</span> <span class="p">+</span> <span class="n">kasEksamiEes</span><span class="p">);</span> <span class="c1">// true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="igapäevaelu-näited-2">Igapäevaelu näited</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Sooduspakkumine</span>
+<span class="n">DateTime</span> <span class="n">pakkumiseLõpp</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DateTime</span><span class="p">(</span><span class="m">2026</span><span class="p">,</span> <span class="m">12</span><span class="p">,</span> <span class="m">31</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="n">kasPakkumineKehtib</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span> <span class="p">&lt;=</span> <span class="n">pakkumiseLõpp</span><span class="p">;</span>
+
+<span class="c1">// Laenutuse tähtaeg</span>
+<span class="n">DateTime</span> <span class="n">laenutus</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DateTime</span><span class="p">(</span><span class="m">2026</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+<span class="n">DateTime</span> <span class="n">tänane</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">päeviAega</span> <span class="p">=</span> <span class="m">14</span> <span class="p">-</span> <span class="p">(</span><span class="n">tänane</span> <span class="p">-</span> <span class="n">laenutus</span><span class="p">).</span><span class="n">Days</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasHilinenud</span> <span class="p">=</span> <span class="n">tänane</span> <span class="p">&gt;</span> <span class="n">laenutus</span><span class="p">.</span><span class="nf">AddDays</span><span class="p">(</span><span class="m">14</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="loogilised-operaatorid">Loogilised operaatorid</h2>
+
+<p>Tihti peame kontrollima <strong>mitut tingimust korraga</strong>. Selleks on kolm loogilist operaatorit.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operaator</th>
+      <th>Tähendus</th>
+      <th>Selgitus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;&amp;</code></td>
+      <td>JA (AND)</td>
+      <td><strong>Mõlemad</strong> peavad olema tõesed</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">\|\|</code></td>
+      <td>VÕI (OR)</td>
+      <td><strong>Üks</strong> peab olema tõene</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">!</code></td>
+      <td>MITTE (NOT)</td>
+      <td>Pöörab tõeväärtuse ümber</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nn">LogicalApp</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">vanus</span> <span class="p">=</span> <span class="m">17</span><span class="p">;</span>
+        <span class="kt">bool</span> <span class="n">kasOnIDKaart</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+
+        <span class="c1">// JA — mõlemad peavad olema tõesed</span>
+        <span class="kt">bool</span> <span class="n">kasSaanHääletada</span> <span class="p">=</span> <span class="n">vanus</span> <span class="p">&gt;=</span> <span class="m">18</span> <span class="p">&amp;&amp;</span> <span class="n">kasOnIDKaart</span><span class="p">;</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Hääletada saab: "</span> <span class="p">+</span> <span class="n">kasSaanHääletada</span><span class="p">);</span> <span class="c1">// false (vanus &lt; 18)</span>
+
+        <span class="c1">// VÕI — üks peab olema tõene</span>
+        <span class="kt">bool</span> <span class="n">kasVajanLuba</span> <span class="p">=</span> <span class="n">vanus</span> <span class="p">&lt;</span> <span class="m">18</span> <span class="p">||</span> <span class="p">!</span><span class="n">kasOnIDKaart</span><span class="p">;</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Luba vaja: "</span> <span class="p">+</span> <span class="n">kasVajanLuba</span><span class="p">);</span> <span class="c1">// true (vanus &lt; 18)</span>
+
+        <span class="c1">// MITTE — pöörab väärtuse ümber</span>
+        <span class="kt">bool</span> <span class="n">kasEiOleTäisealine</span> <span class="p">=</span> <span class="p">!(</span><span class="n">vanus</span> <span class="p">&gt;=</span> <span class="m">18</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Ei ole täisealine: "</span> <span class="p">+</span> <span class="n">kasEiOleTäisealine</span><span class="p">);</span> <span class="c1">// true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="igapäevaelu-näited-3">Igapäevaelu näited</h3>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Bussisõit — soodushind alla 18 või üliõpilasele</span>
+<span class="kt">int</span> <span class="n">vanus</span> <span class="p">=</span> <span class="m">16</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasOnÜliõpilane</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasSoodushind</span> <span class="p">=</span> <span class="n">vanus</span> <span class="p">&lt;</span> <span class="m">18</span> <span class="p">||</span> <span class="n">kasOnÜliõpilane</span><span class="p">;</span> <span class="c1">// true</span>
+
+<span class="c1">// Turvavöö — kõik peavad olema kinnitatud</span>
+<span class="kt">bool</span> <span class="n">esiistmelKinnitatud</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">tagaistmelKinnitatud</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasKõikKinnitatud</span> <span class="p">=</span> <span class="n">esiistmelKinnitatud</span> <span class="p">&amp;&amp;</span> <span class="n">tagaistmelKinnitatud</span><span class="p">;</span> <span class="c1">// false</span>
+
+<span class="c1">// ligipääs — admin ja süsteem peavad mõlemad olema</span>
+<span class="kt">bool</span> <span class="n">kasAdmin</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasSüsteem</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">kasLubatud</span> <span class="p">=</span> <span class="n">kasAdmin</span> <span class="p">&amp;&amp;</span> <span class="n">kasSüsteem</span><span class="p">;</span> <span class="c1">// false</span>
+</code></pre></div></div>
+
+<p>!!! tip “Järjestus ja sulud”
+    Loogilistel operaatoritel on oma eelisjärjekord: <code class="language-plaintext highlighter-rouge">!</code> enne <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> enne <code class="language-plaintext highlighter-rouge">||</code>. Kui pole kindel, kasuta sulge.
+    <code class="language-plaintext highlighter-rouge">csharp
+    // Sama tulemus, aga selgem
+    bool a = vanus &gt;= 18 &amp;&amp; kasOnIDKaart;
+    bool b = (vanus &gt;= 18) &amp;&amp; (kasOnIDKaart);
+   </code></p>
+
+<h2 id="harjutused">Harjutused</h2>
+
+<ol>
+  <li>Kirjuta programm, mis kontrollib, kas number on positiivne (<code class="language-plaintext highlighter-rouge">&gt; 0</code>), negatiivne (<code class="language-plaintext highlighter-rouge">&lt; 0</code>) või null. Küsi number kasutajalt.</li>
+  <li>Kirjuta programm, mis kontrollib, kas kasutaja on sisselogitud JA kas tal on admini õigused. Kasuta kahte booli muutujat.</li>
+  <li>Kirjuta programm, mis võrdleb kahe õpilase hindeid. Kellel on kõrgem keskmine? Kas mõlemal on miinimumhinne 3?</li>
+</ol>
