@@ -163,7 +163,16 @@
         <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/andmetuubid/</loc>
       </url>
       <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/csv/</loc>
+      </url>
+      <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/failid/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/idisposable/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/json/</loc>
       </url>
       <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/kodutoo-1/</loc>
@@ -197,5 +206,8 @@
       </url>
       <url>
         <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/vordlused/</loc>
+      </url>
+      <url>
+        <loc>https://gunnarpeipman.com/kool/programmeerimise-alused/xml/</loc>
       </url>
 </urlset>
