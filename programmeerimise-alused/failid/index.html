@@ -1140,7 +1140,7 @@
   <span class="md-ellipsis">
     
   
-  ???
+  Üldosa
 
     
   </span>
@@ -1156,7 +1156,7 @@
               <span class="md-nav__icon md-icon"></span>
               
   
-  ???
+  Üldosa
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -1450,15 +1450,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduvad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduvad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduvad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1473,10 +1473,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tee-ehk-margi-kasutamata-jatmine" class="md-nav__link">
+  <a href="#-margi-kasutamata-jatmine" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Tee ehk <code>@</code>-märgi kasutamata jätmine
+        <code>@</code>-märgi kasutamata jätmine
       </span>
     </span>
   </a>
@@ -3062,15 +3062,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduvad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduvad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduvad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3085,10 +3085,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tee-ehk-margi-kasutamata-jatmine" class="md-nav__link">
+  <a href="#-margi-kasutamata-jatmine" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Tee ehk <code>@</code>-märgi kasutamata jätmine
+        <code>@</code>-märgi kasutamata jätmine
       </span>
     </span>
   </a>
@@ -3273,7 +3273,7 @@
           
   
   <span class="md-ellipsis">
-    ???
+    Üldosa
   </span>
 
         </a>
@@ -3312,7 +3312,7 @@
 <p>Windowsis näeb tee välja nii:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>C:\temp\tervitus.txt
 </span></code></pre></div>
-<p>C#-s sisaldab selline tee tagurpidi kaldkriipse <code>\</code>, mis on muidu spetsiaalmärk. Et süntaks vigadeta üle läheks, kirjutame tee ette <code>@</code>-sissekorratud sõne (nimetatakse <em>verbatim</em>-sõneks):</p>
+<p>C#-s sisaldab selline tee tagurpidi kaldkriipse <code>\</code>, mis on muidu spetsiaalmärk. Et kõik vigadeta töötaks, kirjutame tee ette <code>@</code>-märgi:</p>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@"C:\temp\tervitus.txt"</span><span class="p">;</span>
 </span></code></pre></div>
 <h2 id="kas-fail-on-olemas">Kas fail on olemas?<a class="headerlink" href="#kas-fail-on-olemas" title="Permanent link">&para;</a></h2>
@@ -3361,7 +3361,7 @@
 </div>
 <p>Sama loogika kehtib ka kaustade kohta, aga meetodi nimi on <code>Directory.Exists()</code>. Sellest räägime allpool kataloogide osas.</p>
 <h2 id="failist-lugemine">Failist lugemine<a class="headerlink" href="#failist-lugemine" title="Permanent link">&para;</a></h2>
-<p>Kahte kõige tavalisemat võimalust: kogu fail korraga ühe sõnena või fail ridade kaupa.</p>
+<p>Vaatame kahte kõige tavalisemat viisi faili lugemiseks: kogu fail korraga ühe stringina ja fail ridade kaupa.</p>
 <h3 id="kogu-sisu-uhe-sonena-filereadalltext">Kogu sisu ühe sõnena — <code>File.ReadAllText()</code><a class="headerlink" href="#kogu-sisu-uhe-sonena-filereadalltext" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label><label for="__tabbed_2_2">Proovimiseks</label></div>
 <div class="tabbed-content">
@@ -3425,9 +3425,9 @@
 </div>
 </div>
 </div>
-<p><code>File.ReadAllLines()</code> tagastab sõnede massiivi, kus iga element on üks rida failist. Kuna tulemus on massiiv, saab sellega kasutada ka kõike seda, mida massiividelt õppisime — näiteks LINQ-d.</p>
+<p><code>File.ReadAllLines()</code> tagastab stringide massiivi, kus iga element on üks rida failist. Kuna tulemus on massiiv, siis saab sellega kasutada ka LINQ päringuid.</p>
 <h3 id="naide-hinnete-analuus">Näide: hinnete analüüs<a class="headerlink" href="#naide-hinnete-analuus" title="Permanent link">&para;</a></h3>
-<p>Oletame, et failis <code>hinded.txt</code> on igal real üks hinne. Loeme hinded, arvutame kokkuvõtte:</p>
+<p>Oletame, et failis <code>hinded.txt</code> on igal real üks hinne. Loeme hinded ja arvutame kokkuvõtte:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label><label for="__tabbed_4_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3468,8 +3468,8 @@
 </div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Erindid</p>
-<p>Kui loetav faili pole olemas, katkestab programm töö lõpetades veaga. Sellepärast ongi mõistlik enne lugemist kontrollida <code>File.Exists()</code> — või katta vea tabamine, millest tuleb juttu OOP-kursuse veade peatükis.</p>
+<p class="admonition-title">Vead</p>
+<p>Kui loetavat faili pole olemas, katkestab programm töö veaga. Sellepärast ongi mõistlik enne lugemist kontrollida <code>File.Exists()</code> — või püüda kinni vastav viga.</p>
 </div>
 <h2 id="faili-kirjutamine">Faili kirjutamine<a class="headerlink" href="#faili-kirjutamine" title="Permanent link">&para;</a></h2>
 <h3 id="teksti-kirjutamine-filewritealltext">Teksti kirjutamine — <code>File.WriteAllText()</code><a class="headerlink" href="#teksti-kirjutamine-filewritealltext" title="Permanent link">&para;</a></h3>
@@ -3499,7 +3499,7 @@
 </div>
 </div>
 </div>
-<p>Pärast selle programmi jooksutamist oleme failis <code>tervitus.txt</code> tekst <em>Tere, maailm!</em>. Kui fail oli enne olemas, kirjutatakse vana sisu üle.</p>
+<p>Pärast selle programmi jooksutamist on failis <code>tervitus.txt</code> tekst <em>Tere, maailm!</em>. Kui fail oli enne olemas, kirjutatakse vana sisu üle.</p>
 <h3 id="ridade-kirjutamine-filewritealllines">Ridade kirjutamine — <code>File.WriteAllLines()</code><a class="headerlink" href="#ridade-kirjutamine-filewritealllines" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Näide</label><label for="__tabbed_6_2">Proovimiseks</label></div>
 <div class="tabbed-content">
@@ -3537,9 +3537,9 @@
 </div>
 </div>
 </div>
-<p><code>File.WriteAllLines()</code> võtab sõnede massiivi ja kirjutab iga elemendi oma reana faili.</p>
+<p><code>File.WriteAllLines()</code> võtab stringide massiivi ja kirjutab iga elemendi eraldi reana faili.</p>
 <h3 id="lisamine-faili-loppu-fileappendalltext">Lisamine faili lõppu — <code>File.AppendAllText()</code><a class="headerlink" href="#lisamine-faili-loppu-fileappendalltext" title="Permanent link">&para;</a></h3>
-<p>Kui tahame failile juurde lisada ilma vana sisu kustutamata, kasutame <code>File.AppendAllText()</code>.</p>
+<p>Kui tahame teksti lisada faili lõppu ilma vana sisu üle kirjutamata, siis kasutame <code>File.AppendAllText()</code>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Näide</label><label for="__tabbed_7_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3620,7 +3620,7 @@
 </div>
 <h2 id="kataloogidega-tootamine">Kataloogidega töötamine<a class="headerlink" href="#kataloogidega-tootamine" title="Permanent link">&para;</a></h2>
 <h3 id="kataloogi-olemasolu-ja-loomine">Kataloogi olemasolu ja loomine<a class="headerlink" href="#kataloogi-olemasolu-ja-loomine" title="Permanent link">&para;</a></h3>
-<p><code>Directory.CreateDirectory()</code> loob kausta, kui see pole veel olemas. See on kasulik, sest näiteks <code>File.WriteAllText()</code> ebaõnnestub, kui sihtkausta pole.</p>
+<p><code>Directory.CreateDirectory()</code> loob kausta, kui seda pole veel olemas. See on kasulik, sest näiteks <code>File.WriteAllText()</code> ebaõnnestub, kui sihtkausta pole.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Näide</label><label for="__tabbed_9_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3735,8 +3735,11 @@
 <p class="admonition-title">Eesti tähed</p>
 <p>C# salvestab tekstifailid vaikimisi UTF-8 kodeeringus, mis toetab kõiki eesti tähti (ä, ö, õ, ü). Avades sellise faili näiteks Notepadiga, on tähed näha ilma moonutusteta.</p>
 </div>
-<h2 id="sageli-tekkinud-vead">Sageli tekkinud vead<a class="headerlink" href="#sageli-tekkinud-vead" title="Permanent link">&para;</a></h2>
+<h2 id="korduvad-vead">Korduvad vead<a class="headerlink" href="#korduvad-vead" title="Permanent link">&para;</a></h2>
 <h3 id="using-systemio-puudumine"><code>using System.IO</code> puudumine<a class="headerlink" href="#using-systemio-puudumine" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1">// VIGA — klassid File ja Directory puuduvad</span>
 </span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">sisu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="s">@"C:\temp\pupill.txt"</span><span class="p">);</span><span class="w"> </span><span class="c1">// Viga!</span>
 </span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>
@@ -3744,14 +3747,26 @@
 </span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="kt">string</span><span class="w"> </span><span class="n">sisu2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="s">@"C:\temp\pupill.txt"</span><span class="p">);</span><span class="w"> </span><span class="c1">// töötab</span>
 </span></code></pre></div>
-<h3 id="tee-ehk-margi-kasutamata-jatmine">Tee ehk <code>@</code>-märgi kasutamata jätmine<a class="headerlink" href="#tee-ehk-margi-kasutamata-jatmine" title="Permanent link">&para;</a></h3>
+</div>
+</div>
+</div>
+<h3 id="-margi-kasutamata-jatmine"><code>@</code>-märgi kasutamata jätmine<a class="headerlink" href="#-margi-kasutamata-jatmine" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1">// VIGA — \t on tabulaator, mitte täht t</span>
 </span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">tee1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"C:\temp\pupill.txt"</span><span class="p">;</span>
 </span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
 </span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="c1">// ÕIGE — @ teeb sõnest verbatim-sõne, kaldkriipsud jäävad tavalisteks märkideks</span>
 </span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="kt">string</span><span class="w"> </span><span class="n">tee2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@"C:\temp\pupill.txt"</span><span class="p">;</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="loetakse-faili-mis-pole-olemas">Loetakse faili, mis pole olemas<a class="headerlink" href="#loetakse-faili-mis-pole-olemas" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
 </span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="c1">// VIGA — kui faili pole, jookseb programm kokku</span>
@@ -3764,8 +3779,14 @@
 </span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">sisu2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="n">tee</span><span class="p">);</span>
 </span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="teede-kokku-panemine-pathcombine">Teede kokku panemine — <code>Path.Combine</code><a class="headerlink" href="#teede-kokku-panemine-pathcombine" title="Permanent link">&para;</a></h2>
-<p>Seni oleme kirjutanud faili tee ühe terve sõnena: <code>@"C:\temp\tervitus.txt"</code>. Aga mis siis, kui tee osad — nagu kataloog ja failinimi — on muutujates? Loomulik mõte oleks need kokku panna <code>+</code> märgiga:</p>
+<p>Seni oleme kirjutanud faili tee ühe terve stringina: <code>@"C:\temp\tervitus.txt"</code>. Aga mis siis, kui tee osad — nagu kataloog ja failinimi — on muutujates? Loomulik mõte oleks need kokku panna <code>+</code> märgiga:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
 </span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="kt">string</span><span class="w"> </span><span class="n">kataloog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@"C:\temp"</span><span class="p">;</span>
@@ -3773,9 +3794,12 @@
 </span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>
 </span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="kt">string</span><span class="w"> </span><span class="n">tee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kataloog</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"\\"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">failiNimi</span><span class="p">;</span><span class="w"> </span><span class="c1">// VÄGA VEAOHTLIK</span>
 </span></code></pre></div>
-<p>See töötab, aga ainult seni, kuni kõik on täpselt õige. Kui näiteks kataloogi lõppu jääb juhuslikult kaldkriips, on teele juba kaks kaldkriipsu ja programm ei leia faili.</p>
+</div>
+</div>
+</div>
+<p>See töötab, aga ainult seni, kuni kõik on täpselt õige. Kui näiteks kataloogi lõppu jääb juhuslikult kaldkriips, on tees juba kaks kaldkriipsu ja programm ei leia faili.</p>
 <p>Selle asemel kasutame klassi <code>Path</code> meetodit <code>Combine()</code>, mis paneb tee osad ise õigesti kokku:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Näide</label><label for="__tabbed_12_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Näide</label><label for="__tabbed_16_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3810,6 +3834,9 @@
 </div>
 </div>
 <p><code>Path.Combine()</code> lisab ise vajaliku eraldusmärgi, olenemata sellest, kas kataloogi lõpus on kaldkriips või mitte:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
 </span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="kt">string</span><span class="w"> </span><span class="n">tee1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="s">@"C:\temp"</span><span class="p">,</span><span class="w"> </span><span class="s">"tervitus.txt"</span><span class="p">);</span>
@@ -3817,17 +3844,25 @@
 </span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>
 </span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="c1">// Mõlemad annavad sama tulemuse: C:\temp\tervitus.txt</span>
 </span></code></pre></div>
-<p>Eraldi viil kaldkriipse ja katalooge mõelda ei ole vaja — seda tehakse meie eest ära.</p>
+</div>
+</div>
+</div>
 <h3 id="mitu-tee-osa-korraga">Mitu tee osa korraga<a class="headerlink" href="#mitu-tee-osa-korraga" title="Permanent link">&para;</a></h3>
 <p><code>Path.Combine()</code> saab kokku panna ka rohkem kui kaks osa. Iga osa lisatakse eelmise järele:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
 </span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="kt">string</span><span class="w"> </span><span class="n">tee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="s">@"C:\temp"</span><span class="p">,</span><span class="w"> </span><span class="s">"aasta-2026"</span><span class="p">,</span><span class="w"> </span><span class="s">"jaanuar"</span><span class="p">,</span><span class="w"> </span><span class="s">"paevik.txt"</span><span class="p">);</span>
 </span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="c1">// Tulemus: C:\temp\aasta-2026\jaanuar\paevik.txt</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="naide-koos-kataloogi-loomisega">Näide koos kataloogi loomisega<a class="headerlink" href="#naide-koos-kataloogi-loomisega" title="Permanent link">&para;</a></h3>
 <p>Võtame varasema kataloogide näite ja kirjutame selle ümber <code>Path.Combine()</code> abil:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Näide</label><label for="__tabbed_13_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Näide</label><label for="__tabbed_19_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3869,7 +3904,7 @@
 </div>
 <p>Nüüd on faili tee kokku pandud ühes kohas ja seda on lihtsam muuta — näiteks failinime vahetamiseks piisab ühe muutuja muutmisest.</p>
 <div class="admonition note">
-<p class="admonition-title">Muud <code>Path</code> klassi abilised</p>
+<p class="admonition-title">Muud <code>Path</code> klassi liikmed</p>
 <p>Klassil <code>Path</code> on teisigi kasulikke meetodeid, näiteks <code>Path.GetFileName(tee)</code> failinime ja <code>Path.GetDirectoryName(tee)</code> kataloogi saamiseks. Selles peatükis tutvume aga kõige kasutatavamaga — <code>Path.Combine()</code>.</p>
 </div>
 <h2 id="koik-meetodid-kokkuvottes">Kõik meetodid kokkuvõttes<a class="headerlink" href="#koik-meetodid-kokkuvottes" title="Permanent link">&para;</a></h2>
@@ -3933,7 +3968,6 @@
 <li>Loo programm, mis loeb failist <code>hinded.txt</code> ja trükib konsoolile välja read, millel olev hinne on vähemalt 4.</li>
 <li>Kirjuta programm päeviku pidamiseks: programm küsib sissekande teksti ja lisab selle faili <code>paevik.txt</code> lõppu (vana sisu peab alles jääma).</li>
 <li>Loo programm, mis loeb failist <code>opilased.txt</code> nimede loendi (üks nimi real) ja sorteerib need tähestiku järjekorras enne välja trükkimist. Kasuta LINQ-d.</li>
-<li>Loo mäng "Numbrimäng": programm loob juhusliku arvu 1–20 ja kasutaja püüab seda ära arvata. Iga katse kohta salvestatakse päevikusse kuupäev koos käiega. (Kuupäeva saad <code>DateTime.Now.ToString()</code>, juhusliku arvu <code>Random</code> klassiga nagu algoritmide peatükist.)</li>
 </ol>
 
 

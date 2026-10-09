@@ -1140,7 +1140,7 @@
   <span class="md-ellipsis">
     
   
-  ???
+  Üldosa
 
     
   </span>
@@ -1156,7 +1156,7 @@
               <span class="md-nav__icon md-icon"></span>
               
   
-  ???
+  Üldosa
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -1540,6 +1540,17 @@
       Sisukord
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vihjed" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Vihjed
+      </span>
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#tublimatele" class="md-nav__link">
@@ -2574,6 +2585,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#vihjed" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Vihjed
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tublimatele" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -2685,7 +2707,7 @@
           
   
   <span class="md-ellipsis">
-    ???
+    Üldosa
   </span>
 
         </a>
@@ -2723,12 +2745,13 @@ ilmateadete portaalil on range reegel - avalikke andmeid tohid API käest küsid
 <li><a href="https://www.err.ee/rss">ERR</a> </li>
 </ul>
 <p>Võite kasutada ka muid RSS-i põhiseid uudisvooge.</p>
-<p>Vihjed:</p>
+<h2 id="vihjed">Vihjed<a class="headerlink" href="#vihjed" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Uudisvood on XML-põhised ning neid tuleb lugeda internetist (XML-i ja interneti andmete peatükid)</li>
 <li>Uudise jaoks võiks luua eraldi klassi (näiteks RssItem)</li>
 <li>Uudiseid võiks hoida mõnes geneerilises kogumis (näiteks List&lt;RssItem&gt;)</li>
 <li>Uudiste sorteerimiseks kasutage LINQ-i</li>
+<li>Kui kasutate IDisposable klasse, siis kasutage using-klauslit</li>
 <li>HTML-iks saate uudised teha FileStream ja foreach tsükli abil</li>
 <li>HTML-väljund:
     <div class="language-HTML highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>

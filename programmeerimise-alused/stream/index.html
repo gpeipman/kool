@@ -1140,7 +1140,7 @@
   <span class="md-ellipsis">
     
   
-  ???
+  Üldosa
 
     
   </span>
@@ -1156,7 +1156,7 @@
               <span class="md-nav__icon md-icon"></span>
               
   
-  ???
+  Üldosa
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -1372,10 +1372,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#naide-logifaili-lugemine-vealehtede-leidmiseks" class="md-nav__link">
+  <a href="#naide-logifaili-lugemine-veateadete-leidmiseks" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Näide: logifaili lugemine vealehtede leidmiseks
+        Näide: logifaili lugemine veateadete leidmiseks
       </span>
     </span>
   </a>
@@ -1394,15 +1394,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduma-kippuvad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduma kippuvad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduma kippuvad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2835,10 +2835,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#naide-logifaili-lugemine-vealehtede-leidmiseks" class="md-nav__link">
+  <a href="#naide-logifaili-lugemine-veateadete-leidmiseks" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Näide: logifaili lugemine vealehtede leidmiseks
+        Näide: logifaili lugemine veateadete leidmiseks
       </span>
     </span>
   </a>
@@ -2857,15 +2857,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduma-kippuvad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduma kippuvad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduma kippuvad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3029,7 +3029,7 @@
           
   
   <span class="md-ellipsis">
-    ???
+    Üldosa
   </span>
 
         </a>
@@ -3049,12 +3049,12 @@
 
 
 <h1 id="streamid">Streamid<a class="headerlink" href="#streamid" title="Permanent link">&para;</a></h1>
-<p><a href=".././failid/">Failide peatükis</a> õppisime faile lugema ja kirjutama nii, et terve fail laeti korraga mällu: <code>File.ReadAllText()</code> loeb kogu faili üheks sõneks, <code>File.ReadAllLines()</code> aga kogu faili ridade massiiviks. See sobib väikeste failide jaoks.</p>
-<p>Aga mis saab siis, kui fail on tohutusuur — näiteks mitme gigabaidine logifail ehk programmi töö käigus tekkinud sündmuste päevik? Terve faili mällu laadimine viib programmi kokku. Lahendus on <strong>stream</strong>.</p>
+<p><a href=".././failid/">Failide peatükis</a> õppisime faile lugema ja kirjutama nii, et terve fail laeti korraga mällu: <code>File.ReadAllText()</code> loeb kogu faili üheks stringiks, <code>File.ReadAllLines()</code> aga kogu faili ridade massiiviks. See sobib väikeste failide jaoks.</p>
+<p>Aga mis saab siis, kui fail on hästi suur — näiteks mitme gigabaidine logifail ehk programmi töö käigus tekkinud sündmuste logi? Terve faili mällu laadimine võtaks liiga palju mälu ja jooksutaks programmi halvemal juhul kokku. Lahendus on <strong>stream</strong>.</p>
 <h2 id="mis-on-stream">Mis on stream?<a class="headerlink" href="#mis-on-stream" title="Permanent link">&para;</a></h2>
-<p><strong>Stream</strong> (eesti keeles <em>voog</em>) on andmete pidev liikumine allikast sihtkohta. Streami asemel, et terve fail korraga mällu laadida, loeme andmeid väikeste tükkidena — nagu jooksaks vett läbi õlekõrre.</p>
-<p>Mõtle selle peale nagu muusika kuulamisel: striiminguteenus ei laadi alla terve albumi korraga. See mängib muusikat lõigukaupa, samal ajal kui uued lõigud jõuavad kohale.</p>
-<p>C#-s on streamideks klassisüsteem: kõigil neil on ühine <strong>emaklass <code>Stream</code></strong>. Kaks kõige tavalisemat streami, mida me kasutame, on:</p>
+<p><strong>Stream</strong> (eesti keeles <em>voog</em>) on andmete pidev liikumine allikast sihtkohta. Selle asemel, et terve fail korraga mällu laadida, loeme andmeid väikeste tükkidena.</p>
+<p>Mõtle selle peale nagu muusika kuulamisel: striiminguteenus ei laadi alla tervet albumit korraga. See mängib muusikat lõigukaupa, samal ajal kui uued lõigud alla laetakse kohale.</p>
+<p>C#-s on streame palju, kuid kõigil neil on ühine <strong>emaklass <code>Stream</code></strong>. Meie kasutame siin järgmisi streamide klasse:</p>
 <table>
 <thead>
 <tr>
@@ -3085,7 +3085,7 @@
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span></code></pre></div>
 <h2 id="faili-avamine-streamina-filestream">Faili avamine streamina — <code>FileStream</code><a class="headerlink" href="#faili-avamine-streamina-filestream" title="Permanent link">&para;</a></h2>
-<p><code>FileStream</code> ühendab meid failiga. Avamisel peame ütlema, kuidas me faili kohtleme — <code>FileMode</code> väärtusega:</p>
+<p><code>FileStream</code> avab meile faili. Avamisel peame ütlema, kuidas me faili kasutame — <code>FileMode</code> väärtusega:</p>
 <table>
 <thead>
 <tr>
@@ -3104,31 +3104,37 @@
 </tr>
 <tr>
 <td><code>OpenOrCreate</code></td>
-<td>Ava fail või loo, kui teda pole</td>
+<td>Ava fail või loo, kui seda pole</td>
 </tr>
 <tr>
 <td><code>Append</code></td>
-<td>Ava fail ja mine lõppu juurde kirjutamiseks</td>
+<td>Ava fail ja vii kursor faili lõppu</td>
 </tr>
 <tr>
 <td><code>CreateNew</code></td>
-<td>Loo uus fail; vea, kui fail juba olemas</td>
+<td>Loo uus fail; annab vea, kui fail on juba olemas</td>
 </tr>
 </tbody>
 </table>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">string</span><span class="w"> </span><span class="n">tee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@"C:\temp\tervitus.txt"</span><span class="p">;</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">FileStream</span><span class="w"> </span><span class="n">voog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileStream</span><span class="p">(</span><span class="n">tee</span><span class="p">,</span><span class="w"> </span><span class="n">FileMode</span><span class="p">.</span><span class="n">OpenOrCreate</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Avatud stream tuleb ka kinni panna, sest muidu jääb fail lukku ja andmed võivad kaduma minna. Lähemalt räägime sellest allpool.</p>
 <div class="admonition note">
 <p class="admonition-title">Veel üks viis faili avamiseks</p>
-<p><code>File</code> klassil on ka oma meetodid streamide tegemiseks: <code>File.OpenRead(tee)</code>, <code>File.OpenWrite(tee)</code> ja <code>File.Open(tee, FileMode)</code>. Need on lühike tee sama asja juurde.</p>
+<p><code>File</code> klassil on ka oma meetodid streamide tegemiseks: <code>File.OpenRead(tee)</code>, <code>File.OpenWrite(tee)</code> ja <code>File.Open(tee, FileMode)</code>. Need tagastavad meile FileStreami.</p>
 </div>
 <h2 id="kirjutamine-streamwriter-iga">Kirjutamine <code>StreamWriter</code>-iga<a class="headerlink" href="#kirjutamine-streamwriter-iga" title="Permanent link">&para;</a></h2>
 <p><code>StreamWriter</code> kirjutab faili teksti ridade kaupa. Tähtsad meetodid on <code>WriteLine()</code> (rida koos reavahetusega) ja <code>Write()</code> (tekst ilma reavahetuseta).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Näide</label><label for="__tabbed_1_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label><label for="__tabbed_2_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3167,7 +3173,7 @@
 <p><code>Close()</code> paneb streami kinni. See kirjutab allesjäänud andmed kettale ja annab faili teiste programmide jaoks vabaks.</p>
 <h3 id="lisamine-faili-loppu">Lisamine faili lõppu<a class="headerlink" href="#lisamine-faili-loppu" title="Permanent link">&para;</a></h3>
 <p><code>StreamWriter</code> ei pea alati faili algusest alustama. Teine argument <code>true</code> tähendab, et uued read lisatakse faili lõppu, vana sisu alles jääb:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label><label for="__tabbed_2_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label><label for="__tabbed_3_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3201,10 +3207,10 @@
 </div>
 </div>
 </div>
-<p>Nii saame programmidele logisid ehk sündmuste päevikuid juurde kirjutada, ilma et varasem kirjutatu kaoks.</p>
+<p>Nii saame näiteks lisada uusi ridu logifailidesse ilma eelnevat faili sisu kaotamata.</p>
 <h2 id="lugemine-streamreader-iga">Lugemine <code>StreamReader</code>-iga<a class="headerlink" href="#lugemine-streamreader-iga" title="Permanent link">&para;</a></h2>
 <p><code>StreamReader</code> loeb faili teksti ridade kaupa. Ridade kaupa lugemisel peame teadma, millal fail lõppeb: <code>ReadLine()</code> tagastab <code>null</code>, kui rohkem ridu pole.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label><label for="__tabbed_3_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label><label for="__tabbed_4_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3249,8 +3255,8 @@
 <p><code>while ((rida = lugeja.ReadLine()) != null)</code> loeb igal sammul uue rea muutujasse <code>rida</code> ja kontrollib, kas rida on olemas — kui <code>ReadLine()</code> tagastab <code>null</code>, on fail lõppenud ja tsükkel peatub.</p>
 </div>
 <h3 id="kogu-sisu-korraga">Kogu sisu korraga<a class="headerlink" href="#kogu-sisu-korraga" title="Permanent link">&para;</a></h3>
-<p>Kui tahame kogu sisu ühe korraga, on <code>StreamReader</code>-il olemas <code>ReadToEnd()</code>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label><label for="__tabbed_4_2">Proovimiseks</label></div>
+<p>Kui tahame lugeda kogu faili sisu ühe korraga, on <code>StreamReader</code>-il olemas <code>ReadToEnd()</code> meetod:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Näide</label><label for="__tabbed_5_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3286,6 +3292,9 @@
 </div>
 <h2 id="ressursside-vabastamine-using-lause">Ressursside vabastamine — <code>using</code>-lause<a class="headerlink" href="#ressursside-vabastamine-using-lause" title="Permanent link">&para;</a></h2>
 <p>Streami kinnipanemata jätmine on ohtlik: fail võib teistele programmidele lukku jääda ja kirjutamisel võib osa andmeid kaduma minna. Õige viis on kasutada <strong><code>using</code>-lauset</strong>, mis paneb streami automaatselt kinni — ka siis, kui programmis juhtub viga.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">StreamWriter</span><span class="w"> </span><span class="n">kirjutaja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamWriter</span><span class="p">(</span><span class="s">@"C:\temp\paevik.txt"</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">))</span>
@@ -3295,14 +3304,17 @@
 </span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">}</span>
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c1">// siin on stream juba automaatselt kinni pandud</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Kõik edasised näited kasutavad <code>using</code>-lauset.</p>
 <div class="admonition note">
-<p class="admonition-title">Lühike vorm valikuliselt</p>
-<p>Uusemates C# versioonides (8.0 ja uuemad) on olemas ka lühem vorm <code>using StreamWriter kirjutaja = new StreamWriter(tee);</code>. Sel juhul pandakse stream kinni programmi lõpus, aga klassikaline <code>using</code>-blokk on selge ja soovitatav alustajale.</p>
+<p class="admonition-title">Lühike vorm</p>
+<p>Uusemates C# versioonides (8.0 ja uuemad) on olemas ka lühem vorm <code>using StreamWriter kirjutaja = new StreamWriter(tee);</code>. Sel juhul pannakse stream kinni programmi lõpus. Klassikaline <code>using</code>-blokk on algajatele tavaliselt selgem.</p>
 </div>
-<h2 id="naide-logifaili-lugemine-vealehtede-leidmiseks">Näide: logifaili lugemine vealehtede leidmiseks<a class="headerlink" href="#naide-logifaili-lugemine-vealehtede-leidmiseks" title="Permanent link">&para;</a></h2>
+<h2 id="naide-logifaili-lugemine-veateadete-leidmiseks">Näide: logifaili lugemine veateadete leidmiseks<a class="headerlink" href="#naide-logifaili-lugemine-veateadete-leidmiseks" title="Permanent link">&para;</a></h2>
 <p>Oletame, et meil on logifail, kus igal real on üks sündmus. Loeme faili rea kaupa ja loeme kokku, mitu <code>ERROR</code> sündmust sealt leiame:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Näide</label><label for="__tabbed_5_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Näide</label><label for="__tabbed_7_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
@@ -3393,8 +3405,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="sageli-tekkinud-vead">Sageli tekkinud vead<a class="headerlink" href="#sageli-tekkinud-vead" title="Permanent link">&para;</a></h2>
+<h2 id="korduma-kippuvad-vead">Korduma kippuvad vead<a class="headerlink" href="#korduma-kippuvad-vead" title="Permanent link">&para;</a></h2>
 <h3 id="using-systemio-puudumine"><code>using System.IO</code> puudumine<a class="headerlink" href="#using-systemio-puudumine" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// VIGA — StreamReader klass puudub</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">StreamReader</span><span class="w"> </span><span class="n">lugeja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamReader</span><span class="p">(</span><span class="n">tee</span><span class="p">);</span><span class="w"> </span><span class="c1">// Viga!</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
@@ -3402,7 +3417,13 @@
 </span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">StreamReader</span><span class="w"> </span><span class="n">lugeja2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamReader</span><span class="p">(</span><span class="n">tee</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="streami-kinnipanemata-jatmine">Streami kinnipanemata jätmine<a class="headerlink" href="#streami-kinnipanemata-jatmine" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1">// VIGA — Close() puudub, fail jääb lukku ja andmed võivad kaduda</span>
@@ -3415,7 +3436,13 @@
 </span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="n">kirjutaja2</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
 </span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="readline-ilma-null-kontrollita"><code>ReadLine()</code> ilma <code>null</code>-kontrollita<a class="headerlink" href="#readline-ilma-null-kontrollita" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="c1">// VIGA — faili lõpus annab ReadLine() null ja programm jookseb kokku</span>
@@ -3435,6 +3462,9 @@
 </span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="koik-meetodid-kokkuvottes">Kõik meetodid kokkuvõttes<a class="headerlink" href="#koik-meetodid-kokkuvottes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

@@ -1140,7 +1140,7 @@
   <span class="md-ellipsis">
     
   
-  ???
+  Üldosa
 
     
   </span>
@@ -1156,7 +1156,7 @@
               <span class="md-nav__icon md-icon"></span>
               
   
-  ???
+  Üldosa
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -1630,15 +1630,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduma-kippuvad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduma kippuvad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduma kippuvad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3013,15 +3013,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduma-kippuvad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduma kippuvad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduma kippuvad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3207,7 +3207,7 @@
           
   
   <span class="md-ellipsis">
-    ???
+    Üldosa
   </span>
 
         </a>
@@ -3324,12 +3324,24 @@
 </ul>
 <h2 id="json-nimeruum">JSON nimeruum<a class="headerlink" href="#json-nimeruum" title="Permanent link">&para;</a></h2>
 <p>.NET-is asub JSON-iga töötamiseks vajalik klass <code>JsonSerializer</code> nimeruumis <code>System.Text.Json</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>JSON-i puu kujul lugemiseks läheb vaja klass <code>JsonDocument</code>, mis on samuti samas nimeruumas. Päris puu objektidega (objektid ja massiivid) töötamiseks on olemas nimeruum <code>System.Text.Json.Nodes</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json.Nodes</span><span class="p">;</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Erinevalt XML-ist ei pea JSON-i jaoks ühtegi lisapaketti paigaldama — <code>System.Text.Json</code> on .NET-is juba sees.</p>
 <h2 id="lugemine-jsondocument-iga">Lugemine <code>JsonDocument</code>-iga<a class="headerlink" href="#lugemine-jsondocument-iga" title="Permanent link">&para;</a></h2>
 <p>Kõige lihtsam viis tundmatut JSON-i lugeda on <code>JsonDocument</code>. See laeb JSON-i mällu ja laseb väärtusi võtme järgi küsida.</p>
@@ -3341,7 +3353,7 @@
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Lugemine:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Näide</label><label for="__tabbed_1_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label><label for="__tabbed_3_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3400,7 +3412,7 @@
 </div>
 <h3 id="massiivi-lugemine">Massiivi lugemine<a class="headerlink" href="#massiivi-lugemine" title="Permanent link">&para;</a></h3>
 <p>Kui juur on massiiv, käime elemendid läbi meetodiga <code>EnumerateArray()</code>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label><label for="__tabbed_2_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label><label for="__tabbed_4_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3448,6 +3460,9 @@
 </div>
 <h3 id="puuduva-votme-kontrollimine">Puuduva võtme kontrollimine<a class="headerlink" href="#puuduva-votme-kontrollimine" title="Permanent link">&para;</a></h3>
 <p>Kui võti võib puududa, viskab <code>GetProperty()</code> vea. Selle asemel tasub kasutada <code>TryGetProperty()</code>, mis tagastab <code>true</code> või <code>false</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">JsonDocument</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonDocument</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
@@ -3461,10 +3476,13 @@
 </span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Hinne puudub."</span><span class="p">);</span>
 </span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="json-i-kirjutamine">JSON-i kirjutamine<a class="headerlink" href="#json-i-kirjutamine" title="Permanent link">&para;</a></h2>
 <h3 id="kirjutamine-jsonobject-i-ja-jsonarray-iga">Kirjutamine <code>JsonObject</code>-i ja <code>JsonArray</code>-iga<a class="headerlink" href="#kirjutamine-jsonobject-i-ja-jsonarray-iga" title="Permanent link">&para;</a></h3>
 <p>Puu objektidega saab JSON-i ka ise ehitada, sarnaselt XML-i <code>XDocument</code>-ile. Nimeruumis <code>System.Text.Json.Nodes</code> on klassid <code>JsonObject</code> (objekt) ja <code>JsonArray</code> (massiiv).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label><label for="__tabbed_3_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Näide</label><label for="__tabbed_6_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3511,6 +3529,9 @@
 </div>
 <p><code>WriteIndented = true</code> muudab tulemuse loetavaks — iga väärtus tuleb oma reale. Ilma selleta on JSON ühel pikal real.</p>
 <p>Massiivi ehitamine <code>JsonArray</code>-iga:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json.Nodes</span><span class="p">;</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">JsonArray</span><span class="w"> </span><span class="n">opilased</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JsonArray</span>
@@ -3521,9 +3542,15 @@
 </span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
 </span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="kt">string</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">opilased</span><span class="p">.</span><span class="n">ToJsonString</span><span class="p">();</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="serialiseerimine">Serialiseerimine<a class="headerlink" href="#serialiseerimine" title="Permanent link">&para;</a></h2>
 <p>JSON-i kõige mugavam pool on <strong>serialiseerimine</strong>: objekt muudetakse automaatselt JSON-iks. Sarnaselt XML-i <code>XmlSerializer</code>-ile teeb siin töö ära klass <code>JsonSerializer</code> — meie ei pea iga võtit ise kirjutama.</p>
 <p>Alustame klassiga:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Opilane</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">{</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Nimi</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
@@ -3531,8 +3558,11 @@
 </span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Hinne</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Serialiseerimine ehk objekti muutmine JSON-tekstiks:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label><label for="__tabbed_4_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Näide</label><label for="__tabbed_9_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3594,6 +3624,9 @@
 </span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <p><code>JsonSerializer</code> kasutab võtmetena klasside omaduste nimesid. Serialiseerida saab ka otse voogu, mis ühendab selle peatüki <a href=".././stream/">streamidega</a>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
@@ -3602,8 +3635,14 @@
 </span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="n">JsonSerializer</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">voog</span><span class="p">,</span><span class="w"> </span><span class="n">opilane</span><span class="p">);</span>
 </span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="votmenimede-muutmine">Võtmenimede muutmine<a class="headerlink" href="#votmenimede-muutmine" title="Permanent link">&para;</a></h3>
 <p>Päris maailmas kasutavad JSON-failid tavaliselt <code>camelCase</code> nimesid (<code>nimi</code>, <code>vanus</code>), mitte <code>PascalCase</code> (<code>Nimi</code>, <code>Vanus</code>). Seda saab seadistada <code>PropertyNamingPolicy</code> abil:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="kt">var</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JsonSerializerOptions</span>
@@ -3614,6 +3653,9 @@
 </span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
 </span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="kt">string</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonSerializer</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">opilane</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Nüüd on tulemus:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">{</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="nt">"nimi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mari"</span><span class="p">,</span>
@@ -3622,6 +3664,9 @@
 </span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Täpsema nime saab anda atribuudiga <code>[JsonPropertyName]</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json.Serialization</span><span class="p">;</span>
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
 </span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Opilane</span>
@@ -3633,8 +3678,14 @@
 </span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Vanus</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="loendi-serialiseerimine">Loendi serialiseerimine<a class="headerlink" href="#loendi-serialiseerimine" title="Permanent link">&para;</a></h3>
 <p>Ka loendi saab korraga serialiseerida. Tulemuseks on JSON-massiiv:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
@@ -3646,6 +3697,9 @@
 </span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>
 </span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="kt">string</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonSerializer</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">opilased</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JsonSerializerOptions</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">WriteIndented</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="w"> </span><span class="p">});</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Tulemus:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">[</span>
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="p">{</span>
@@ -3662,7 +3716,7 @@
 </span></code></pre></div>
 <h2 id="deserialiseerimine">Deserialiseerimine<a class="headerlink" href="#deserialiseerimine" title="Permanent link">&para;</a></h2>
 <p><strong>Deserialiseerimine</strong> on vastupidine tegevus: JSON-tekstist saab jälle C#-objekt. Kasutame sama <code>JsonSerializer</code>-it, aga seekord lugemiseks.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Näide</label><label for="__tabbed_5_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Näide</label><label for="__tabbed_14_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3719,6 +3773,9 @@
 </div>
 <h3 id="loendi-deserialiseerimine">Loendi deserialiseerimine<a class="headerlink" href="#loendi-deserialiseerimine" title="Permanent link">&para;</a></h3>
 <p>Loendi lugemisel kasutame sama tüüpi, millega serialiseerisime — <code>List&lt;Opilane&gt;</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
 </span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
@@ -3731,7 +3788,13 @@
 </span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">opilane</span><span class="p">.</span><span class="n">Nimi</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" — hinne "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">opilane</span><span class="p">.</span><span class="n">Hinne</span><span class="p">);</span>
 </span><span id="__span-26-11"><a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Deserialiseerida saab ka otse voost, ilma et peaksime kogu faili esmalt sõneks lugema:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
 </span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
@@ -3741,9 +3804,12 @@
 </span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Opilane</span><span class="o">&gt;</span><span class="w"> </span><span class="n">opilased</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonSerializer</span><span class="p">.</span><span class="n">Deserialize</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Opilane</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">voog</span><span class="p">);</span>
 </span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="naide-opilaste-nimekiri-json-is">Näide: õpilaste nimekiri JSON-is<a class="headerlink" href="#naide-opilaste-nimekiri-json-is" title="Permanent link">&para;</a></h2>
 <p>Paneme seni õpitu kokku. Programmis on klass <code>Opilane</code>, loome mitu õpilast, salvestame need JSON-i ja loeme seejärel tagasi.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Näide</label><label for="__tabbed_6_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Näide</label><label for="__tabbed_17_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
@@ -3875,8 +3941,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="sageli-tekkinud-vead">Sageli tekkinud vead<a class="headerlink" href="#sageli-tekkinud-vead" title="Permanent link">&para;</a></h2>
+<h2 id="korduma-kippuvad-vead">Korduma kippuvad vead<a class="headerlink" href="#korduma-kippuvad-vead" title="Permanent link">&para;</a></h2>
 <h3 id="nimeruumi-puudumine">Nimeruumi puudumine<a class="headerlink" href="#nimeruumi-puudumine" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="c1">// VIGA — JsonSerializer klass puudub</span>
 </span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonSerializer</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">opilane</span><span class="p">);</span><span class="w"> </span><span class="c1">// Viga!</span>
 </span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>
@@ -3884,14 +3953,26 @@
 </span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="kt">string</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonSerializer</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">opilane</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="vigane-json">Vigane JSON<a class="headerlink" href="#vigane-json" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
 </span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="c1">// VIGA — viimase paari järel on üleliigne koma, Parse viskab JsonException</span>
 </span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="kt">string</span><span class="w"> </span><span class="n">katki</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"{ \"nimi\": \"Mari\", }"</span><span class="p">;</span>
 </span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="k">using</span><span class="w"> </span><span class="nn">JsonDocument</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonDocument</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">katki</span><span class="p">);</span><span class="w"> </span><span class="c1">// Viga!</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="tostutundlikkuse-eiramine">Tõstutundlikkuse eiramine<a class="headerlink" href="#tostutundlikkuse-eiramine" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
 </span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="c1">// JSON-is on "nimi", klassis omadus Nimi</span>
@@ -3902,7 +3983,13 @@
 </span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="kt">var</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JsonSerializerOptions</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">PropertyNameCaseInsensitive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="w"> </span><span class="p">};</span>
 </span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="n">Opilane</span><span class="w"> </span><span class="n">opilane2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonSerializer</span><span class="p">.</span><span class="n">Deserialize</span><span class="o">&lt;</span><span class="n">Opilane</span><span class="o">&gt;</span><span class="p">(</span><span class="n">json</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="jsondocument-i-mitte-vabastamine"><code>JsonDocument</code>-i mitte vabastamine<a class="headerlink" href="#jsondocument-i-mitte-vabastamine" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
 </span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="c1">// VIGA — JsonDocument implementeerib IDisposable</span>
@@ -3911,7 +3998,13 @@
 </span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="c1">// ÕIGE — kasutame using-lauset</span>
 </span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="k">using</span><span class="w"> </span><span class="nn">JsonDocument</span><span class="w"> </span><span class="n">doc2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonDocument</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="puuduva-votme-kusimine">Puuduva võtme küsimine<a class="headerlink" href="#puuduva-votme-kusimine" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 </span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>
 </span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="c1">// VIGA — kui võti "hinne" puudub, viskab GetProperty() erindi</span>
@@ -3923,6 +4016,9 @@
 </span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">hinne2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">GetInt32</span><span class="p">();</span>
 </span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="koik-meetodid-ja-klassid-kokkuvottes">Kõik meetodid ja klassid kokkuvõttes<a class="headerlink" href="#koik-meetodid-ja-klassid-kokkuvottes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

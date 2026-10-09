@@ -1140,7 +1140,7 @@
   <span class="md-ellipsis">
     
   
-  ???
+  Üldosa
 
     
   </span>
@@ -1156,7 +1156,7 @@
               <span class="md-nav__icon md-icon"></span>
               
   
-  ???
+  Üldosa
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -2795,7 +2795,7 @@
           
   
   <span class="md-ellipsis">
-    ???
+    Üldosa
   </span>
 
         </a>
@@ -2853,7 +2853,10 @@
 </div>
 </div>
 <h2 id="miks-kasutame-mootmiseks-stopwatch-klassi">Miks kasutame mõõtmiseks <code>Stopwatch</code> klassi?<a class="headerlink" href="#miks-kasutame-mootmiseks-stopwatch-klassi" title="Permanent link">&para;</a></h2>
-<p>Igasuguse kiiruse mõõtmise juures on esimene küsimus: millega me mõõdame? Esmapilgul tundub loomulik võtta enne mõõdetava koodi jooksutamist hetk <code>DateTime.Now</code>-ist, pärast seda uuesti ja lahutada:</p>
+<p>Igasuguse kiiruse mõõtmise juures on esimene küsimus: millega me seda mõõdame? Esmapilgul tundub loomulik võtta enne mõõdetava koodi jooksutamist hetk <code>DateTime.Now</code>-ist, pärast seda uuesti ja lahutada:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">algus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">// mõõdetav kood</span>
@@ -2862,13 +2865,19 @@
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Aega läks: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">lõpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">algus</span><span class="p">));</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>See lahendus küll töötab, aga on kiiruse mõõtmiseks halb. <code>DateTime.Now</code> on mõeldud kellaaja kuvamiseks inimesele — selle ülesanne on öelda, mis kell parasjagu on, mitte mõõta mikrosekundeid. Sellel on kolm probleemi:</p>
 <ul>
 <li>Süsteemi kella aetakse aeg-ajalt õigeks näiteks kellaaja sünkroniseerimise teel. Sel hetkel võib kellaaeg hüpata edasi või tagasi, mis teeb mõõtmistulemuse valeks.</li>
-<li><code>DateTime.Now</code> väikseim eristatav ajavahemik on piiratud. Windowsil on see suurusjärgus 15 millisekundit ehk 15 tuhandikku sekundit. Kiire kood, mis töötab mikrosekunditega (tuhandikud millisekundit), jääb sellisest mõõtmisest nähtamatuks.</li>
+<li><code>DateTime.Now</code> väikseim eristatav ajavahemik on piiratud. Windowsil on see suurusjärgus 15 millisekundit ehk 15 tuhandikku sekundit. Kiire kood, mis töötab mikrosekunditega (tuhandikud millisekundit), jääb sellisele mõõtmisele nähtamatuks.</li>
 <li>Täpsust mõjutab ka see, mis kasutaja arvutis sel hetkel veel toimub — taustaülesanded ja operatsioonisüsteemi üldine seis.</li>
 </ul>
 <p><code>Stopwatch</code> klass on loodud just selle ülesande jaoks: väikeste ajavahemike täpseks mõõtmiseks. Ta kasutab süsteemi kõrge resolutsiooniga loendurit ja mõõdab aega mikrosekundite täpsusega. Tema kasutamine ei koorma praktiliselt programmi üldse. Sealt ka kogu peatüki jooksul kasutatav muster:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">watch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Stopwatch</span><span class="p">();</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">watch</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span>
@@ -2879,13 +2888,16 @@
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Aega läks: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">watch</span><span class="p">.</span><span class="n">Elapsed</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title"><code>using System.Diagnostics</code></p>
-<p><code>Stopwatch</code> asub nimeruumis <code>System.Diagnostics</code>. Uuemad Visual Studio mallid toovad selle tihti ise sisse, muul juhul lisame programmi ülaossa rea <code>using System.Diagnostics;</code>.</p>
+<p><code>Stopwatch</code> asub nimeruumis <code>System.Diagnostics</code>. Uuemad Visual Studio versioonid toovad selle tihti ise sisse, muul juhul lisame programmi ülaossa rea <code>using System.Diagnostics;</code>.</p>
 </div>
 <h2 id="faili-kirjutamine-file-klassi-abil">Faili kirjutamine File klassi abil<a class="headerlink" href="#faili-kirjutamine-file-klassi-abil" title="Permanent link">&para;</a></h2>
-<p>Varasemast on File klass meile juba tuttav. Selle klassi abil saime failidega teha mitmeid toiminguid. Nüüd püüame selle klassi abil luua logifaili ja kirjutada sinna 100000 kannet. Seejuures mõõdame kirjutamisele kulunud aega.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label><label for="__tabbed_2_2">Proovimiseks</label></div>
+<p>Varasemast on File klass meile juba tuttav. Selle klassi abil saime failidega teha mitmeid toiminguid. Nüüd püüame selle klassi abil luua logifaili ja kirjutada sinna 10000 kannet. Seejuures mõõdame kirjutamisele kulunud aega.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label><label for="__tabbed_4_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">watch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Stopwatch</span><span class="p">();</span>
@@ -2935,7 +2947,7 @@
 <p>Selle teksti kirjutamise ajal andis arvuti tulemuseks 00:01:15.4007626 (üks minut ja 15 sekundit).</p>
 <h2 id="faili-kirjutamine-streami-klasside-abil">Faili kirjutamine streami klasside abil<a class="headerlink" href="#faili-kirjutamine-streami-klasside-abil" title="Permanent link">&para;</a></h2>
 <p>Kirjutame selle koodi nüüd ümber streami klasse kasutades ja mõõdame ka selle kiiruse.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label><label for="__tabbed_3_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Näide</label><label for="__tabbed_5_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">watch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Stopwatch</span><span class="p">();</span>
@@ -2992,7 +3004,7 @@
 <h2 id="mis-juhtus">Mis juhtus?<a class="headerlink" href="#mis-juhtus" title="Permanent link">&para;</a></h2>
 <p>Kui me neid kahte ajakulu võrdleme, siis streami kasutamine on 62500 korda kiirem. Millest selline vahe?</p>
 <p>File.AppendAllText() teeb kordi rohkem tegevusi kui streami klassid. Kui streami korral toimub kirjutamine samasse streami, siis File klassi korral on töörütm teine.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Näide</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">for</span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100000</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>

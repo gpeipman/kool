@@ -1140,7 +1140,7 @@
   <span class="md-ellipsis">
     
   
-  ???
+  Üldosa
 
     
   </span>
@@ -1156,7 +1156,7 @@
               <span class="md-nav__icon md-icon"></span>
               
   
-  ???
+  Üldosa
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -1240,10 +1240,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#klass-mis-vajab-vabastamist" class="md-nav__link">
+  <a href="#klass-mis-vajab-ressurside-vabastamist" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Klass, mis vajab vabastamist
+        Klass, mis vajab ressurside vabastamist
       </span>
     </span>
   </a>
@@ -1284,10 +1284,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paris-elu-naide-faili-kirjutamine" class="md-nav__link">
+  <a href="#eluline-naide-faili-kirjutamine" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Päris elu näide: faili kirjutamine
+        Eluline näide: faili kirjutamine
       </span>
     </span>
   </a>
@@ -1317,15 +1317,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduvalt-tekkivad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduvalt tekkivad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduvalt tekkivad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1340,10 +1340,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#liidese-votmine-aga-dispose-puudub" class="md-nav__link">
+  <a href="#idisposable-kasutamine-aga-dispose-puudub" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Liidese võtmine, aga <code>Dispose()</code> puudub
+        IDisposable kasutamine, aga <code>Dispose()</code> puudub
       </span>
     </span>
   </a>
@@ -2734,10 +2734,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#klass-mis-vajab-vabastamist" class="md-nav__link">
+  <a href="#klass-mis-vajab-ressurside-vabastamist" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Klass, mis vajab vabastamist
+        Klass, mis vajab ressurside vabastamist
       </span>
     </span>
   </a>
@@ -2778,10 +2778,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paris-elu-naide-faili-kirjutamine" class="md-nav__link">
+  <a href="#eluline-naide-faili-kirjutamine" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Päris elu näide: faili kirjutamine
+        Eluline näide: faili kirjutamine
       </span>
     </span>
   </a>
@@ -2811,15 +2811,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduvalt-tekkivad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduvalt tekkivad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduvalt tekkivad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2834,10 +2834,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#liidese-votmine-aga-dispose-puudub" class="md-nav__link">
+  <a href="#idisposable-kasutamine-aga-dispose-puudub" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Liidese võtmine, aga <code>Dispose()</code> puudub
+        IDisposable kasutamine, aga <code>Dispose()</code> puudub
       </span>
     </span>
   </a>
@@ -2983,7 +2983,7 @@
           
   
   <span class="md-ellipsis">
-    ???
+    Üldosa
   </span>
 
         </a>
@@ -3013,22 +3013,31 @@
 <h2 id="mis-on-idisposable">Mis on <code>IDisposable</code>?<a class="headerlink" href="#mis-on-idisposable" title="Permanent link">&para;</a></h2>
 <p><code>IDisposable</code> on <strong>liides</strong> (<em>interface</em>) nimeruumist <code>System</code>. Liides on omamoodi leping: kui klass selle endale võtab, peab ta selle lepingu tingimused täitma.</p>
 <p><code>IDisposable</code>-liidesel on täpselt üks meetod:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IDisposable</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Dispose</span><span class="p">();</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Lühidalt: klass, mis haldab mingit välisressurssi, ütleb <code>IDisposable</code> liidese abil: "Mina oskan enda ressursse vabastada — kutsu lihtsalt meetodit <code>Dispose()</code>."</p>
-<h2 id="klass-mis-vajab-vabastamist">Klass, mis vajab vabastamist<a class="headerlink" href="#klass-mis-vajab-vabastamist" title="Permanent link">&para;</a></h2>
+<h2 id="klass-mis-vajab-ressurside-vabastamist">Klass, mis vajab ressurside vabastamist<a class="headerlink" href="#klass-mis-vajab-ressurside-vabastamist" title="Permanent link">&para;</a></h2>
 <p>Vaatame lihtsat näidet klassist, mis esindab ühendust. Ühenduse "avamisega" eraldatakse ressursse ja seetõttu peab see klass pakkuma meetodit <code>Dispose()</code>:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Uhendus</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDisposable</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Connection</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDisposable</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Uhendus</span><span class="p">()</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Connect</span><span class="p">()</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Ühendus avatud."</span><span class="p">);</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Saada</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">sõnum</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Send</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">sõnum</span><span class="p">)</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Saadan: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sõnum</span><span class="p">);</span>
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
@@ -3039,22 +3048,31 @@
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Pööra tähelepanu paarile asjale:</p>
 <ul>
-<li><code>: IDisposable</code> tähendab, et klass võtab liidese omaks.</li>
-<li><code>Dispose()</code> on meetod, mis vabastab ressursi. Kui selle liidese võtsime, <strong>peab</strong> <code>Dispose()</code> olemas olema — muidu ei lähe kood kompileerimisest läbi.</li>
-<li>Klassi konstruktor eraldab ressursi ja <code>Dispose()</code> vabastab selle.</li>
+<li><code>: IDisposable</code> tähendab, et klass kasutab IDisposable liidest.</li>
+<li><code>Dispose()</code> on meetod, mis vabastab ressursi. Kui IDisposaleble liidest kasutame, siis <strong>peab</strong> <code>Dispose()</code> meetod olemas olema — muidu kood ei kompileeru.</li>
+<li>Klass oma töö käigus küsis mingi ressursi ja <code>Dispose()</code> vabastab selle.</li>
 </ul>
 <h2 id="dispose-kasitsi-kutsumine"><code>Dispose()</code> käsitsi kutsumine<a class="headerlink" href="#dispose-kasitsi-kutsumine" title="Permanent link">&para;</a></h2>
 <p>Lihtsaim (aga veaohtlik) viis on luua objekt, kasutada seda ja lõpuks kutsuda <code>Dispose()</code>:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Uhendus</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Uhendus</span><span class="p">();</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">u</span><span class="p">.</span><span class="n">Saada</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Connection</span><span class="p">();</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">u</span><span class="p">.</span><span class="n">Send</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">u</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
 </span></code></pre></div>
-<p>See töötab, kuid sellel on üks suur puudus — kui objekti kasutamise vahele jääb viga ehk <strong>erind</strong> (<em>exception</em>), siis <code>Dispose()</code> rida kunagi ei jõustu ja ressurss jääbki vabastamata. Just selle probleemi lahendab <code>using</code>-klausel.</p>
+</div>
+</div>
+</div>
+<p>See töötab, kuid sellel on üks suur puudus — kui objekti kasutamisel tekib viga, siis <code>Dispose()</code> meetodit ei kutsuta ja ressurss jääbki vabastamata. Just selle probleemi lahendab <code>using</code>-klausel.</p>
 <h2 id="using-klausel"><code>using</code>-klausel<a class="headerlink" href="#using-klausel" title="Permanent link">&para;</a></h2>
-<p><code>using</code>-klausel on spetsiaalne plokk, mis <strong>kutsub <code>Dispose()</code> automaatselt</strong> välja ploki lõpus — ka siis, kui ploki sees tekib viga.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Näide</label><label for="__tabbed_1_2">Proovimiseks</label></div>
+<p><code>using</code>-klausel on spetsiaalne plokk, mis <strong>kutsub <code>Dispose()</code> meetodi automaatselt</strong> välja ploki lõpus — ka siis, kui ploki sees tekib viga.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label><label for="__tabbed_4_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Uhendus</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Uhendus</span><span class="p">())</span>
@@ -3070,14 +3088,14 @@
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">DisposeApp</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">{</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Uhendus</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDisposable</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Connection</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDisposable</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Uhendus</span><span class="p">()</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Connect</span><span class="p">()</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="p">{</span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Ühendus avatud."</span><span class="p">);</span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Saada</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">sõnum</span><span class="p">)</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Send</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">sõnum</span><span class="p">)</span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">        </span><span class="p">{</span>
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Saadan: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sõnum</span><span class="p">);</span>
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="p">}</span>
@@ -3092,10 +3110,10 @@
 </span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="p">{</span>
 </span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 </span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Uhendus</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Uhendus</span><span class="p">())</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Connection</span><span class="p">())</span>
 </span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">            </span><span class="p">{</span>
-</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">                </span><span class="n">u</span><span class="p">.</span><span class="n">Saada</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">                </span><span class="n">u</span><span class="p">.</span><span class="n">Saada</span><span class="p">(</span><span class="s">"Kuidas läheb?"</span><span class="p">);</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">                </span><span class="n">u</span><span class="p">.</span><span class="n">Send</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">                </span><span class="n">u</span><span class="p">.</span><span class="n">Send</span><span class="p">(</span><span class="s">"Kuidas läheb?"</span><span class="p">);</span>
 </span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">            </span><span class="p">}</span>
 </span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">    </span><span class="p">}</span>
@@ -3111,19 +3129,24 @@
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Ühendus suletud.
 </span></code></pre></div>
 <p>Näed, et <code>Dispose()</code> kutsuti ise välja kohe, kui <code>using</code>-plokk lõppes. Me ei pidanud seda käsitsi kirjutama.</p>
-<div class="admonition note">
-<p class="admonition-title">Kuidas <code>using</code> töötab</p>
-<p><code>using</code>-klauslit võib mõelda kui "try/finally" lühendit: ploki kood jookseb ära ja seejärel kutsutakse kindlasti <code>Dispose()</code>, ükskõik kas plokk lõppes tavaliselt või veaga. Seetõttu on <code>using</code> alati turvalisem kui käsitsi <code>Dispose()</code> kutsumine.</p>
-</div>
 <h2 id="luhivorm-using-deklaratsioon">Lühivorm: <code>using</code>-deklaratsioon<a class="headerlink" href="#luhivorm-using-deklaratsioon" title="Permanent link">&para;</a></h2>
-<p>Uuemates C# versioonides (alates C# 8.0) on olemas ka lühem vorm, kus <code>using</code>-plokki ega sulge pole vaja. Objekt vabastatakse siis, kui programmi osa, kus see loodi, lõpeb:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Uhendus</span><span class="w"> </span><span class="n">uhendus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Uhendus</span><span class="p">();</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">uhendus</span><span class="p">.</span><span class="n">Saada</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
+<p>Uuemates C# versioonides (alates C# 8.0) on olemas ka lühem vorm, kus <code>using</code>-plokki ega sulge pole vaja. Objekt vabastatakse siis, kui programmi osa, kus see loodi, lõpetab oma töö:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Connection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Connection</span><span class="p">();</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">connection</span><span class="p">.</span><span class="n">Send</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">// Dispose() kutsutakse siin, kui koodijupp lõpeb</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Mõlemad vormid teevad sama asja. Klassikaline <code>using (...)</code> plokk on algajale sageli selgem, sest see näitab täpselt, kus ressurss vabastatakse.</p>
-<h2 id="paris-elu-naide-faili-kirjutamine">Päris elu näide: faili kirjutamine<a class="headerlink" href="#paris-elu-naide-faili-kirjutamine" title="Permanent link">&para;</a></h2>
-<p>Kõige sagedasem koht, kus <code>using</code>-klauslit päriselt kasutad, on failide ja voogudega töötamine. Klassid nagu <code>StreamWriter</code> ja <code>StreamReader</code> implementeerivad <code>IDisposable</code>, sest avatud fail tuleb kindlasti kinni panna.</p>
+<h2 id="eluline-naide-faili-kirjutamine">Eluline näide: faili kirjutamine<a class="headerlink" href="#eluline-naide-faili-kirjutamine" title="Permanent link">&para;</a></h2>
+<p>Kõige sagedasem koht, kus <code>using</code>-klauslit päriselt kasutad, on failide ja streamidega töötamine. Klassid nagu <code>StreamWriter</code> ja <code>StreamReader</code> implementeerivad <code>IDisposable</code>, sest avatud fail tuleb kindlasti kinni panna.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">StreamWriter</span><span class="w"> </span><span class="n">kirjutaja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamWriter</span><span class="p">(</span><span class="s">@"C:\temp\paevik.txt"</span><span class="p">))</span>
@@ -3133,63 +3156,90 @@
 </span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1">// fail on siin kindlasti kinni pandud</span>
 </span></code></pre></div>
-<p>Ilma <code>using</code>-klauslita jääks fail võib-olla lukku ja osa andmeid võiks kettale jõudmata kaduma minna. Failide ja voogudega tutvume lähemalt järgmistes peatükkides.</p>
+</div>
+</div>
+</div>
+<p>Ilma <code>using</code>-klauslita jääks fail võib-olla lukku ja osa andmeid võiks kettale jõudmata kaduma minna. Failide ja streamidega tutvume lähemalt järgmistes peatükkides.</p>
 <div class="admonition tip">
 <p class="admonition-title"><code>Close()</code> ja <code>Dispose()</code></p>
 <p>Paljudel klassidel on lisaks meetod <code>Close()</code>. Failide puhul teeb <code>Close()</code> sisuliselt sama, mis <code>Dispose()</code> — mõlemad sulgevad ressursi. <code>using</code>-klausel kasutab alati <code>Dispose()</code>-i, seega on see kõige üldisem ja kindlam viis.</p>
 </div>
 <h2 id="mitu-ressurssi-korraga">Mitu ressurssi korraga<a class="headerlink" href="#mitu-ressurssi-korraga" title="Permanent link">&para;</a></h2>
-<p>Kui vaja kasutada mitut vabastatavat objekti, saab need ühte <code>using</code>-lausesse panna komaga eraldatult:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Uhendus</span><span class="w"> </span><span class="n">esimene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Uhendus</span><span class="p">(),</span><span class="w"> </span><span class="n">teine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Uhendus</span><span class="p">())</span>
+<p>Kui on vaja kasutada mitut vabastatavat objekti, saab need ühte <code>using</code>-lausesse panna komaga eraldatult:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Connection</span><span class="w"> </span><span class="n">esimene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Connection</span><span class="p">(),</span><span class="w"> </span><span class="n">teine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Connection</span><span class="p">())</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">{</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">esimene</span><span class="p">.</span><span class="n">Saada</span><span class="p">(</span><span class="s">"A"</span><span class="p">);</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n">teine</span><span class="p">.</span><span class="n">Saada</span><span class="p">(</span><span class="s">"B"</span><span class="p">);</span>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>Ressursid vabastatakse vastupidises järjekorras: viimasena loodud suletakse esimesena. Sama tulemuse annavad ka pesastatud <code>using</code>-plokid, aga üks rida on lühem ja loetavam.</p>
+</div>
+</div>
+</div>
+<p>Ressursid vabastatakse vastupidises järjekorras: viimasena loodu suletakse esimesena. Sama tulemuse annavad ka järjestikused <code>using</code>-plokid, aga üks rida on lühem ja loetavam.</p>
 <h2 id="millal-peaks-klass-implementeerima-idisposable">Millal peaks klass implementeerima <code>IDisposable</code>?<a class="headerlink" href="#millal-peaks-klass-implementeerima-idisposable" title="Permanent link">&para;</a></h2>
-<p>Klass peaks võtma <code>IDisposable</code> liidese omaks siis, kui ta hoiab enda käes midagi, mis tuleb käsitsi vabastada. Tüüpilised näited:</p>
+<p>Klass peaks kasutama <code>IDisposable</code> liidest siis, kui ta hoiab enda käes midagi, mis tuleb käsitsi vabastada. Tüüpilised näited:</p>
 <ul>
-<li>avatud fail või voog,</li>
+<li>avatud fail või stream,</li>
 <li>võrguühendus,</li>
 <li>andmebaasiühendus,</li>
 <li>muud välise süsteemi ressursid.</li>
 </ul>
-<p>Kui klass hoiab vaid tavalisi andmeid (arvud, sõned, loendid), pole <code>IDisposable</code>-i vaja — prügikoguja saab nendega ise hakkama.</p>
-<h2 id="sageli-tekkinud-vead">Sageli tekkinud vead<a class="headerlink" href="#sageli-tekkinud-vead" title="Permanent link">&para;</a></h2>
+<p>Kui klass hoiab vaid tavalisi andmeid (arvud, sõned, loendid), pole <code>IDisposable</code>-i vaja.</p>
+<h2 id="korduvalt-tekkivad-vead">Korduvalt tekkivad vead<a class="headerlink" href="#korduvalt-tekkivad-vead" title="Permanent link">&para;</a></h2>
 <h3 id="dispose-kasitsi-aga-viga-katkestab-too"><code>Dispose()</code> käsitsi, aga viga katkestab töö<a class="headerlink" href="#dispose-kasitsi-aga-viga-katkestab-too" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// VIGA — kui Saada() viskab erindi, jääb Dispose() kutsumata</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">Uhendus</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Uhendus</span><span class="p">();</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">u</span><span class="p">.</span><span class="n">Saada</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span><span class="w">   </span><span class="c1">// kahjustab siin</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// VIGA — kui Send() viskab vea, jääb Dispose() kutsumata</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Connection</span><span class="p">();</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">u</span><span class="p">.</span><span class="n">Send</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">u</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1">// ÕIGE — using kutsub Dispose() kindlasti välja</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">Uhendus</span><span class="w"> </span><span class="n">u2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Uhendus</span><span class="p">())</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">u2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Connection</span><span class="p">())</span>
 </span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="p">{</span>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="n">u2</span><span class="p">.</span><span class="n">Saada</span><span class="p">(</span><span class="s">"Tere!"</span><span class="p">);</span>
 </span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="liidese-votmine-aga-dispose-puudub">Liidese võtmine, aga <code>Dispose()</code> puudub<a class="headerlink" href="#liidese-votmine-aga-dispose-puudub" title="Permanent link">&para;</a></h3>
+</div>
+</div>
+</div>
+<h3 id="idisposable-kasutamine-aga-dispose-puudub">IDisposable kasutamine, aga <code>Dispose()</code> puudub<a class="headerlink" href="#idisposable-kasutamine-aga-dispose-puudub" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// VIGA — klass lubab IDisposable, aga meetod on puudu, kompilaator annab vea</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Katki</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDisposable</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">{</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Saada</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">sõnum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Send</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">sõnum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">}</span>
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
 </span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1">// ÕIGE — Dispose() on olemas</span>
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Korras</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDisposable</span>
 </span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="p">{</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Saada</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">sõnum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Send</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">sõnum</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Dispose</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="vale-meetodi-nimi">Vale meetodi nimi<a class="headerlink" href="#vale-meetodi-nimi" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// VIGA — meetodi nimi peab olema täpselt Dispose</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">dispose</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// C# on tõstutundlik!</span>
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1">// ÕIGE</span>
 </span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Dispose</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="kokkuvote">Kokkuvõte<a class="headerlink" href="#kokkuvote" title="Permanent link">&para;</a></h2>
 <table>
 <thead>

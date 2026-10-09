@@ -1140,7 +1140,7 @@
   <span class="md-ellipsis">
     
   
-  ???
+  Üldosa
 
     
   </span>
@@ -1156,7 +1156,7 @@
               <span class="md-nav__icon md-icon"></span>
               
   
-  ???
+  Üldosa
 
             </label>
             <ul class="md-nav__list" data-md-scrollfix>
@@ -1642,15 +1642,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduma-kippuvad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduma kippuvad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduma kippuvad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3080,15 +3080,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sageli-tekkinud-vead" class="md-nav__link">
+  <a href="#korduma-kippuvad-vead" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Sageli tekkinud vead
+        Korduma kippuvad vead
       </span>
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sageli tekkinud vead">
+    <nav class="md-nav" aria-label="Korduma kippuvad vead">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3263,7 +3263,7 @@
           
   
   <span class="md-ellipsis">
-    ???
+    Üldosa
   </span>
 
         </a>
@@ -3323,6 +3323,9 @@
 </div>
 <h2 id="mis-on-xml">Mis on XML?<a class="headerlink" href="#mis-on-xml" title="Permanent link">&para;</a></h2>
 <p>XML-fail koosneb <strong>elementidest</strong>. Iga element algab avava sildiga nagu <code>&lt;nimi&gt;</code> ja lõpeb sulgeva sildiga nagu <code>&lt;/nimi&gt;</code>. Nende vahel on elemendi sisu.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&lt;opilased&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;opilane&gt;</span>
@@ -3337,18 +3340,27 @@
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">&lt;/opilane&gt;</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">&lt;/opilased&gt;</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Selles näites:</p>
 <ul>
 <li><code>&lt;?xml ... ?&gt;</code> on <strong>deklaratsioon</strong>, mis ütleb, et tegemist on XML-failiga ja millist kodeeringut kasutatakse.</li>
-<li><code>&lt;opilased&gt;</code> on <strong>juurelement</strong> (<em>root</em>). XML-failil saab olla täpselt üks juurelement, mille sees on kõik ülejäänu.</li>
-<li><code>&lt;opilane&gt;</code> on iga õpilase kirje, mille sees on omakorda <code>&lt;nimi&gt;</code>, <code>&lt;vanus&gt;</code> ja <code>&lt;hinne&gt;</code>.</li>
-<li>Sildid on <strong>pesastatud</strong> (<em>nested</em>) — sarnaselt loogikaga, kuidas plokid on üksteise sees.</li>
+<li><code>&lt;opilased&gt;</code> on <strong>juurelement</strong> (<em>root</em>). XML-failil saab olla täpselt üks juurelement, mille sees on kõik ülejäänud elemendid.</li>
+<li><code>&lt;opilane&gt;</code> on iga õpilase element, mille sees on omakorda <code>&lt;nimi&gt;</code>, <code>&lt;vanus&gt;</code> ja <code>&lt;hinne&gt;</code>.</li>
+<li>Sildid on üksteise sees (<em>nested</em>)</li>
 </ul>
-<p>Elementidel võivad olla ka <strong>atribuudid</strong> — lisanväärtused avava sildi sees:</p>
+<p>Elementidel võivad olla ka <strong>atribuudid</strong> — need on lisaväärtused avava sildi sees:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;opilane</span><span class="w"> </span><span class="na">id=</span><span class="s">"1"</span><span class="w"> </span><span class="na">klass=</span><span class="s">"A"</span><span class="nt">&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&lt;nimi&gt;</span>Mari<span class="nt">&lt;/nimi&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">&lt;/opilane&gt;</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Siin on <code>id</code> ja <code>klass</code> atribuudid. Atribuut sobib hästi lühikese, elemendi juurde kuuluva lisainfo jaoks.</p>
 <div class="admonition warning">
 <p class="admonition-title">Sildid peavad olema paaris</p>
@@ -3379,13 +3391,19 @@
 </tbody>
 </table>
 <p>Lisame need sõltuvalt vajadusest programmi ülaossa:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml</span><span class="p">;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Linq</span><span class="p">;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Serialization</span><span class="p">;</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="lugemine-xmldocument-iga">Lugemine <code>XmlDocument</code>-iga<a class="headerlink" href="#lugemine-xmldocument-iga" title="Permanent link">&para;</a></h2>
 <p>Klassikaline viis XML-i lugemiseks on <code>XmlDocument</code>. Fail laetakse mällu meetodiga <code>Load()</code> ja seejärel saab elemente otsida XPath-päringute abil.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Näide</label><label for="__tabbed_1_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label><label for="__tabbed_4_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml</span><span class="p">;</span>
@@ -3443,6 +3461,9 @@
 </div>
 <h3 id="atribuutide-lugemine">Atribuutide lugemine<a class="headerlink" href="#atribuutide-lugemine" title="Permanent link">&para;</a></h3>
 <p>Atribuudile pääseb ligi <code>Attributes</code> kogumiku ja <code>GetAttribute()</code> meetodi kaudu:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml</span><span class="p">;</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">XmlDocument</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">XmlDocument</span><span class="p">();</span>
@@ -3455,9 +3476,12 @@
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"#"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nimi</span><span class="p">);</span>
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="lugemine-xdocument-iga-linq-to-xml">Lugemine <code>XDocument</code>-iga (LINQ to XML)<a class="headerlink" href="#lugemine-xdocument-iga-linq-to-xml" title="Permanent link">&para;</a></h2>
 <p>Kaasaegsem ja lühem viis on <code>XDocument</code> nimeruumist <code>System.Xml.Linq</code>. See lubab XML-i peal kasutada LINQ-päringuid, mida <a href=".././linq/">LINQ peatükist</a> juba tunneme.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label><label for="__tabbed_2_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Näide</label><label for="__tabbed_6_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Linq</span><span class="p">;</span>
@@ -3500,29 +3524,36 @@
 <p><code>XDocument</code>-i puhul:</p>
 <ul>
 <li><code>doc.Root</code> on juurelement.</li>
-<li><code>Elements("opilane")</code> annab kõik <code>opilane</code> lapsed.</li>
-<li><code>Element("nimi")</code> annab ühe lapse nime järgi.</li>
+<li><code>Elements("opilane")</code> annab kõik <code>opilane</code> nimelised alamelemendid.</li>
+<li><code>Element("nimi")</code> annab ühe alamelemendi nime järgi.</li>
 <li><code>Value</code> annab elemendi tekstilise sisu.</li>
 </ul>
 <h3 id="filtreerimine-linq-iga">Filtreerimine LINQ-iga<a class="headerlink" href="#filtreerimine-linq-iga" title="Permanent link">&para;</a></h3>
 <p>Kuna <code>XDocument</code> annab tavalise loendi, saame kohe peale panna LINQ-meetodid. Loeme näiteks ainult need õpilased, kelle hinne on vähemalt 5:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Linq</span><span class="p">;</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">XDocument</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XDocument</span><span class="p">.</span><span class="n">Load</span><span class="p">(</span><span class="s">@"C:\temp\opilased.xml"</span><span class="p">);</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kt">var</span><span class="w"> </span><span class="n">parimad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doc</span><span class="p">.</span><span class="n">Root</span><span class="p">.</span><span class="n">Elements</span><span class="p">(</span><span class="s">"opilane"</span><span class="p">)</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">Element</span><span class="p">(</span><span class="s">"hinne"</span><span class="p">).</span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">Element</span><span class="p">(</span><span class="s">"nimi"</span><span class="p">).</span><span class="n">Value</span><span class="p">);</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nimi</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">parimad</span><span class="p">)</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">{</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nimi</span><span class="p">);</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">}</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kt">var</span><span class="w"> </span><span class="n">parimad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doc</span><span class="p">.</span><span class="n">Root</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="p">.</span><span class="n">Elements</span><span class="p">(</span><span class="s">"opilane"</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">Element</span><span class="p">(</span><span class="s">"hinne"</span><span class="p">).</span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">o</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">Element</span><span class="p">(</span><span class="s">"nimi"</span><span class="p">).</span><span class="n">Value</span><span class="p">);</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">nimi</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">parimad</span><span class="p">)</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">{</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">nimi</span><span class="p">);</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="xml-i-kirjutamine">XML-i kirjutamine<a class="headerlink" href="#xml-i-kirjutamine" title="Permanent link">&para;</a></h2>
 <h3 id="kirjutamine-xmldocument-iga">Kirjutamine <code>XmlDocument</code>-iga<a class="headerlink" href="#kirjutamine-xmldocument-iga" title="Permanent link">&para;</a></h3>
 <p>Uue XML-i ehitamine <code>XmlDocument</code>-iga on sõnaline: iga element tuleb eraldi luua ja üles ehitada.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label><label for="__tabbed_3_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Näide</label><label for="__tabbed_8_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml</span><span class="p">;</span>
@@ -3582,7 +3613,7 @@
 <p><code>Save()</code> kirjutab valminud dokumendi faili. Tulemuseks on korrektselt vormindatud XML.</p>
 <h3 id="kirjutamine-xdocument-iga">Kirjutamine <code>XDocument</code>-iga<a class="headerlink" href="#kirjutamine-xdocument-iga" title="Permanent link">&para;</a></h3>
 <p><code>XDocument</code> teeb sama asja palju lühemalt, sest elemendid saab luua ühe avaldise sees pesastatult.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label><label for="__tabbed_4_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Näide</label><label for="__tabbed_9_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Linq</span><span class="p">;</span>
@@ -3631,6 +3662,9 @@
 <p>Pööra tähelepanu, et <code>new XElement("vanus", 16)</code> võtab teiseks argumendiks juba arvu — <code>XDocument</code> teisendab selle ise tekstiks. Avatud dokumendi saab konsoolile trükkida meetodiga <code>doc.ToString()</code>.</p>
 <h3 id="mitme-elemendi-lisamine-loendist">Mitme elemendi lisamine loendist<a class="headerlink" href="#mitme-elemendi-lisamine-loendist" title="Permanent link">&para;</a></h3>
 <p>Kuna <code>XElement</code> võtab vastu mistahes arvu elemente, saab loendist mugavalt mitu kirjet korraga teha:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Linq</span><span class="p">;</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">nimed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"Mari"</span><span class="p">,</span><span class="w"> </span><span class="s">"Jaan"</span><span class="p">,</span><span class="w"> </span><span class="s">"Kati"</span><span class="w"> </span><span class="p">};</span>
@@ -3643,6 +3677,9 @@
 </span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
 </span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="n">doc</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="s">@"C:\temp\nimed.xml"</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Tulemus:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nt">&lt;nimed&gt;</span>
@@ -3655,6 +3692,9 @@
 <p>Senimaani pidime iga XML-elemendi ise kokku panema. Kui aga andmed on juba C#-klassi kujul, on olemas mugavam viis: <strong>serialiseerimine</strong> ehk objekti muutmine XML-iks.</p>
 <p>Klass <strong><code>XmlSerializer</code></strong> (nimeruumist <code>System.Xml.Serialization</code>) teeb töö meie eest ära. Ta vaatab klassi omadusi (<em>properties</em>) ja kirjutab need XML-i.</p>
 <p>Alustame lihtsa klassiga:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Opilane</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">{</span>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Nimi</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
@@ -3662,8 +3702,11 @@
 </span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Hinne</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Serialiseerimine ehk objekti kirjutamine XML-faili:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Näide</label><label for="__tabbed_5_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Näide</label><label for="__tabbed_12_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3736,6 +3779,9 @@
 </div>
 <h3 id="klassi-ja-elemendinimede-muutmine">Klassi- ja elemendinimede muutmine<a class="headerlink" href="#klassi-ja-elemendinimede-muutmine" title="Permanent link">&para;</a></h3>
 <p>Atribuutide abil saab XML-i nimesid ümber nimetada, kui need erinevad klassi omaduste nimedest. Näiteks kui tahame juurelemendiks <code>opilane</code> (väikese tähega) ja inglisekeelseid elemendinimesid:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Näited</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Serialization</span><span class="p">;</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="na">[XmlRoot("opilane")]</span>
@@ -3748,6 +3794,9 @@
 </span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Vanus</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Nüüd tekib XML kujul:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nt">&lt;opilane&gt;</span>
@@ -3757,6 +3806,9 @@
 </span></code></pre></div>
 <h3 id="loendi-serialiseerimine">Loendi serialiseerimine<a class="headerlink" href="#loendi-serialiseerimine" title="Permanent link">&para;</a></h3>
 <p>Ka loendi saab korraga serialiseerida. <code>XmlSerializer</code> loob sel juhul juurelemendi nimega <code>ArrayOfOpilane</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Serialization</span><span class="p">;</span>
@@ -3774,6 +3826,9 @@
 </span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">    </span><span class="n">serializer</span><span class="p">.</span><span class="n">Serialize</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span><span class="w"> </span><span class="n">opilased</span><span class="p">);</span>
 </span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Tulemus:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nt">&lt;ArrayOfOpilane&gt;</span>
@@ -3792,7 +3847,7 @@
 <h2 id="deserialiseerimine">Deserialiseerimine<a class="headerlink" href="#deserialiseerimine" title="Permanent link">&para;</a></h2>
 <p><strong>Deserialiseerimine</strong> on vastupidine tegevus: XML-ist saab jälle C#-objekt. Kasutame sama <code>XmlSerializer</code>-it, aga seekord lugemiseks.</p>
 <p>Oluline on, et XML-i struktuur vastaks täpselt klassile, milleks me seda teisendame.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Näide</label><label for="__tabbed_6_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Näide</label><label for="__tabbed_15_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
@@ -3852,6 +3907,9 @@
 <p><code>Deserialize()</code> tagastab alati tüübi <code>object</code>, seetõttu tuleb tulemus klassi nime ette kirjutades konverteerida: <code>(Opilane)serializer.Deserialize(reader)</code>.</p>
 <h3 id="loendi-deserialiseerimine">Loendi deserialiseerimine<a class="headerlink" href="#loendi-deserialiseerimine" title="Permanent link">&para;</a></h3>
 <p>Loendi lugemisel kasutame sama tüüpi, millega serialiseerisime — <code>List&lt;Opilane&gt;</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
 </span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.IO</span><span class="p">;</span>
 </span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Serialization</span><span class="p">;</span>
@@ -3870,9 +3928,12 @@
 </span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">opilane</span><span class="p">.</span><span class="n">Nimi</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" — hinne "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">opilane</span><span class="p">.</span><span class="n">Hinne</span><span class="p">);</span>
 </span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="naide-opilaste-nimekiri-xml-is">Näide: õpilaste nimekiri XML-is<a class="headerlink" href="#naide-opilaste-nimekiri-xml-is" title="Permanent link">&para;</a></h2>
 <p>Paneme seni õpitu kokku. Programmis on klass <code>Opilane</code>, loome mitu õpilast, salvestame need XML-i ja loeme seejärel tagasi.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Näide</label><label for="__tabbed_7_2">Proovimiseks</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Näide</label><label for="__tabbed_17_2">Proovimiseks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
@@ -4004,8 +4065,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="sageli-tekkinud-vead">Sageli tekkinud vead<a class="headerlink" href="#sageli-tekkinud-vead" title="Permanent link">&para;</a></h2>
+<h2 id="korduma-kippuvad-vead">Korduma kippuvad vead<a class="headerlink" href="#korduma-kippuvad-vead" title="Permanent link">&para;</a></h2>
 <h3 id="nimeruumi-puudumine">Nimeruumi puudumine<a class="headerlink" href="#nimeruumi-puudumine" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="c1">// VIGA — XDocument klass puudub</span>
 </span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="n">XDocument</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XDocument</span><span class="p">.</span><span class="n">Load</span><span class="p">(</span><span class="n">tee</span><span class="p">);</span><span class="w"> </span><span class="c1">// Viga!</span>
 </span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>
@@ -4013,7 +4077,13 @@
 </span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Linq</span><span class="p">;</span>
 </span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="n">XDocument</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XDocument</span><span class="p">.</span><span class="n">Load</span><span class="p">(</span><span class="n">tee</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="deserialiseerimisel-vale-tuup">Deserialiseerimisel vale tüüp<a class="headerlink" href="#deserialiseerimisel-vale-tuup" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Serialization</span><span class="p">;</span>
 </span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
 </span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="c1">// VIGA — XML-i juur on &lt;ArrayOfOpilane&gt;, aga ootame üksikut Opilane objekti</span>
@@ -4024,7 +4094,13 @@
 </span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="n">XmlSerializer</span><span class="w"> </span><span class="n">serializer2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">XmlSerializer</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Opilane</span><span class="o">&gt;</span><span class="p">));</span>
 </span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">Opilane</span><span class="o">&gt;</span><span class="w"> </span><span class="n">opilased</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Opilane</span><span class="o">&gt;</span><span class="p">)</span><span class="n">serializer2</span><span class="p">.</span><span class="n">Deserialize</span><span class="p">(</span><span class="n">reader</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="deserialiseerimine-ilma-konverteerimiseta">Deserialiseerimine ilma konverteerimiseta<a class="headerlink" href="#deserialiseerimine-ilma-konverteerimiseta" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml.Serialization</span><span class="p">;</span>
 </span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
 </span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="c1">// VIGA — Deserialize() tagastab object-tüübi, millel pole Nimi omadust</span>
@@ -4035,7 +4111,13 @@
 </span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="n">Opilane</span><span class="w"> </span><span class="n">opilane2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Opilane</span><span class="p">)</span><span class="n">serializer</span><span class="p">.</span><span class="n">Deserialize</span><span class="p">(</span><span class="n">reader</span><span class="p">);</span>
 </span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">opilane2</span><span class="p">.</span><span class="n">Nimi</span><span class="p">);</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="vale-xpath">Vale XPath<a class="headerlink" href="#vale-xpath" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Xml</span><span class="p">;</span>
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
 </span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="c1">// VIGA — SelectSingleNode tagastab null, kui elementi pole, ja InnerText viskab vea</span>
@@ -4047,6 +4129,9 @@
 </span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">nimi2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">opilane</span><span class="p">.</span><span class="n">SelectSingleNode</span><span class="p">(</span><span class="s">"nimi"</span><span class="p">).</span><span class="n">InnerText</span><span class="p">;</span>
 </span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="koik-meetodid-ja-klassid-kokkuvottes">Kõik meetodid ja klassid kokkuvõttes<a class="headerlink" href="#koik-meetodid-ja-klassid-kokkuvottes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -4143,7 +4228,7 @@
 <li>Loo käsitsi (XDocument-iga) XML-fail <code>raamatud.xml</code>, mis sisaldab vähemalt kahte raamatut. Igal raamatul olgu <code>pealkiri</code>, <code>autor</code> ja <code>aasta</code> element.</li>
 <li>Kirjuta programm, mis loeb <code>raamatud.xml</code> failist <code>XDocument.Load()</code> abil kõik raamatud ja trükib need konsoolile kujul <code>Autor — Pealkiri (aasta)</code>.</li>
 <li>Loo klass <code>Raamat</code> omadustega <code>Pealkiri</code>, <code>Autor</code> ja <code>Aasta</code>. Serialiseeri <code>List&lt;Raamat&gt;</code> faili <code>raamatud.xml</code> ja seejärel deserialiseeri see kohe tagasi ning trüki tulemus konsoolile. Kontrolli, et failis olev XML näeb välja loetav.</li>
-<li>Loe <code>raamatud.xml</code> failist andmed <code>XDocument</code>-iga ja kasuta LINQ-it, et leida kõik raamatud, mis on ilmunud pärast 2010. aastat. Trüki tulemus.</li>
+<li>Loe <code>raamatud.xml</code> failist andmed <code>XDocument</code>-iga ja kasuta LINQ-i, et leida kõik raamatud, mis on ilmunud pärast 2010. aastat. Trüki tulemus ekraanile.</li>
 <li>Loo programm, mis küsib kasutajalt kordamööda raamatu pealkirja, autori ja aasta, lisab need loendisse ning serialiseerib lõpuks kogu nimekirja XML-faili. Küsimine lõpeb, kui kasutaja jätab pealkirja tühjaks.</li>
 </ol>
 
