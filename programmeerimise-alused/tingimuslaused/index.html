@@ -1066,6 +1066,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#harjutused" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harjutused
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2606,6 +2617,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#harjutused" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harjutused
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2743,6 +2765,9 @@
 <li><code>else</code> - mida teeme kui ükski eelnevatest tingimustest pole täidetud</li>
 </ul>
 <p>Vaatame näidet</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">IfConditionApp</span><span class="p">;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
@@ -2767,10 +2792,16 @@
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p><strong>NB!</strong> <code>else if</code> ja <code>else</code> osa ei ole kohustuslikud.</p>
 <h2 id="switch"><code>switch</code><a class="headerlink" href="#switch" title="Permanent link">&para;</a></h2>
 <p>Kui meil <code>if</code> kasvab pikaks ja iga osa tegeleb mõne lihtsa ülesandega, siis võime kasutada ka <code>switch</code> tingimuslauset.</p>
 <p><code>switch</code> on järgneva struktuuriga.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">switch</span><span class="p">(</span><span class="n">kontrollitav</span><span class="w"> </span><span class="n">väärtus</span><span class="p">)</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s">"esimene väärtus"</span><span class="p">:</span><span class="w"> </span><span class="n">kui</span><span class="w"> </span><span class="n">võrdub</span><span class="p">,</span><span class="w"> </span><span class="n">siis</span><span class="w"> </span><span class="n">tee</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">toiming</span><span class="p">;</span><span class="w"> </span><span class="n">välju</span><span class="p">;</span>
@@ -2779,7 +2810,13 @@
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">default</span><span class="p">:</span><span class="w"> </span><span class="n">ei</span><span class="w"> </span><span class="n">olnud</span><span class="w"> </span><span class="n">ükski</span><span class="w"> </span><span class="n">eelnevatest</span><span class="p">;</span><span class="w"> </span><span class="n">välju</span><span class="p">;</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span><span class="w">    </span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Vaatame näidet, kus mängime veidike järgi vanemat pangaautomaati.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">SwitchApp</span><span class="p">;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
@@ -2816,8 +2853,14 @@
 </span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p><code>break</code> ütleb, et nüüd tuleme <code>switch</code> avaldisest välja. <code>default</code> osa ei ole kohustuslik. </p>
 <p><code>switch</code> võimaldab meil ka "libisemist" läbi mitme valiku (<code>case</code>). </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Näide</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">SwitchApp2</span><span class="p">;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
@@ -2839,6 +2882,17 @@
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">}</span>
 </span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="harjutused">Harjutused<a class="headerlink" href="#harjutused" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Kirjuta programm, mis küsib kasutajalt tema vanust ja väljastab, kas ta on täisealine (<code>if</code>-iga). Kui vanus on alla 18, väljasta "Alaealine", vastasel juhul "Täisealine".</li>
+<li>Kirjuta programm, mis küsib kasutajalt arvu ja ütleb, kas see on positiivne, negatiivne või null. Kasuta <code>if</code>, <code>else if</code> ja <code>else</code> harusid.</li>
+<li>Kirjuta programm, mis küsib kasutajalt hinnet (1–5) ja väljastab vastava sõnalise hinnangu (<code>"väga hea"</code>, <code>"hea"</code>, <code>"rahuldav"</code>, <code>"puudulik"</code>, <code>"nõrk"</code>). Kasuta <code>switch</code>-lauset.</li>
+<li>Kirjuta programm, mis küsib nädalapäeva numbrit (1–7) ja väljastab, kas tegemist on tööpäeva või nädalavahetusega. Kasuta <code>switch</code>-i ja libisemist mitme <code>case</code> vahel.</li>
+<li>Kirjuta lihtne kalkulaator: küsi kasutajalt kaks arvu ja tehe (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>) ning väljasta tulemus. Kasuta tehte valikuks <code>switch</code>-lauset ja käsitle ka nulliga jagamise juhtu <code>if</code>-iga.</li>
+</ol>
 
 
 
