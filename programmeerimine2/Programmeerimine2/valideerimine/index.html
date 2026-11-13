@@ -1,0 +1,3046 @@
+
+<!doctype html>
+<html lang="et" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Gunnar Peipmani tundide ja koolituste materjalid">
+      
+      
+        <meta name="author" content="Gunnar Peipman">
+      
+      
+        <link rel="canonical" href="https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/valideerimine/">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.1.1">
+    
+    
+      
+        <title>Valideerimine - Programmeerimine 2 - Kool</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/classic/main.0006804e.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/classic/palette.813d4b3f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-7ENGH7MSL7"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-7ENGH7MSL7",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-7ENGH7MSL7",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Keri sisuni
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Päis">
+    <a href="../../.." title="Kool" class="md-header__button md-logo" aria-label="Kool" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <span class="md-visually-hidden">Navigatsioon</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kool
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Valideerimine - Programmeerimine 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <span class="md-visually-hidden">Otsing</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Otsing">
+  <button type="button" class="md-search__button">
+    Otsing
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Vaheleht" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../oop/" class="md-tabs__link">
+          
+  
+  OOP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../programmeerimise-alused/" class="md-tabs__link">
+          
+  
+  Programmeerimise alused
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Programmeerimine 2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigatsioon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Kool" class="md-nav__button md-logo" aria-label="Kool" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kool
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../oop/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OOP
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  OOP
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/klassid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Klassid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/objektide-loomine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide loomine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/objektide-vordlemine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide võrdlemine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/parilus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pärilus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/liidesed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liidesed
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/enumeraatorid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Enumeraatorid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/staatiline-skoop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Staatiline skoop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/vead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vead
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../programmeerimise-alused/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Programmeerimise alused
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Programmeerimise alused
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Algus
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Algus
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/programmid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Programmid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/algoritmid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Algoritmid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/andmetuubid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Andmetüübid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/muutujad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Muutujad
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/tehted-arvudega/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tehted arvudega
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/vordlused/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Võrdlused
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/tingimuslaused/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tingimuslaused
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/massiivid-ja-loendid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Massiivid ja loendid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/tsuklid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tsüklid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/kodutoo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Esimene kodutöö
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Üldosa
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Üldosa
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/idisposable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IDisposable
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/failid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Töötamine failidega
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/stream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Streamid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/koodi-kiiruse-mootmine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Koodi kiiruse mõõtmine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/linq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  LINQ
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_6" id="__nav_2_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Töötamine andmetega
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_3_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Töötamine andmetega
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/xml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  XML
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  JSON
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/csv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  CSV
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/andmed-internetist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Andmed internetist
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/kodutoo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Teine kodutöö
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objekt-orienteeritud programmeerimine
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Objekt-orienteeritud programmeerimine
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/klassid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Klassid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/objektide-loomine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide loomine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/objektide-vordlemine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide võrdlemine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/parilus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pärilus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/liidesed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liidesed
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/enumeraatorid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Enumeraatorid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/staatiline-skoop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Staatiline skoop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/vead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vead
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/kodutoo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kolmas kodutöö
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Programmeerimine 2
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Programmeerimine 2
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sissejuhatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sissejuhatus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Git ja Github
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visual-studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visual Studio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../objekt-orienteeritud-modelleerimine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objekt-orienteeritud modelleerimine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ORM
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entity-framework-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Entity Framework Core
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migratsioonid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migratsioonid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algandmed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Algandmed
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arhitektuuri-mudelid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Arhitektuuri mudelid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cqrs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  CQRS
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dependency-injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dependency Injection
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DTO
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../andmed-lehtedena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Andmete jagamine lehtedeks
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../valideerimine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Valideerimine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../failide-kasutamine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Failide kasutamine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisukord">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisukord
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#miks-valideerimine-on-vajalik" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Miks valideerimine on vajalik?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valideerimine-kliendis-ja-serveris" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Valideerimine kliendis ja serveris
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataannotations-atribuudid-entiteetidel" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DataAnnotations atribuudid entiteetidel
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praegune-olukord-projektis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Praegune olukord projektis
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miks-valideerida-commande-ja-query-sid" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Miks valideerida commande ja query-sid?
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Miks valideerida commande ja query-sid?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commandid" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Commandid
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queryd" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Queryd
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miks-valideerimist-testida" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Miks valideerimist testida?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluentvalidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FluentValidation
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FluentValidation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paigaldamine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Paigaldamine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandi-valideerija" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Commandi valideerija
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reegel-mis-poordub-andmebaasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reegel, mis pöördub andmebaasi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-valideerija" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Query valideerija
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registreerimine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Registreerimine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kokkuvote" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kokkuvõte
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viited" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Viited
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="valideerimine">Valideerimine<a class="headerlink" href="#valideerimine" title="Permanent link">&para;</a></h1>
+<p>Valideerimine tähendab andmete kontrollimist reeglite vastu enne, kui rakendus nendega midagi teeb. Kui valideerimist ei ole, jõuavad andmebaasi tühjad pealkirjad, negatiivsed lehekülgede arvud või aastad, mis on tulevikus. Selliste andmetega hakkab rakendus hiljem käituma ettearvamatult ja vigade põhjust leida on raske.</p>
+<p>Meie projektis on valideerimine seni olnud ainult ühes kohas: <code>Data</code> kausta entiteetide küljes on <strong>DataAnnotations</strong> atribuudid. <code>Features</code> kausta commandid ja queryd on aga eraldi klassid, millel valideerimist ei ole, ja neid me ka ei testi. Selles peatükis vaatame, miks sellest ei piisa, kuidas commande ja query-sid <strong>FluentValidationi</strong> abil valideerida ning kuidas valideerimist testida.</p>
+<h2 id="miks-valideerimine-on-vajalik">Miks valideerimine on vajalik?<a class="headerlink" href="#miks-valideerimine-on-vajalik" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Andmete kvaliteet</strong> – andmebaasi jõuab ainult see, mis vastab reeglitele.</li>
+<li><strong>Arusaadavad veateated</strong> – klient saab teada, milline väli on vale, mitte lihtsalt "500 Internal Server Error".</li>
+<li><strong>Turvalisus</strong> – liiga pikad või ootamatud väärtused võivad põhjustada erindeid ja liigset koormust.</li>
+<li><strong>Ärireeglid</strong> – osa reegleid ei ole andmebaasi tasandil üldse võimalik kirjeldada (nt "ilmumisaasta ei tohi olla tulevikus").</li>
+<li><strong>Vähem vigu</strong> – vigane sisend peatatakse enne, kui jõutakse andmebaasi päringute ja salvestusteni.</li>
+</ul>
+<h2 id="valideerimine-kliendis-ja-serveris">Valideerimine kliendis ja serveris<a class="headerlink" href="#valideerimine-kliendis-ja-serveris" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kus</th>
+<th>Mida annab</th>
+<th>Kas usaldada?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Klient</strong> (brauser, mobiilirakendus)</td>
+<td>Kiire tagasiside, kasutajat ei sunnita vormi uuesti täitma</td>
+<td>Ei – kliendi saab alati vahele jätta (Postman, <code>curl</code>)</td>
+</tr>
+<tr>
+<td><strong>Server</strong></td>
+<td>Tõeline kaitse, kõik päringud läbivad selle</td>
+<td>Jah – see on ainus usaldusväärne koht</td>
+</tr>
+</tbody>
+</table>
+<p>Klient ei ole kunagi usaldusväärne. Postmaniga saab saata täpselt sellise JSON-i, nagu ise tahad, seega peavad kõik reeglid kehtima ka serveris.</p>
+<h2 id="dataannotations-atribuudid-entiteetidel">DataAnnotations atribuudid entiteetidel<a class="headerlink" href="#dataannotations-atribuudid-entiteetidel" title="Permanent link">&para;</a></h2>
+<p><code>Data</code> kausta klassid on meil kaetud <code>System.ComponentModel.DataAnnotations</code> atribuutidega:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Book</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Id</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="na">[Required(ErrorMessage = "Pealkiri on kohustuslik")]</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="na">[MaxLength(200)]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="na">[Required(ErrorMessage = "Autor on kohustuslik")]</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="na">[MaxLength(100)]</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Author</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="na">[MaxLength(20)]</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Isbn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="na">[Range(1, 10000)]</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Pages</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="na">[Range(1450, 2100)]</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">YearPublished</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsAvailable</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Levinumad atribuudid:</p>
+<table>
+<thead>
+<tr>
+<th>Atribuut</th>
+<th>Mida kontrollib</th>
+<th>Näide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[Required]</code></td>
+<td>Väli peab olema olemas ja tühi string ei ole lubatud</td>
+<td><code>[Required] public string Title { get; set; }</code></td>
+</tr>
+<tr>
+<td><code>[MaxLength]</code> / <code>[MinLength]</code></td>
+<td>Stringi või massiivi pikkus</td>
+<td><code>[MaxLength(200)]</code></td>
+</tr>
+<tr>
+<td><code>[StringLength]</code></td>
+<td>Stringi pikkus koos miinimumiga</td>
+<td><code>[StringLength(200, MinimumLength = 3)]</code></td>
+</tr>
+<tr>
+<td><code>[Range]</code></td>
+<td>Arv või kuupäev vahemikus</td>
+<td><code>[Range(1, 10000)]</code></td>
+</tr>
+<tr>
+<td><code>[RegularExpression]</code></td>
+<td>Väärtus vastab mustrile</td>
+<td><code>[RegularExpression(@"^\d{13}$")]</code></td>
+</tr>
+<tr>
+<td><code>[EmailAddress]</code></td>
+<td>E-posti aadressi formaat</td>
+<td><code>[EmailAddress]</code></td>
+</tr>
+<tr>
+<td><code>[Compare]</code></td>
+<td>Kahe välja väärtused on samad</td>
+<td><code>[Compare(nameof(Password))]</code></td>
+</tr>
+</tbody>
+</table>
+<p>Entity atribuutidel on meie projektis kaks rolli:</p>
+<ol>
+<li><strong>EF Core</strong> loeb neid andmebaasi skeemi loomisel – <code>[Required]</code> teeb veeru <code>NOT NULL</code>-iks, <code>[MaxLength(200)]</code> teeb <code>nvarchar(200)</code>.</li>
+<li><strong>Mudeli sidumine</strong> (model binding) kontrollib neid siis, kui entiteet ise on kontrolleri meetodi parameetriks.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Entity atribuudid ei valideeri commandi</p>
+<p>Kui kontroller võtab vastu <code>SaveBookCommand</code> ja entiteet <code>Book</code> luuakse alles handleris, ei puutu entity atribuudid sisendandmetega üldse kokku. Kontroll toimub andmebaasi tasandil alles <code>SaveChangesAsync()</code> hetkel – ja siis tekib <code>DbUpdateException</code>, mille tulemuseks on kliendile <strong>500</strong>, mitte arusaadav <strong>400</strong>.</p>
+</div>
+<h2 id="praegune-olukord-projektis">Praegune olukord projektis<a class="headerlink" href="#praegune-olukord-projektis" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph LR
+    K["Klient (Postman)"] --&gt; C["BooksController"]
+    C --&gt; D["Dispatcher"]
+    D --&gt; H["SaveBookCommandHandler"]
+    H --&gt; B["new Book()"]
+    B --&gt; DB[("Andmebaas")]</code></pre>
+<p>Command liigub kontrollerist läbi dispatcheri handlerini ning entiteet luuakse alles handleris. Seega:</p>
+<ul>
+<li>commandi välju ei kontrolli keegi,</li>
+<li>entiteedi atribuudid rakenduvad alles andmebaasi tasandil,</li>
+<li>viga jõuab kliendini hilja ja arusaamatult.</li>
+</ul>
+<h2 id="miks-valideerida-commande-ja-query-sid">Miks valideerida commande ja query-sid?<a class="headerlink" href="#miks-valideerida-commande-ja-query-sid" title="Permanent link">&para;</a></h2>
+<h3 id="commandid">Commandid<a class="headerlink" href="#commandid" title="Permanent link">&para;</a></h3>
+<p>Command on <strong>rakenduse piir</strong> – ainus koht, kuhu kliendi andmed sisenevad. Entiteet luuakse alles handleris, seega peab kogu sisendi kontroll toimuma commandi peal.</p>
+<ul>
+<li><strong>Varajane peatumine</strong> – vigane command peatatakse enne andmebaasi päringut ja salvestust.</li>
+<li><strong>Õige veakood</strong> – klient saab <code>400 Bad Request</code> koos väljapõhiste teadetega, mitte <code>500</code>.</li>
+<li><strong>Ärireeglid, mida andmebaas ei tea</strong> – nt aasta ei tohi olla tulevikus, ISBN peab olema unikaalne.</li>
+<li><strong>Üks koht</strong> – sama commandi valideeritakse alati ühtemoodi, olenemata sellest, kas seda kutsutakse kontrollerist või testist.</li>
+</ul>
+<h3 id="queryd">Queryd<a class="headerlink" href="#queryd" title="Permanent link">&para;</a></h3>
+<p>Ka päringu sisend võib olla vale ja see võib põhjustada vigu või liigset koormust:</p>
+<ul>
+<li><code>Id</code> peab olema positiivne – <code>FindAsync(-1)</code> on mõttetu andmebaasipäring.</li>
+<li>Leheküljenumber ja lehekülje suurus peavad olema mõistlikus vahemikus. <code>PageSize = 100000</code> võib tuua mällu kogu tabeli.</li>
+<li>Mõnikord on päringu mõttekus andmebaasist sõltuv – nt küsitud lehekülge ei pruugi üldse olemas olla.</li>
+</ul>
+<p>Query ei muuda andmeid, kuid vale query sisend viib ikkagi erindini või ebaotstarbeka tööni. Seepärast valideerime ka query-sid.</p>
+<h2 id="miks-valideerimist-testida">Miks valideerimist testida?<a class="headerlink" href="#miks-valideerimist-testida" title="Permanent link">&para;</a></h2>
+<p>Praegu me commande ja query-sid ei testi. See tähendab, et iga valideerimisreegli õigsust kontrollime käsitsi Postmaniga – aeglaselt, juhuslikult ja iga muudatuse järel uuesti. Valideerimise testid annavad selle töö automaatselt ära:</p>
+<ul>
+<li><strong>Regressioonide kaitse</strong> – kui keegi hiljem <code>MaximumLength(200)</code> väärtuseks <code>500</code> paneb, kukub test kohe läbi.</li>
+<li><strong>Test on spetsifikatsioon</strong> – testide nimedest on näha, millised reeglid kehtivad. Uus inimene projektis loeb testid läbi ja saab aru, mida süsteem lubab ja mida mitte.</li>
+<li><strong>Piirväärtused on kõige veaohtlikumad</strong> – <code>0</code>, <code>-1</code>, täpselt lubatud maksimum, maksimum + 1. Neid on käsitsi tüütu proovida, testiga käivad need sekunditega.</li>
+<li><strong>Kiire tagasiside</strong> – valideerimine on puhas loogika, enamik testidest jookseb ilma andmebaasi ja veebiserverita.</li>
+<li><strong>Handleri käitumine</strong> – test kinnitab, et vigase commandi korral ei tehta andmebaasi päringut ega salvestust.</li>
+<li><strong>Andmebaasist sõltuvad reeglid</strong> – unikaalsuse kontrolli saab testida mälusisese andmebaasiga, ilma päris SQL Serverita.</li>
+</ul>
+<h2 id="fluentvalidation">FluentValidation<a class="headerlink" href="#fluentvalidation" title="Permanent link">&para;</a></h2>
+<p><strong>FluentValidation</strong> on .NET-i teek, kus valideerimisreeglid kirjutatakse eraldi valideerija klassi loetava koodina. Erinevalt atribuutidest saab reegleid kirjutada kahel väljal põhinevaid (nt algus enne lõppu), tingimuslikke ja andmebaasi pöörduvaid kontrolle.</p>
+<p>Atribuutidega võrreldes:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>DataAnnotations</th>
+<th>FluentValidation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kus reeglid asuvad</td>
+<td>Mudeli/entiteedi küljes</td>
+<td>Eraldi valideerija klassis</td>
+</tr>
+<tr>
+<td>Keerukad reeglid</td>
+<td>Raskesti väljendatavad</td>
+<td>Lihtsad (<code>Must</code>, <code>When</code>, <code>MustAsync</code>)</td>
+</tr>
+<tr>
+<td>Andmebaasi pöördumine</td>
+<td>Ei ole ette nähtud</td>
+<td>Jah (<code>MustAsync</code>)</td>
+</tr>
+<tr>
+<td>Testimine</td>
+<td>Võimalik, kuid kohmakas</td>
+<td>Väga lihtne (<code>TestValidate</code>)</td>
+</tr>
+<tr>
+<td>Kasutuskoht</td>
+<td>Mudeli sidumine</td>
+<td>Commandid, queryd, äriloogika</td>
+</tr>
+</tbody>
+</table>
+<h3 id="paigaldamine">Paigaldamine<a class="headerlink" href="#paigaldamine" title="Permanent link">&para;</a></h3>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">dotnet</span> <span class="n">add</span> <span class="n">package</span> <span class="n">FluentValidation</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">dotnet</span> <span class="n">add</span> <span class="n">package</span> <span class="n">FluentValidation</span><span class="p">.</span><span class="n">DependencyInjectionExtensions</span>
+</span></code></pre></div>
+<h3 id="commandi-valideerija">Commandi valideerija<a class="headerlink" href="#commandi-valideerija" title="Permanent link">&para;</a></h3>
+<p>Alustame lihtsamate reeglitega, mis kontrollivad ainult commandi välju:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">FluentValidation</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SaveBookCommandValidator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AbstractValidator</span><span class="o">&lt;</span><span class="n">SaveBookCommand</span><span class="o">&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">SaveBookCommandValidator</span><span class="p">()</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">Title</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">            </span><span class="p">.</span><span class="n">NotEmpty</span><span class="p">().</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Pealkiri on kohustuslik"</span><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">            </span><span class="p">.</span><span class="n">MaximumLength</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Pealkiri võib olla kuni 200 tähemärki"</span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">Author</span><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">            </span><span class="p">.</span><span class="n">NotEmpty</span><span class="p">().</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Autor on kohustuslik"</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">            </span><span class="p">.</span><span class="n">MaximumLength</span><span class="p">(</span><span class="mi">100</span><span class="p">).</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Autori nimi võib olla kuni 100 tähemärki"</span><span class="p">);</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">Pages</span><span class="p">)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">            </span><span class="p">.</span><span class="n">InclusiveBetween</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">            </span><span class="p">.</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Lehekülgede arv peab olema 1 kuni 10000"</span><span class="p">);</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">YearPublished</span><span class="p">)</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">            </span><span class="p">.</span><span class="n">InclusiveBetween</span><span class="p">(</span><span class="mi">1450</span><span class="p">,</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">Year</span><span class="p">)</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">            </span><span class="p">.</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">$"Ilmumisaasta peab olema 1450 kuni {DateTime.Now.Year}"</span><span class="p">);</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Levinumad reeglid:</p>
+<table>
+<thead>
+<tr>
+<th>Reegel</th>
+<th>Mida kontrollib</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NotEmpty()</code></td>
+<td>Väli ei ole tühi ega koosne ainult tühikutest</td>
+</tr>
+<tr>
+<td><code>NotNull()</code></td>
+<td>Väärtus ei ole <code>null</code></td>
+</tr>
+<tr>
+<td><code>Length(min, max)</code></td>
+<td>Stringi pikkus vahemikus</td>
+</tr>
+<tr>
+<td><code>MaximumLength(max)</code> / <code>MinimumLength(min)</code></td>
+<td>Stringi maksimum- või miinimumpikkus</td>
+</tr>
+<tr>
+<td><code>InclusiveBetween(min, max)</code></td>
+<td>Arv on vahemikus, otsad kaasa arvatud</td>
+</tr>
+<tr>
+<td><code>GreaterThan(0)</code></td>
+<td>Arv on suurem kui antud väärtus</td>
+</tr>
+<tr>
+<td><code>EmailAddress()</code></td>
+<td>E-posti aadressi formaat</td>
+</tr>
+<tr>
+<td><code>Matches(regex)</code></td>
+<td>Väärtus vastab regulaaravaldisele</td>
+</tr>
+<tr>
+<td><code>Must(...)</code> / <code>MustAsync(...)</code></td>
+<td>Oma kontroll, sh andmebaasi päring</td>
+</tr>
+<tr>
+<td><code>When(...)</code></td>
+<td>Reegel kehtib ainult teatud tingimusel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reegel-mis-poordub-andmebaasi">Reegel, mis pöördub andmebaasi<a class="headerlink" href="#reegel-mis-poordub-andmebaasi" title="Permanent link">&para;</a></h3>
+<p>Osa reegleid ei saa kontrollida ainult commandi väljade põhjal – näiteks ISBN peab olema unikaalne. Sellisel juhul sõltub valideerija <code>DbContext</code>-ist ja kasutame <code>MustAsync</code>-i. Täiendame eelmist valideerijat:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">FluentValidation</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.EntityFrameworkCore</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SaveBookCommandValidator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AbstractValidator</span><span class="o">&lt;</span><span class="n">SaveBookCommand</span><span class="o">&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">LibraryContext</span><span class="w"> </span><span class="n">_dbContext</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">SaveBookCommandValidator</span><span class="p">(</span><span class="n">LibraryContext</span><span class="w"> </span><span class="n">dbContext</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="n">_dbContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dbContext</span><span class="p">;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">Title</span><span class="p">)</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">            </span><span class="p">.</span><span class="n">NotEmpty</span><span class="p">().</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Pealkiri on kohustuslik"</span><span class="p">)</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">            </span><span class="p">.</span><span class="n">MaximumLength</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Pealkiri võib olla kuni 200 tähemärki"</span><span class="p">);</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">Author</span><span class="p">)</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">            </span><span class="p">.</span><span class="n">NotEmpty</span><span class="p">().</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Autor on kohustuslik"</span><span class="p">)</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">            </span><span class="p">.</span><span class="n">MaximumLength</span><span class="p">(</span><span class="mi">100</span><span class="p">).</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Autori nimi võib olla kuni 100 tähemärki"</span><span class="p">);</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">Pages</span><span class="p">)</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">            </span><span class="p">.</span><span class="n">InclusiveBetween</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">            </span><span class="p">.</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Lehekülgede arv peab olema 1 kuni 10000"</span><span class="p">);</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">YearPublished</span><span class="p">)</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">            </span><span class="p">.</span><span class="n">InclusiveBetween</span><span class="p">(</span><span class="mi">1450</span><span class="p">,</span><span class="w"> </span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">Year</span><span class="p">)</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">            </span><span class="p">.</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">$"Ilmumisaasta peab olema 1450 kuni {DateTime.Now.Year}"</span><span class="p">);</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">Isbn</span><span class="p">)</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">            </span><span class="p">.</span><span class="n">Cascade</span><span class="p">(</span><span class="n">CascadeMode</span><span class="p">.</span><span class="n">Stop</span><span class="p">)</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">            </span><span class="p">.</span><span class="n">NotEmpty</span><span class="p">().</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"ISBN on kohustuslik"</span><span class="p">)</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">            </span><span class="p">.</span><span class="n">MustAsync</span><span class="p">(</span><span class="n">BeUniqueIsbn</span><span class="p">).</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Selle ISBN-iga raamat on juba olemas"</span><span class="p">);</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">BeUniqueIsbn</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">isbn</span><span class="p">,</span><span class="w"> </span><span class="n">CancellationToken</span><span class="w"> </span><span class="n">cancellationToken</span><span class="p">)</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">!</span><span class="k">await</span><span class="w"> </span><span class="n">_dbContext</span><span class="p">.</span><span class="n">Books</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">            </span><span class="p">.</span><span class="n">AnyAsync</span><span class="p">(</span><span class="n">book</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">book</span><span class="p">.</span><span class="n">Isbn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">isbn</span><span class="p">,</span><span class="w"> </span><span class="n">cancellationToken</span><span class="p">);</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Pane tähele <code>Cascade(CascadeMode.Stop)</code>: kui ISBN on tühi, ei minda andmebaasi pärima. Ilma selleta tehtaks tühja ISBN-iga ikkagi üks mõttetu <code>SELECT</code> päring. Andmebaasi pöörduvate reeglite puhul tasub alati mõelda, kas päringut saab vältida.</p>
+<div class="admonition note">
+<p class="admonition-title">Unikaalsus ja andmebaas</p>
+<p><code>AnyAsync</code> kontroll ei taga unikaalsust 100% – kahe samaaegse päringu korral võivad mõlemad kontrolli läbida. Tõeline garantii on andmebaasis <code>UNIQUE</code> indeks. Valideerimine annab siiski kliendile kiire ja arusaadava veateate; indeks on viimane kaitse.</p>
+</div>
+<h3 id="query-valideerija">Query valideerija<a class="headerlink" href="#query-valideerija" title="Permanent link">&para;</a></h3>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">FluentValidation</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.EntityFrameworkCore</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ListBooksQueryValidator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AbstractValidator</span><span class="o">&lt;</span><span class="n">ListBooksQuery</span><span class="o">&gt;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">LibraryContext</span><span class="w"> </span><span class="n">_dbContext</span><span class="p">;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">ListBooksQueryValidator</span><span class="p">(</span><span class="n">LibraryContext</span><span class="w"> </span><span class="n">dbContext</span><span class="p">)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="n">_dbContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dbContext</span><span class="p">;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">query</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="n">Page</span><span class="p">)</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">            </span><span class="p">.</span><span class="n">GreaterThan</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Lehekülje number peab olema vähemalt 1"</span><span class="p">);</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">query</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="n">PageSize</span><span class="p">)</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">            </span><span class="p">.</span><span class="n">InclusiveBetween</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">            </span><span class="p">.</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Lehekülje suurus peab olema 1 kuni 100"</span><span class="p">);</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">query</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="n">Page</span><span class="p">)</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">            </span><span class="p">.</span><span class="n">MustAsync</span><span class="p">(</span><span class="n">PageExists</span><span class="p">).</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Sellist lehekülge ei ole olemas"</span><span class="p">)</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">            </span><span class="p">.</span><span class="n">When</span><span class="p">(</span><span class="n">query</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="n">PageSize</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">PageExists</span><span class="p">(</span><span class="n">ListBooksQuery</span><span class="w"> </span><span class="n">query</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">page</span><span class="p">,</span><span class="w"> </span><span class="n">CancellationToken</span><span class="w"> </span><span class="n">cancellationToken</span><span class="p">)</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">rowCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">_dbContext</span><span class="p">.</span><span class="n">Books</span><span class="p">.</span><span class="n">CountAsync</span><span class="p">(</span><span class="n">cancellationToken</span><span class="p">);</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">pageCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Ceiling</span><span class="p">((</span><span class="kt">double</span><span class="p">)</span><span class="n">rowCount</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="n">PageSize</span><span class="p">);</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">pageCount</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">pageCount</span><span class="p">;</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Siin sõltub reegel kahest väljast (<code>Page</code> ja <code>PageSize</code>) ja andmebaasi ridade arvust. Just selliseid reegleid on DataAnnotations atribuutidega võimatu kirjeldada. <code>When</code>-tingimus hoiab ära nulliga jagamise, kui <code>PageSize</code> ise on vale.</p>
+<h3 id="registreerimine">Registreerimine<a class="headerlink" href="#registreerimine" title="Permanent link">&para;</a></h3>
+<p>Valideerijad tuleb DI-konteinerisse registreerida. Kõige lihtsam on lasta FluentValidationil leida kõik valideerijad ühest assembly-st:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">FluentValidation</span><span class="p">;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kt">var</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="o">&lt;</span><span class="n">LibraryContext</span><span class="o">&gt;</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">options</span><span class="p">.</span><span class="n">UseSqlServer</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Configuration</span><span class="p">.</span><span class="n">GetConnectionString</span><span class="p">(</span><span class="s">"DefaultConnection"</span><span class="p">)));</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddValidatorsFromAssemblyContaining</span><span class="o">&lt;</span><span class="n">SaveBookCommandValidator</span><span class="o">&gt;</span><span class="p">();</span>
+</span></code></pre></div>
+<p><code>AddValidatorsFromAssemblyContaining</code> registreerib valideerijad <strong>scoped</strong> elueaga. See on oluline, sest valideerija kasutab <code>DbContext</code>-i, mis on samuti scoped.</p>
+<h2 id="kokkuvote">Kokkuvõte<a class="headerlink" href="#kokkuvote" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Valideerimine</strong> kontrollib andmeid enne, kui rakendus nendega midagi teeb; serveripoolne valideerimine on ainus usaldusväärne.</li>
+<li><strong>DataAnnotations</strong> entiteedil kirjeldavad andmebaasi skeemi, kuid ei valideeri commande – entiteet luuakse alles handleris.</li>
+<li><strong>Commandid ja queryd</strong> on rakenduse piir, seega peab nende sisend olema valideeritud.</li>
+<li><strong>FluentValidation</strong> kirjutab reeglid eraldi valideerija klassi; <code>MustAsync</code>-iga saab kaasata ka andmebaasipäringu (nt ISBN unikaalsus).</li>
+<li><strong>Andmebaasist sõltuvaid reegleid</strong> testitakse InMemory andmebaasiga, päris andmebaasi pole testide jaoks vaja.</li>
+</ul>
+<h2 id="viited">Viited<a class="headerlink" href="#viited" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.fluentvalidation.net/">FluentValidation dokumentatsioon</a></li>
+<li><a href="https://github.com/FluentValidation/FluentValidation">FluentValidation – GitHub</a></li>
+<li><a href="https://docs.fluentvalidation.net/en/latest/aspnet.html">FluentValidation ASP.NET Core integratsioon</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations">System.ComponentModel.DataAnnotations – Microsoft Learn</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Üles
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright (C) Gunnar Peipman, 2023–2026
+    </div>
+  
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.expand","navigation.indexes","navigation.instant.prefetch","navigation.path","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Kopeeritud","clipboard.copy":"Kopeeri lõikelauale","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 veel sellel lehel","search.result.more.other":"# veel sellel lehel","search.result.none":"Otsingule ei leitud ühtegi vastet","search.result.one":"Leiti üks tulemus","search.result.other":"Leiti # tulemust","search.result.placeholder":"Otsimiseks kirjuta siia","search.result.term.missing":"Puudub","select.version":"Vali versioon"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3cb411a8.min.js"></script>
+      
+    
+  </body>
+</html>

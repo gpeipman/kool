@@ -1,0 +1,3283 @@
+
+<!doctype html>
+<html lang="et" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Gunnar Peipmani tundide ja koolituste materjalid">
+      
+      
+        <meta name="author" content="Gunnar Peipman">
+      
+      
+        <link rel="canonical" href="https://gunnarpeipman.com/kool/programmeerimine2/Programmeerimine2/failide-kasutamine/">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.1.1">
+    
+    
+      
+        <title>Failide kasutamine - Programmeerimine 2 - Kool</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/classic/main.0006804e.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/classic/palette.813d4b3f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-7ENGH7MSL7"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-7ENGH7MSL7",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-7ENGH7MSL7",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Keri sisuni
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Päis">
+    <a href="../../.." title="Kool" class="md-header__button md-logo" aria-label="Kool" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <span class="md-visually-hidden">Navigatsioon</span>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kool
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Failide kasutamine - Programmeerimine 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <span class="md-visually-hidden">Otsing</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Otsing">
+  <button type="button" class="md-search__button">
+    Otsing
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Vaheleht" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../oop/" class="md-tabs__link">
+          
+  
+  OOP
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../programmeerimise-alused/" class="md-tabs__link">
+          
+  
+  Programmeerimise alused
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Programmeerimine 2
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigatsioon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Kool" class="md-nav__button md-logo" aria-label="Kool" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kool
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../oop/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  OOP
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  OOP
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/klassid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Klassid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/objektide-loomine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide loomine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/objektide-vordlemine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide võrdlemine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/parilus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pärilus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/liidesed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liidesed
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/enumeraatorid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Enumeraatorid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/staatiline-skoop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Staatiline skoop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../oop/vead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vead
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../programmeerimise-alused/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Programmeerimise alused
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Programmeerimise alused
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Algus
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Algus
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/programmid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Programmid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/algoritmid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Algoritmid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/andmetuubid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Andmetüübid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/muutujad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Muutujad
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/tehted-arvudega/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tehted arvudega
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/vordlused/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Võrdlused
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/tingimuslaused/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tingimuslaused
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/massiivid-ja-loendid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Massiivid ja loendid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/tsuklid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tsüklid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/kodutoo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Esimene kodutöö
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Üldosa
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Üldosa
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/idisposable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  IDisposable
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/failid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Töötamine failidega
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/stream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Streamid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/koodi-kiiruse-mootmine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Koodi kiiruse mõõtmine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/linq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  LINQ
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_6" id="__nav_2_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Töötamine andmetega
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_3_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Töötamine andmetega
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/xml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  XML
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  JSON
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/csv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  CSV
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/andmed-internetist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Andmed internetist
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/kodutoo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Teine kodutöö
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objekt-orienteeritud programmeerimine
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_2_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Objekt-orienteeritud programmeerimine
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/klassid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Klassid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/objektide-loomine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide loomine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/objektide-vordlemine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objektide võrdlemine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/parilus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Pärilus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/liidesed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Liidesed
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/enumeraatorid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Enumeraatorid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/staatiline-skoop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Staatiline skoop
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/oop/vead/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Vead
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programmeerimise-alused/kodutoo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kolmas kodutöö
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Programmeerimine 2
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Programmeerimine 2
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sissejuhatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Sissejuhatus
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Git ja Github
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visual-studio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Visual Studio
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../objekt-orienteeritud-modelleerimine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Objekt-orienteeritud modelleerimine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  ORM
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../entity-framework-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Entity Framework Core
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migratsioonid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migratsioonid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algandmed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Algandmed
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arhitektuuri-mudelid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Arhitektuuri mudelid
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cqrs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  CQRS
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dependency-injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dependency Injection
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  DTO
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../andmed-lehtedena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Andmete jagamine lehtedeks
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../valideerimine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Valideerimine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../failide-kasutamine.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Failide kasutamine
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Sisukord">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Sisukord
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probleem-failikood-hajub-mooda-rakendust" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Probleem: failikood hajub mööda rakendust
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifileclient-liides" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IFileClient liides
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IFileClient liides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hoidla-nimi-ja-faili-nimi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hoidla nimi ja faili nimi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filestore-konstandid" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        FileStore konstandid
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localfileclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LocalFileClient
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failide-paigutus-projektides" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Failide paigutus projektides
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registreerimine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Registreerimine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failide-uleslaadimine-aspnet-core-web-api-s" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Failide üleslaadimine ASP.NET Core Web API-s
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Failide üleslaadimine ASP.NET Core Web API-s">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kontrolleri-tegevus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kontrolleri tegevus
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proovimine-swaggeriga" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Proovimine Swaggeriga
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suuruse-piirangud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Suuruse piirangud
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turvalisus" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Turvalisus
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cqrs-i-command-faili-salvestamiseks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        CQRS-i command faili salvestamiseks
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CQRS-i command faili salvestamiseks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Command
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Handler
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valideerimine" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Valideerimine
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kontrolleri-loplik-versioon" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kontrolleri lõplik versioon
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kogu-teekond" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kogu teekond
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kokkuvote" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Kokkuvõte
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harjutused" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Harjutused
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viited" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Viited
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="failide-kasutamine">Failide kasutamine<a class="headerlink" href="#failide-kasutamine" title="Permanent link">&para;</a></h1>
+<p>Paljud rakendused peavad lisaks andmebaasiandmetele hoidma ka faile: lepinguid PDF-idena, arveid, kasutajate pilte või manuseid. Failide hoidmiseks on mitu võimalust – kohalik ketas, võrguketas, Azure Blob Storage, Amazon S3. Iga hoidla kasutamise viis on erinev, seetõttu tekib kiusatus kirjutada failide lugemine ja salvestamine otse sinna, kus parasjagu vaja on.</p>
+<p>Selles peatükis vaatame, miks selline lähenemine pikemas perspektiivis halb on, kuidas peita failihoidla <code>IFileClient</code> liidese taha, kuidas faili ASP.NET Core Web API-s vastu võtta ning kuidas kirjutada CQRS-i command, mis faili ära salvestab.</p>
+<h2 id="probleem-failikood-hajub-mooda-rakendust">Probleem: failikood hajub mööda rakendust<a class="headerlink" href="#probleem-failikood-hajub-mooda-rakendust" title="Permanent link">&para;</a></h2>
+<p>Kõige lihtsam viis fail salvestada on kirjutada see otse kontrolleris kettale:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="na">[HttpPost("{id}/file")]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="n">IActionResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">UploadFile</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">IFormFile</span><span class="w"> </span><span class="n">file</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="s">"C:\\uploads\\contracts"</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">".pdf"</span><span class="p">);</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="nn">var</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">File</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">CopyToAsync</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nf">Ok</span><span class="p">();</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>See kood töötab ühe masina peal. Päris rakenduses tekib aga hulk probleeme:</p>
+<ul>
+<li><strong>Asukoht on koodi sisse kirjutatud.</strong> Arendusmasinas on üks tee, serveris teine, konteineris kolmas. Iga keskkonna jaoks tuleb koodi muuta.</li>
+<li><strong>Sama kood kordub.</strong> Iga uus failitüüp (arved, pildid, manused) toob kaasa veel ühe sarnase meetodi, kus on oma tee, oma kontrollid ja oma veakäsitlus.</li>
+<li><strong>Testimine puudutab päris ketast.</strong> Test käivitub arendaja masinal ja kirjutab faile, mida hiljem keegi ei korista.</li>
+<li><strong>Hoidla vahetamine on kallis.</strong> Kui tahame minna Azure Blob Storage'i või Amazon S3 peale, tuleb muuta iga kohta, kus failidega töötatakse.</li>
+<li><strong>Pilvekeskkonnas ei püsi failid kettal.</strong> Azure App Service'i või konteineri kohalik ketas on ajutine – uue instantsi käivitumisel kaob sealt kõik.</li>
+<li><strong>Turvalisus jääb igaühe hooleks.</strong> Kliendi antud failinimi võib sisaldada kaustateed (<code>..\..\appsettings.json</code>) või katta olemasoleva faili.</li>
+<li><strong>Kontroller teab liiga palju.</strong> Kontroller peaks tegelema HTTP-päringu vastuvõtmisega, mitte sellega, kus ja kuidas fail kettale läheb.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Tähelepanu: <code>File</code> tähendus kontrolleris</p>
+<p>Kontrolleris varjab <code>ControllerBase.File()</code> meetod <code>System.IO.File</code> klassi. Seepärast tuleb kontrolleris kirjutada <code>System.IO.File.WriteAllBytesAsync(...)</code>, mitte lihtsalt <code>File.WriteAllBytesAsync(...)</code>. See on veel üks märk sellest, et failioperatsioonid ei kuulu kontrollerisse.</p>
+</div>
+<p>Probleemi juur on <strong>tihe side</strong> (ingl <em>tight coupling</em>) failisüsteemiga. Lahendus on sama, mida kasutasime andmebaasi puhul: peidame tehnilise detaili liidese taha ja laseme sõltuvusel tulla väljastpoolt.</p>
+<pre class="mermaid"><code>graph LR
+    subgraph Rakendus["Rakendus"]
+        C["Kontroller"] --&gt; H["Command handler"]
+        H --&gt; I["IFileClient"]
+    end
+    I -.-&gt; L["LocalFileClient"]
+    I -.-&gt; B["AzureBlobFileClient"]
+    L --&gt; D[("Kohalik ketas")]
+    B --&gt; A[("Azure Blob Storage")]
+    style I fill:#e8f0fe,stroke:#4285f4</code></pre>
+<p>Rakendus teab ainult liidest <code>IFileClient</code>. Milline klass selle taga on, otsustab <strong>dependency injection</strong> <code>Program.cs</code>-is. Kui hiljem vahetame kohaliku ketta pilvehoidla vastu, muutub ainult üks rida registreerimises – command handleri ega kontrolleri koodi ei puutu.</p>
+<h2 id="ifileclient-liides">IFileClient liides<a class="headerlink" href="#ifileclient-liides" title="Permanent link">&para;</a></h2>
+<p><code>IFileClient</code> kirjeldab kõik failioperatsioonid, mida rakendus vajab. Liides ei tea, kus failid tegelikult asuvad ega kuidas need kettale kirjutatakse.</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IFileClient</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">Task</span><span class="w"> </span><span class="nf">SaveFileAsync</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">content</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">Task</span><span class="o">&lt;</span><span class="kt">byte</span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetFileAsync</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">Task</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">FileExistsAsync</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">Task</span><span class="w"> </span><span class="nf">DeleteFileAsync</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetFileUrl</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Meetod</th>
+<th>Mida teeb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SaveFileAsync</code></td>
+<td>Salvestab faili sisu hoidlasse <code>storeName</code>. Kui sama nimega fail on olemas, kirjutatakse see üle.</td>
+</tr>
+<tr>
+<td><code>GetFileAsync</code></td>
+<td>Tagastab faili sisu baitidena või <code>null</code>, kui faili ei ole.</td>
+</tr>
+<tr>
+<td><code>FileExistsAsync</code></td>
+<td>Kontrollib, kas fail on hoidlas olemas.</td>
+</tr>
+<tr>
+<td><code>DeleteFileAsync</code></td>
+<td>Kustutab faili.</td>
+</tr>
+<tr>
+<td><code>GetFileUrl</code></td>
+<td>Tagastab faili URL-i. Kohaliku ketta puhul on see staatiline URL, blob-hoidla puhul avalik link.</td>
+</tr>
+</tbody>
+</table>
+<p>Meetodid on <code>async</code>, sest ketta- ja võrgupöördumised on aeglased. Kui kontroller või handler ootab <code>await</code>-iga, ei blokeeri ta selle ajal teisi päringuid.</p>
+<div class="admonition note">
+<p class="admonition-title">Miks <code>byte[]</code> ja mitte <code>Stream</code>?</p>
+<p>Väikeste failide (lepingud, arved, pildid) puhul on <code>byte[]</code> kõige lihtsam: faili sisu on üks objekt, mida saab commandiga edasi anda ja testides hõlpsasti asendada. Suurte failide puhul oleks mõistlikum kasutada <code>Stream</code>-i, et kogu faili korraga mällu ei loetaks. Selles kursuses jääme lihtsuse huvides <code>byte[]</code> juurde.</p>
+</div>
+<h3 id="hoidla-nimi-ja-faili-nimi">Hoidla nimi ja faili nimi<a class="headerlink" href="#hoidla-nimi-ja-faili-nimi" title="Permanent link">&para;</a></h3>
+<p>Liideses on iga faili jaoks kaks osa: <strong>hoidla nimi</strong> (<code>storeName</code>) ja <strong>faili nimi</strong> (<code>fileName</code>).</p>
+<p>Selline jaotus tuleb blob-hoidlate eripärast. Azure Blob Storage'is ei ole päris kaustu nagu kettal – on konteinerid, mille sees on failid. Seetõttu piirdub struktuur ühe tasemega: hoidla → fail. Kohaliku ketta puhul vastab hoidla alamkaustale, näiteks <code>wwwroot/files/contracts/</code>, ja blob-hoidlas konteinerile.</p>
+<h3 id="filestore-konstandid">FileStore konstandid<a class="headerlink" href="#filestore-konstandid" title="Permanent link">&para;</a></h3>
+<p>Hoidlate nimed ei ole juhuslikud stringid, mida igaüks võib omatahtsi kirjutada. Nende jaoks on eraldi staatiline klass konstantidega:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">FileStore</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Contracts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"contracts"</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Invoices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"invoices"</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Kasutame koodis alati <code>FileStore.Contracts</code>, mitte <code>"contracts"</code>. Nii hoiame ära kirjavead (<code>"contract"</code>, <code>"Contracts"</code>) ja kui hoidla nimi kunagi muutub, piisab ühe rea muutmisest. Konstantide väärtused on kompileerimise ajal fikseeritud – see on tahtlik, sest hoidlate nimed on rakenduse disaini osa, mitte seadistus.</p>
+<h3 id="localfileclient">LocalFileClient<a class="headerlink" href="#localfileclient" title="Permanent link">&para;</a></h3>
+<p>Kohaliku ketta jaoks on meil <code>LocalFileClient</code>. See paigutab failid <code>wwwroot/files</code> kausta, kus iga hoidla on oma alamkaust.</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Hosting</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">LocalFileClient</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IFileClient</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">_rootPath</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">LocalFileClient</span><span class="p">(</span><span class="n">IWebHostEnvironment</span><span class="w"> </span><span class="n">environment</span><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">webRoot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">environment</span><span class="p">.</span><span class="n">WebRootPath</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">            </span><span class="o">??</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">environment</span><span class="p">.</span><span class="n">ContentRootPath</span><span class="p">,</span><span class="w"> </span><span class="s">"wwwroot"</span><span class="p">);</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="n">_rootPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">webRoot</span><span class="p">,</span><span class="w"> </span><span class="s">"files"</span><span class="p">);</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">SaveFileAsync</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">content</span><span class="p">)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">_rootPath</span><span class="p">,</span><span class="w"> </span><span class="n">storeName</span><span class="p">);</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">directory</span><span class="p">);</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetPath</span><span class="p">(</span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">WriteAllBytesAsync</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">content</span><span class="p">);</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="kt">byte</span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetFileAsync</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetPath</span><span class="p">(</span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllBytesAsync</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">FileExistsAsync</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Task</span><span class="p">.</span><span class="n">FromResult</span><span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">GetPath</span><span class="p">(</span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="n">fileName</span><span class="p">)));</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">DeleteFileAsync</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetPath</span><span class="p">(</span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="n">fileName</span><span class="p">);</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">            </span><span class="n">File</span><span class="p">.</span><span class="n">Delete</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Task</span><span class="p">.</span><span class="n">CompletedTask</span><span class="p">;</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetFileUrl</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">$"/files/{storeName}/{Path.GetFileName(fileName)}"</span><span class="p">;</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetPath</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a><span class="w">        </span><span class="c1">// Kliendi antud nimest võtame ainult failinime, mitte kaustateed</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">safeFileName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">GetFileName</span><span class="p">(</span><span class="n">fileName</span><span class="p">);</span>
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">_rootPath</span><span class="p">,</span><span class="w"> </span><span class="n">storeName</span><span class="p">,</span><span class="w"> </span><span class="n">safeFileName</span><span class="p">);</span>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Mõned olulised kohad:</p>
+<ul>
+<li><strong>Konstruktor</strong> võtab <code>IWebHostEnvironment</code>-i ja leiab <code>wwwroot</code> kausta. Nii ei ole tee koodi sisse kirjutatud.</li>
+<li><strong><code>Directory.CreateDirectory</code></strong> loob hoidla kausta, kui seda veel ei ole. Ilma selleta kukub esimene salvestus veaga.</li>
+<li><strong><code>GetPath</code></strong> kasutab <code>Path.GetFileName</code>-i, mis eemaldab failinimest kõik kaustateed. See hoiab ära failinimega ettenähtud kaustast välja pääsemise (ingl <em>path traversal</em>).</li>
+<li><strong><code>File.WriteAllBytesAsync</code></strong> kirjutab olemasoleva faili üle. Lepingute puhul on see soovitud: uus versioon asendab vana.</li>
+<li><strong><code>GetFileUrl</code></strong> eeldab, et <code>wwwroot/files</code> on staatiliste failidena kättesaadav. Selleks peab <code>Program.cs</code>-is olema <code>app.UseStaticFiles()</code>.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Avalikud ja privaatsed failid</p>
+<p>Kõik, mis on <code>wwwroot</code> kaustas, on veebis <strong>avalikult</strong> kättesaadav. Lepingud ja arved ei tohiks tavaliselt avalikud olla. Päris rakenduses hoitakse privaatseid faile väljaspool <code>wwwroot</code>-i (nt <code>App_Data/files</code>) ja serveeritakse autenditud kontrolleri kaudu. Siis peab ka <code>GetFileUrl</code> tagastama API URL-i, mitte staatilise faili URL-i.</p>
+</div>
+<h3 id="failide-paigutus-projektides">Failide paigutus projektides<a class="headerlink" href="#failide-paigutus-projektides" title="Permanent link">&para;</a></h3>
+<p>Meie lahenduses on failidega seotud klassid kahes projektis:</p>
+<table>
+<thead>
+<tr>
+<th>Fail</th>
+<th>Projekt</th>
+<th>Sisu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Storage/IFileClient.cs</code></td>
+<td>Application</td>
+<td>failioperatsioonide liides</td>
+</tr>
+<tr>
+<td><code>Storage/FileStore.cs</code></td>
+<td>Application</td>
+<td>hoidlate nimede konstandid</td>
+</tr>
+<tr>
+<td><code>Storage/LocalFileClient.cs</code></td>
+<td>WebApi</td>
+<td>kohaliku ketta implementatsioon</td>
+</tr>
+<tr>
+<td><code>Controllers/ContractsController.cs</code></td>
+<td>WebApi</td>
+<td>faili vastuvõtmine</td>
+</tr>
+<tr>
+<td><code>Features/Contracts/SaveContractFileCommand.cs</code></td>
+<td>Application</td>
+<td>command</td>
+</tr>
+<tr>
+<td><code>Features/Contracts/SaveContractFileCommandHandler.cs</code></td>
+<td>Application</td>
+<td>handler</td>
+</tr>
+<tr>
+<td><code>Features/Contracts/SaveContractFileCommandValidator.cs</code></td>
+<td>Application</td>
+<td>valideerija</td>
+</tr>
+</tbody>
+</table>
+<p>Liides ja commandid on <strong>Application</strong> projektis, sest need ei tohi sõltuda ASP.NET Core-ist. <code>LocalFileClient</code> on <strong>WebApi</strong> projektis, sest ta kasutab <code>IWebHostEnvironment</code>-i, mis on ASP.NET Core-i tüüp.</p>
+<h3 id="registreerimine">Registreerimine<a class="headerlink" href="#registreerimine" title="Permanent link">&para;</a></h3>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddControllers</span><span class="p">();</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="o">&lt;</span><span class="n">IFileClient</span><span class="p">,</span><span class="w"> </span><span class="n">LocalFileClient</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kt">var</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">app</span><span class="p">.</span><span class="n">UseStaticFiles</span><span class="p">();</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">app</span><span class="p">.</span><span class="n">MapControllers</span><span class="p">();</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">app</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+</span></code></pre></div>
+<p><code>LocalFileClient</code> sobib <strong>singletonina</strong>, sest ta on olekutu – hoiab ainult juurkausta teed. Kui testides tahame ketta asemel mälus olevat lahendust, piisab ainult registreerimise rea muutmisest:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddSingleton</span><span class="o">&lt;</span><span class="n">IFileClient</span><span class="p">,</span><span class="w"> </span><span class="n">InMemoryFileClient</span><span class="o">&gt;</span><span class="p">();</span>
+</span></code></pre></div>
+<p>Ükski handler ega kontroller ei pea sellest muudatusest teadma. See ongi liidese mõte.</p>
+<h2 id="failide-uleslaadimine-aspnet-core-web-api-s">Failide üleslaadimine ASP.NET Core Web API-s<a class="headerlink" href="#failide-uleslaadimine-aspnet-core-web-api-s" title="Permanent link">&para;</a></h2>
+<p>Faili saatmiseks ei kasuta HTTP päringu kehas JSON-i, sest JSON sobib hästi tekstiliste andmete jaoks, mitte binaarfailide jaoks. Selle asemel kasutatakse <strong><code>multipart/form-data</code></strong> vormingut, kus iga väli saadetakse eraldi osana koos nime, failinime ja sisuga.</p>
+<p>ASP.NET Core pakub faili jaoks tüüpi <code>IFormFile</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Omadus / meetod</th>
+<th>Tähendus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FileName</code></td>
+<td>Kliendi teatatud failinimi. <strong>Ei ole usaldusväärne</strong> – klient võib sinna kirjutada mida iganes.</td>
+</tr>
+<tr>
+<td><code>ContentType</code></td>
+<td>Kliendi teatatud MIME-tüüp (nt <code>application/pdf</code>). Samuti ei ole usaldusväärne.</td>
+</tr>
+<tr>
+<td><code>Length</code></td>
+<td>Faili suurus baitides.</td>
+</tr>
+<tr>
+<td><code>CopyToAsync</code></td>
+<td>Kopeerib faili sisu streami.</td>
+</tr>
+<tr>
+<td><code>OpenReadStream</code></td>
+<td>Annab faili sisu lugemiseks streami.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kontrolleri-tegevus">Kontrolleri tegevus<a class="headerlink" href="#kontrolleri-tegevus" title="Permanent link">&para;</a></h3>
+<p>Kontroller võtab faili vastu <code>[FromForm]</code> atribuudiga ja loeb selle sisu baitidena:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="na">[ApiController]</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="na">[Route("api/[controller]</span><span class="s">")]</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ContractsController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ControllerBase</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">{</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="na">[HttpPost("{id}/file")]</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="na">[RequestSizeLimit(5 * 1024 * 1024)]</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="n">IActionResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">UploadFile</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">FromForm</span><span class="p">]</span><span class="w"> </span><span class="n">IFormFile</span><span class="w"> </span><span class="n">file</span><span class="p">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="c1">// 1. Kontrollime, et fail üldse saabus</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nf">BadRequest</span><span class="p">(</span><span class="s">"Fail on kohustuslik"</span><span class="p">);</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">        </span><span class="c1">// 2. Loeme faili sisu baitidena</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="nn">var</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MemoryStream</span><span class="p">();</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">CopyToAsync</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stream</span><span class="p">.</span><span class="n">ToArray</span><span class="p">();</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">        </span><span class="c1">// 3. Salvestamise loogika lisame järgmises jaotises</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">Ok</span><span class="p">(</span><span class="k">new</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">            </span><span class="n">fileName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">FileName</span><span class="p">,</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">            </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">content</span><span class="p">.</span><span class="n">Length</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>See on vaheetapp: kontrollime, et fail jõuab serverisse kohale. Faili veel ei salvestata – selle lisame järgmises jaotises commandi abil.</p>
+<ul>
+<li><strong><code>[FromForm]</code></strong> ütleb, et <code>file</code> tuleb vormiandmetest, mitte päringu keha JSON-ist. Ilma selleta ei pruugi Swagger failivalijat õigesti kuvada.</li>
+<li><strong><code>[RequestSizeLimit]</code></strong> piirab selle konkreetse endpointi päringu suurust. Suurem päring lükatakse tagasi staatusekoodiga <strong>413 Payload Too Large</strong>.</li>
+<li><strong><code>MemoryStream</code></strong> on vajalik seetõttu, et <code>IFormFile</code> ei ole <code>byte[]</code>. Command aga võtab vastu <code>byte[]</code>, sest Application projekt ei tohi <code>IFormFile</code>-i tunda.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Miks mitte saata <code>IFormFile</code> commandiga edasi?</p>
+<p><code>IFormFile</code> on ASP.NET Core-i tüüp. Kui command võtaks selle vastu, peaks Application projekt viitama ASP.NET Core-ile ja kogu äriloogika muutuks veebiraamistikust sõltuvaks. Seepärast teisendame faili kontrolleris <code>byte[]</code>-ks ja saadame commandiga edasi ainult andmed.</p>
+</div>
+<h3 id="proovimine-swaggeriga">Proovimine Swaggeriga<a class="headerlink" href="#proovimine-swaggeriga" title="Permanent link">&para;</a></h3>
+<p>Käivita rakendus ja ava Swagger. <code>POST /api/contracts/{id}/file</code> juures kuvatakse <code>file</code> väli failivalijana, sest parameetri tüüp on <code>IFormFile</code>.</p>
+<ol>
+<li>Vajuta <strong>Try it out</strong>.</li>
+<li>Sisesta <code>id</code> väärtuseks näiteks <code>5</code>.</li>
+<li>Vali <code>file</code> välja juures PDF-fail.</li>
+<li>Vajuta <strong>Execute</strong>.</li>
+</ol>
+<p>Sama päringu saab teha ka käsurealt:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">"https://localhost:7001/api/contracts/5/file"</span><span class="w"> </span>-F<span class="w"> </span><span class="s2">"file=@leping.pdf"</span>
+</span></code></pre></div>
+<h3 id="suuruse-piirangud">Suuruse piirangud<a class="headerlink" href="#suuruse-piirangud" title="Permanent link">&para;</a></h3>
+<p>Vaikimisi on päringu suurus piiratud mitmes kohas. Kui piirangut ei sea, võib klient saata gigabaidise faili ja kirjutada serveri mälu või kettaruumi täis.</p>
+<table>
+<thead>
+<tr>
+<th>Koht</th>
+<th>Vaikimisi</th>
+<th>Kuidas muuta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kestrel (<code>MaxRequestBodySize</code>)</td>
+<td>30 MB</td>
+<td><code>builder.WebHost.ConfigureKestrel(...)</code></td>
+</tr>
+<tr>
+<td>Vormiandmete osa suurus (<code>MultipartBodyLengthLimit</code>)</td>
+<td>128 MB</td>
+<td><code>[RequestFormLimits(MultipartBodyLengthLimit = ...)]</code></td>
+</tr>
+<tr>
+<td>Üksiku endpointi piirang</td>
+<td>–</td>
+<td><code>[RequestSizeLimit(...)]</code></td>
+</tr>
+</tbody>
+</table>
+<p>Näiteks kogu rakenduse jaoks 10 MB piirang:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">builder</span><span class="p">.</span><span class="n">WebHost</span><span class="p">.</span><span class="n">ConfigureKestrel</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">options</span><span class="p">.</span><span class="n">Limits</span><span class="p">.</span><span class="n">MaxRequestBodySize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>Endpointi tasandil on <code>[RequestSizeLimit(5 * 1024 * 1024)]</code> täpsem, sest teised endpointid võivad vajada suuremat piiri.</p>
+<h3 id="turvalisus">Turvalisus<a class="headerlink" href="#turvalisus" title="Permanent link">&para;</a></h3>
+<p>Failide üleslaadimine on üks levinumaid turvaaukude allikaid. Isegi kui rakendus on väike, tuleb järgida põhireegleid:</p>
+<div class="admonition warning">
+<p class="admonition-title">Failide üleslaadimise turvareeglid</p>
+<ul>
+<li><strong>Ära kasuta kliendi failinime tee jaoks.</strong> <code>file.FileName</code> võib olla <code>..\..\appsettings.json</code>. Kasuta <code>Path.GetFileName</code>-i või genereeri nimi ise.</li>
+<li><strong>Kontrolli laiendit, mitte ainult <code>ContentType</code>-i.</strong> Kliendi teatatud MIME-tüüp on lihtsalt tekst ja seda saab vabalt valetada.</li>
+<li><strong>Piira suurust.</strong> Nii Kestrelis kui ka endpointis.</li>
+<li><strong>Ära hoia privaatseid faile <code>wwwroot</code>-is.</strong> Kõik seal olev on avalikult alla laaditav.</li>
+<li><strong>Päris süsteemides kontrollitakse ka faili sisu</strong> (nt PDF-i päis) ja skaneeritakse failid viirusetõrjega.</li>
+</ul>
+</div>
+<p>Halvasti:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// HALB: kliendi failinimi läheb otse teesse</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="s">"wwwroot/files/contracts"</span><span class="p">,</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">FileName</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Kui <code>file.FileName</code> on <code>..\..\appsettings.json</code>, kirjutatakse fail väljapoole ettenähtud kausta. Seepärast genereerime failinime serveris – seda teeme command handleris.</p>
+<h2 id="cqrs-i-command-faili-salvestamiseks">CQRS-i command faili salvestamiseks<a class="headerlink" href="#cqrs-i-command-faili-salvestamiseks" title="Permanent link">&para;</a></h2>
+<p>Nüüd, kui fail on serverisse jõudnud ja teisendatud <code>byte[]</code>-ks, tuleb see ära salvestada. Salvestamist ei tee kontroller, vaid <strong>command handler</strong>, sest tegu on rakenduse ärilise tegevusega.</p>
+<h3 id="command">Command<a class="headerlink" href="#command" title="Permanent link">&para;</a></h3>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SaveContractFileCommand</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">{</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ContractId</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">FileName</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">Content</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Commandis on ainult andmed, mida salvestamiseks vaja on:</p>
+<ul>
+<li><strong><code>ContractId</code></strong> – millise lepinguga fail seotud on.</li>
+<li><strong><code>FileName</code></strong> – kliendi antud failinimi. Sellest kasutame ainult laiendit.</li>
+<li><strong><code>Content</code></strong> – faili sisu baitidena.</li>
+</ul>
+<p>Command ei sisalda faili asukohta, hoidla nime ega ühtegi muud tehnilist detaili. Need otsustab handler. Commandil ei ole ka ASP.NET Core-i tüüpe – nii saab sama commandi käivitada nii kontrollerist kui ka testist.</p>
+<h3 id="handler">Handler<a class="headerlink" href="#handler" title="Permanent link">&para;</a></h3>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SaveContractFileCommandHandler</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p">{</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">IFileClient</span><span class="w"> </span><span class="n">_fileClient</span><span class="p">;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">SaveContractFileCommandHandler</span><span class="p">(</span><span class="n">IFileClient</span><span class="w"> </span><span class="n">fileClient</span><span class="p">)</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">        </span><span class="n">_fileClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fileClient</span><span class="p">;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="n">Result</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Handle</span><span class="p">(</span><span class="n">SaveContractFileCommand</span><span class="w"> </span><span class="n">command</span><span class="p">)</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">extension</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">GetExtension</span><span class="p">(</span><span class="n">command</span><span class="p">.</span><span class="n">FileName</span><span class="p">).</span><span class="n">ToLowerInvariant</span><span class="p">();</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">fileName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$"{command.ContractId}{extension}"</span><span class="p">;</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="n">_fileClient</span><span class="p">.</span><span class="n">SaveFileAsync</span><span class="p">(</span><span class="n">FileStore</span><span class="p">.</span><span class="n">Contracts</span><span class="p">,</span><span class="w"> </span><span class="n">fileName</span><span class="p">,</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">Content</span><span class="p">);</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Result</span><span class="p">.</span><span class="n">Ok</span><span class="p">();</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Rea haaval:</p>
+<ol>
+<li><strong>Laiend</strong> võetakse kliendi failinimest. Ainult laiendit on vaja – ülejäänud nime mõtleb server ise välja.</li>
+<li><strong>Failinimi genereeritakse serveris:</strong> <code>5.pdf</code>. Klient ei saa mõjutada ei kausta ega failinime, seega ei ole võimalik kaustast välja murda ega teist faili üle kirjutada.</li>
+<li><strong><code>IFileClient</code> on konstruktorist sisse antud.</strong> Handler ei tea, kas fail läheb kohalikule kettale või pilve.</li>
+<li><strong>Hoidla nimi tuleb <code>FileStore</code> konstandist.</strong> Handler ütleb, <em>mis</em> hoidlasse fail kuulub, mitte <em>kus</em> see asub.</li>
+<li><strong><code>Result.Ok()</code></strong> näitab, et tegevus õnnestus. CQRS-i reegli kohaselt command andmeid ei tagasta.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Miks sama lepingu fail kirjutatakse üle?</p>
+<p>Kui lepingule laaditakse uus PDF, asendab see vana. See on tavaline käitumine. Kui on vaja failide ajalugu, tuleks nimeks võtta näiteks <code>5-20261113.pdf</code> või <code>Guid.NewGuid()</code>, salvestada faili nimi andmebaasi ning vanad failid alles hoida. See muudab aga nii salvestamise kui ka allalaadimise loogikat ja jääb selle kursuse raamest välja.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Faili nime laiend ja vana fail</p>
+<p>Kui lubada mitut laiendit (nt <code>.pdf</code> ja <code>.docx</code>), võib lepingu <code>5.pdf</code> kõrvale jääda ka <code>5.docx</code>, kui laiend muutub. Sellisel juhul tuleb enne salvestamist vana fail kustutada või piirduda ühe lubatud laiendiga. Meie näites lubame ainult PDF-i.</p>
+</div>
+<h3 id="valideerimine">Valideerimine<a class="headerlink" href="#valideerimine" title="Permanent link">&para;</a></h3>
+<p>Nagu eelmises peatükis nägime, kuuluvad commandi sisendi reeglid valideerijasse, mitte kontrollerisse:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SaveContractFileCommandValidator</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AbstractValidator</span><span class="o">&lt;</span><span class="n">SaveContractFileCommand</span><span class="o">&gt;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">AllowedExtensions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">".pdf"</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">SaveContractFileCommandValidator</span><span class="p">()</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">ContractId</span><span class="p">)</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">            </span><span class="p">.</span><span class="n">GreaterThan</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Lepingu id peab olema positiivne"</span><span class="p">);</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">FileName</span><span class="p">)</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">            </span><span class="p">.</span><span class="n">NotEmpty</span><span class="p">().</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Faili nimi on kohustuslik"</span><span class="p">)</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">            </span><span class="p">.</span><span class="n">Must</span><span class="p">(</span><span class="n">HaveAllowedExtension</span><span class="p">).</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Lubatud on ainult PDF-fail"</span><span class="p">);</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">        </span><span class="n">RuleFor</span><span class="p">(</span><span class="n">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">Content</span><span class="p">)</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">            </span><span class="p">.</span><span class="n">NotEmpty</span><span class="p">().</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Fail on tühi"</span><span class="p">)</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">            </span><span class="p">.</span><span class="n">Must</span><span class="p">(</span><span class="n">content</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">content</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">            </span><span class="p">.</span><span class="n">WithMessage</span><span class="p">(</span><span class="s">"Fail võib olla kuni 2 MB"</span><span class="p">);</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">HaveAllowedExtension</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">fileName</span><span class="p">)</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-12-22"><a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">AllowedExtensions</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">Path</span><span class="p">.</span><span class="n">GetExtension</span><span class="p">(</span><span class="n">fileName</span><span class="p">).</span><span class="n">ToLowerInvariant</span><span class="p">());</span>
+</span><span id="__span-12-23"><a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-24"><a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Kontrolleris piisab <code>null</code>- ja tühjuse kontrollist, sest <code>[ApiController]</code> teeb mudeli sidumise vigade puhul automaatselt <code>400 Bad Request</code>. Ärireeglid – lubatud laiend ja maksimaalne suurus – on valideerijas.</p>
+<div class="admonition note">
+<p class="admonition-title">Laiend ei tõesta faili tüüpi</p>
+<p>Ka <code>.pdf</code> laiendiga fail võib olla hoopis midagi muud. Tõsisemates süsteemides kontrollitakse faili algusbaite (nn <em>magic bytes</em>) või teisendatakse pilt enne salvestamist uuesti. Meie kursuses piirdume laiendi ja suurusega.</p>
+</div>
+<p>Valideerija registreeritakse eelmises peatükis näidatud viisil:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddValidatorsFromAssemblyContaining</span><span class="o">&lt;</span><span class="n">SaveContractFileCommandValidator</span><span class="o">&gt;</span><span class="p">();</span>
+</span></code></pre></div>
+<h3 id="kontrolleri-loplik-versioon">Kontrolleri lõplik versioon<a class="headerlink" href="#kontrolleri-loplik-versioon" title="Permanent link">&para;</a></h3>
+<p>Nüüd saab kontrolleri vaheetapi asendada päris lahendusega, mis saadab commandi dispatcherile:</p>
+<div class="language-cs highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="na">[ApiController]</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="na">[Route("api/[controller]</span><span class="s">")]</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ContractsController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ControllerBase</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">{</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">Dispatcher</span><span class="w"> </span><span class="n">_dispatcher</span><span class="p">;</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">ContractsController</span><span class="p">(</span><span class="n">Dispatcher</span><span class="w"> </span><span class="n">dispatcher</span><span class="p">)</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">        </span><span class="n">_dispatcher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dispatcher</span><span class="p">;</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">    </span><span class="na">[HttpPost("{id}/file")]</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">    </span><span class="na">[RequestSizeLimit(5 * 1024 * 1024)]</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="n">IActionResult</span><span class="o">&gt;</span><span class="w"> </span><span class="n">UploadFile</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">FromForm</span><span class="p">]</span><span class="w"> </span><span class="n">IFormFile</span><span class="w"> </span><span class="n">file</span><span class="p">)</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">file</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nf">BadRequest</span><span class="p">(</span><span class="s">"Fail on kohustuslik"</span><span class="p">);</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="nn">var</span><span class="w"> </span><span class="n">stream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MemoryStream</span><span class="p">();</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">CopyToAsync</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SaveContractFileCommand</span>
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">            </span><span class="n">ContractId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">,</span>
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">            </span><span class="n">FileName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="p">.</span><span class="n">FileName</span><span class="p">,</span>
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">            </span><span class="n">Content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stream</span><span class="p">.</span><span class="n">ToArray</span><span class="p">()</span>
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="w">        </span><span class="p">};</span>
+</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>
+</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">        </span><span class="k">await</span><span class="w"> </span><span class="n">_dispatcher</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">command</span><span class="p">);</span>
+</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>
+</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">StatusCode</span><span class="p">(</span><span class="n">StatusCodes</span><span class="p">.</span><span class="n">Status201Created</span><span class="p">);</span>
+</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-14-33"><a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Kontrolleri vastutus on nüüd selgelt piiratud:</p>
+<ul>
+<li>võtta HTTP päring vastu,</li>
+<li>kontrollida, et fail on olemas,</li>
+<li>teisendada <code>IFormFile</code> commandi andmeteks,</li>
+<li>saata command dispatcherile,</li>
+<li>tagastada sobiv staatusekood.</li>
+</ul>
+<p>Kontroller ei tea, kuhu fail salvestatakse ega kuidas seda tehakse.</p>
+<div class="admonition note">
+<p class="admonition-title">Dispatcheri meetodi nimi</p>
+<p>Selles materjalis on dispatcheri meetodi nimeks <code>SendAsync</code>. Kui sinu projektis on meetodi nimi teine (nt <code>DispatchAsync</code>), kasuta seda, mis projektis olemas on – tähtis on, et kontroller ei kutsuks handlerit otse.</p>
+</div>
+<h3 id="kogu-teekond">Kogu teekond<a class="headerlink" href="#kogu-teekond" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant K as Klient
+    participant C as ContractsController
+    participant D as Dispatcher
+    participant H as SaveContractFileCommandHandler
+    participant F as LocalFileClient
+    participant Ketas as Ketas
+    K-&gt;&gt;C: POST /api/contracts/5/file (multipart/form-data)
+    C-&gt;&gt;C: IFormFile → byte[]
+    C-&gt;&gt;D: SendAsync(SaveContractFileCommand)
+    D-&gt;&gt;H: Handle(command)
+    H-&gt;&gt;F: SaveFileAsync("contracts", "5.pdf", content)
+    F-&gt;&gt;Ketas: File.WriteAllBytesAsync(...)
+    Ketas--&gt;&gt;F: OK
+    F--&gt;&gt;H: valmis
+    H--&gt;&gt;D: Result.Ok()
+    D--&gt;&gt;C: Result
+    C--&gt;&gt;K: 201 Created</code></pre>
+<h2 id="kokkuvote">Kokkuvõte<a class="headerlink" href="#kokkuvote" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Failioperatsioonid ei kuulu kontrollerisse</strong> – need tuleb peita liidese taha, et rakendus ei sõltuks konkreetsest hoidlast.</li>
+<li><strong><code>IFileClient</code></strong> kirjeldab salvestamise, lugemise, olemasolu kontrolli, kustutamise ja URL-i genereerimise.</li>
+<li><strong>Hoidla nimi ja faili nimi</strong> hoiavad liidese lihtsana ning töötavad nii kohaliku ketta kui ka blob-hoidlatega.</li>
+<li><strong><code>FileStore</code></strong> hoiab hoidlate nimed ühes kohas ja väldib kirjavigu.</li>
+<li><strong><code>LocalFileClient</code></strong> salvestab failid <code>wwwroot/files/&lt;hoidla&gt;/</code> kausta; päris projektis tuleb privaatsed failid hoida väljaspool <code>wwwroot</code>-i.</li>
+<li><strong><code>IFormFile</code></strong> võtab faili vastu <code>multipart/form-data</code> päringust; kontroller teisendab selle <code>byte[]</code>-ks, sest Application projekt ei tohi ASP.NET Core-i tüüpe tunda.</li>
+<li><strong>Suurust ja laiendit tuleb piirata</strong> ning kliendi failinime mitte kunagi otse teena kasutada.</li>
+<li><strong>Command</strong> sisaldab ainult andmeid, <strong>handler</strong> genereerib turvalise failinime ja kutsub <code>IFileClient</code>-i, <strong>valideerija</strong> kontrollib ärireegleid.</li>
+<li>Hoidla vahetamine käib ainult <code>Program.cs</code>-is tehtava registreerimise kaudu.</li>
+</ul>
+<h2 id="harjutused">Harjutused<a class="headerlink" href="#harjutused" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Kirjuta <code>SaveInvoiceFileCommand</code> ja <code>SaveInvoiceFileCommandHandler</code>, mis salvestab arve PDF-i hoidlasse <code>FileStore.Invoices</code>. Kasuta failinimena arve id-d ja laiendit. Testi Swaggeriga.</li>
+<li>Lisa eelmisele ülesandele <code>SaveInvoiceFileCommandValidator</code>, mis lubab ainult PDF-faile suurusega kuni 1 MB. Kontrolli, et liiga suur fail annab <code>400 Bad Request</code>.</li>
+<li>Loo <code>InMemoryFileClient</code>, mis hoiab faile <code>Dictionary&lt;string, byte[]&gt;</code>-s. Registreeri see testkeskkonnas <code>LocalFileClient</code>-i asemel ja veendu, et handleri koodi ei pea muutma.</li>
+<li>Loo endpoint <code>GET /api/contracts/{id}/file</code>, mis tagastab <code>IFileClient.GetFileAsync</code> abil lepingu PDF-i. Kui faili ei ole, tagasta <code>404 Not Found</code>.</li>
+<li><em>(Raske)</em> Loe <code>LocalFileClient</code>-i juurkaust konfiguratsioonist (nt <code>appsettings.json</code> väärtusest <code>FileStorage:RootPath</code>). Kirjuta test, mis kontrollib, et failinimi <code>..\..\appsettings.json</code> ei pääse juurkaustast välja.</li>
+</ol>
+<h2 id="viited">Viited<a class="headerlink" href="#viited" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://gunnarpeipman.com/blog/ifileclient-generalizing-storage-access-in-asp-net-web-applications/">IFileClient – Generalizing storage access in ASP.NET web applications</a></li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads">File uploads in ASP.NET Core – Microsoft Learn</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.iformfile">IFormFile interface – Microsoft Learn</a></li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/static-files">Static files in ASP.NET Core – Microsoft Learn</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html">File Upload Cheat Sheet – OWASP</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Üles
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright (C) Gunnar Peipman, 2023–2026
+    </div>
+  
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.expand","navigation.indexes","navigation.instant.prefetch","navigation.path","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Kopeeritud","clipboard.copy":"Kopeeri lõikelauale","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 veel sellel lehel","search.result.more.other":"# veel sellel lehel","search.result.none":"Otsingule ei leitud ühtegi vastet","search.result.one":"Leiti üks tulemus","search.result.other":"Leiti # tulemust","search.result.placeholder":"Otsimiseks kirjuta siia","search.result.term.missing":"Puudub","select.version":"Vali versioon"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.3cb411a8.min.js"></script>
+      
+    
+  </body>
+</html>
